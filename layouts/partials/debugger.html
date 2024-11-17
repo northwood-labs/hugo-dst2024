@@ -1,0 +1,14 @@
+{{ if ($.Site.Param "templateDebugger") }}
+  <hr />
+  <h3 id="current">Node (Debug)</h3>
+  {{ partial "debugprint.html" . }}
+  <hr />
+  <h3 id="debug">SiteInfo (Debug)</h3>
+  {{ partial "debugprint.html" .Site }}
+  <hr />
+  <h3 id="file-debug">File Object (Debug)</h3>
+  {{ partial "debugprint.html" .File }}
+  <hr />
+  <h3 id="debug-menu">Menu (Debug)</h3>
+  {{ partial "debugprint.html" .Site.Menus }}
+{{ end }}

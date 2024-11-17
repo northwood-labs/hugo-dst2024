@@ -1,0 +1,72 @@
+<meta property="og:title" content="{{ .Title }}" />
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:locale" content="{{- $.Site.Params.locale -}}" />
+
+{{- with .Params.images }}
+  {{ range first 6 . -}}
+    <meta property="og:image" content="{{ . | absURL }}" />
+  {{- end }}
+{{ end -}}
+
+{{- if .IsHome -}}
+  <meta property="og:image:url" content="{{- $.Site.Params.defaultOembed -}}" />
+  <meta property="og:image:type" content="{{- $.Site.Params.oembedMediaType -}}" />
+  <meta property="og:image:width" content="{{- $.Site.Params.oembedWidth -}}" />
+  <meta property="og:image:height" content="{{- $.Site.Params.oembedHeight -}}" />
+  <meta property="og:image:alt" content="{{- $.Site.Params.oembedAlt -}}" />
+{{- end -}}
+
+
+<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML }}" />
+
+{{- with .Site.Params.title -}}
+  <meta property="og:site_name" content="{{ . }}" />
+{{- end -}}
+
+
+<meta property="book:author" content="{{- $.Site.Params.og_book_author -}}" />
+<meta property="book:isbn" content="{{- $.Site.Params.og_book_isbn -}}" />
+<meta property="book:release_date" content="{{- $.Site.Params.og_book_release_date -}}" />
+
+{{ with .Params.metaTags }}
+  {{ range first 10 . }}
+    <meta property="book:tag" content="{{ . }}" />
+  {{ end }}
+{{ end }}
+
+{{/* ********************************************************************** */}}
+
+{{ if $.Params.featured_image }}
+  {{- with $.Params.featured_image -}}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="{{ . | absURL }}" />
+  {{- end }}
+{{- else if $.Params.images -}}
+  {{- with $.Params.images -}}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="{{ index . 0 | absURL }}" />
+  {{- end }}
+{{ else -}}
+  {{- $images := $.Resources.ByType "image" -}}
+  {{- $featured := $images.GetMatch "*feature*" -}}
+  {{- $featured := cond (ne $featured nil) $featured ($images.GetMatch "{*cover*,*thumbnail*}") -}}
+
+  {{- with $featured -}}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="{{ $featured.Permalink }}" />
+  {{- else -}}
+    {{- with $.Site.Params.images -}}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:image" content="{{ index . 0 | absURL }}" />
+    {{ else -}}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:image" content="{{- $.Site.Params.defaultOembed -}}" />
+    {{- end -}}
+  {{- end -}}
+{{- end }}
+
+
+<meta name="twitter:title" content="{{ .Title }}" />
+<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end -}}" />

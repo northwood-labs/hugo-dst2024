@@ -1,0 +1,4 @@
+{{ $domain := .Site.Params.domain }}
+{{- range $.Site.Data.safety -}}
+  <link rel="{{ .rel }}" type="{{ .type }}" href="{{ .profile }}{{ $domain }}" title="{{ .service }}" />
+{{ end -}}

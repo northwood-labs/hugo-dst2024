@@ -1,0 +1,18 @@
+{{ define "head_element" }}
+  {{ partial "head/_head.html" . }}
+{{ end }}
+
+{{ define "header" }}
+  {{ partial "body/_header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+  {{ partial "body/home/opening_text.html" . }}
+  {{ partial "body/home/deep_dive.html" . }}
+  {{ partial "body/home/chapters.html" . }}
+  {{ partial "body/home/contact.html" . }}
+{{ end }}
+
+{{ define "footer" }}
+  {{ partial "body/_footer.html" . }}
+{{ end }}

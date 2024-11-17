@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  {{- block "head_element" . }}{{- end }}
+  <body>
+    <div class="bg-white text-gray-900 dark:bg-gray-800">
+      {{- block "header" . }}{{- end }}
+
+
+      <main>
+        {{- block "main" . }}{{- end }}
+      </main>
+
+      {{- block "footer" . }}{{- end }}
+    </div>
+
+    {{ $js := resources.Get "js/index.js" | fingerprint "sha256" }}<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+  </body>
+</html>

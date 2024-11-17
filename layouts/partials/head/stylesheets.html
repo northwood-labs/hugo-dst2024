@@ -1,0 +1,5 @@
+{{/* https://www.brycewray.com/posts/2021/11/making-tailwind-jit-work-hugo/ */}}
+
+{{ $css := resources.Get "css/index.css" | fingerprint "sha256" }}
+<link rel="preload" as="style" href="{{ $css.RelPermalink }}" />
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" type="text/css" />

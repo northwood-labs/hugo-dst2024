@@ -1,0 +1,14 @@
+{{ $ISO8601 := "2006-01-02T15:04:05-07:00" }}
+
+{{ if .IsHome }}
+  {{ if not .Date.IsZero }}
+    <meta itemprop="dateModified" content="{{ .Date.Format $ISO8601 | safeHTML }}" />
+  {{ end }}
+
+
+  <meta itemprop="image" content="{{- $.Site.Params.defaultOembed -}}" />
+  <meta itemprop="keywords" content="{{ delimit $.Site.Params.metaTags "," }}" />
+{{ end -}}
+
+
+<meta itemprop="copyrightYear" content="2021-{{ now.Format "2006" | safeHTML }}" />

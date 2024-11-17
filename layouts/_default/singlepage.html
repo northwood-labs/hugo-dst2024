@@ -1,0 +1,15 @@
+{{ define "head_element" }}
+  {{ partial "head/_head.html" . }}
+{{ end }}
+
+{{ define "header" }}
+  {{ partial "body/_header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+  {{- .Content -}}
+{{ end }}
+
+{{ define "footer" }}
+  {{ partial "body/_footer.html" . }}
+{{ end }}

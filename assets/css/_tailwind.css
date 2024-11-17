@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {}
+
+@layer utilities {
+
+  /* Things for IE/EdgeHTML to ignore. */
+  @supports not (-ms-ime-align: auto) {
+    details summary {
+      cursor: pointer;
+    }
+
+    details summary > * {
+      display: inline;
+    }
+  }
+
+  .text-shadow {
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5)
+  }
+
+  .text-shadow-none {
+    text-shadow: none;
+  }
+}

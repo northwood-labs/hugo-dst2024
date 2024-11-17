@@ -1,0 +1,25 @@
+<head prefix="og:http://ogp.me/ns# fb:http://ogp.me/ns/fb# book:https://ogp.me/ns/book# profile:http://ogp.me/ns/profile# website:http://ogp.me/ns/website#">
+  {{ partial "head/meta_toplevel.html" . }}
+  {{ partial "head/link_rel.html" . }}
+  {{ partial "head/oembed.html" . }}
+  {{ partial "head/robots.html" . }}
+  <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} •{{ end }}{{ .Site.Title }}{{ end }}</title>
+
+  {{ partial "head/preconnect.html" . }}
+  {{ partial "head/script_async.html" . }}
+  {{ partial "head/google_analytics.html" . }}
+  {{ partial "head/stylesheets.html" . }}
+  {{ partial "head/preload.html" . }}
+  {{ partial "head/favicons.html" . }}
+  {{ partial "head/copyright_mobile.html" . }}
+  {{ partial "head/google_news.html" . }}
+  {{ partial "head/gravatar.html" . }}
+
+  {{ partial "head/opengraph.html" . }}
+  {{ partial "head/opensearch.html" . }}
+  {{ partial "head/safety.html" . }}
+  {{/* partial "head/schema.html" . */}}
+  {{ partial "head/share_meta.html" . }}
+  {{ partial "head/structured_data.html" . }}
+  {{ partial "head/ld_logo.html" . }}
+</head>

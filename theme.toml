@@ -1,0 +1,14 @@
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name        = "DevSec Tools (2024)"
+license     = "MIT"
+licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
+description = ""
+homepage    = "http://example.com/"
+tags        = []
+features    = []
+min_version = "0.111.3"
+
+[author]
+name     = "Northwood Labs"
+homepage = "https://northwood-labs.com"

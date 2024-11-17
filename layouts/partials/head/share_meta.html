@@ -1,0 +1,56 @@
+{{- $description := "" -}}
+{{- with .Description -}}
+  {{- $description = . -}}
+{{- else -}}
+  {{- if .IsPage -}}
+    {{- $description = .Summary -}}
+  {{- else -}}
+    {{- with .Site.Params.description -}}
+      {{- $description = . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $permalink := .Permalink -}}
+{{- $title := .Title -}}
+
+{{- $media := "" -}}
+{{- with $.Params.images -}}
+  {{ $media = index . 0 | absURL }}
+{{ else -}}
+  {{- $images := $.Resources.ByType "image" -}}
+  {{- $featured := $images.GetMatch "*feature*" -}}
+  {{- $featured := cond (ne $featured nil) $featured ($images.GetMatch "{*cover*,*thumbnail*}") -}}
+
+  {{- with $featured -}}
+    {{ $media = $featured.Permalink }}
+  {{- else -}}
+    {{- with $.Site.Params.images -}}
+      {{ $media = index . 0 | absURL }}
+    {{- else -}}
+      {{ $media = $.Site.Params.defaultOembed }}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- range $.Site.Data.readability -}}
+  {{- $href := .profile -}}
+  {{- $href := replace $href "@@PERMALINK@@" ( $permalink ) -}}
+  <link rel="{{ .rel }}" type="{{ .type }}" href="{{ $href | safeURL }}" title="{{ .service }}" />
+{{ end -}}
+
+{{- range $.Site.Data.read_later -}}
+  {{- $href := .profile -}}
+  {{- $href := replace $href "@@PERMALINK@@" ( $permalink ) -}}
+  {{- $href := replace $href "@@TITLE@@" ( $title ) -}}
+  {{- $href := replace $href "@@DESCRIPTION@@" ( $description ) -}}
+  <link rel="{{ .rel }}" type="{{ .type }}" href="{{ $href | safeURL }}" title="{{ .service }}" />
+{{ end -}}
+
+{{- range $.Site.Data.share -}}
+  {{- $href := .profile -}}
+  {{- $href := replace $href "@@PERMALINK@@" ( $permalink ) -}}
+  {{- $href := replace $href "@@TITLE@@" ( $title ) -}}
+  {{- $href := replace $href "@@MEDIA@@" ( $media ) -}}
+  <link rel="{{ .rel }}" type="{{ .type }}" href="{{ $href | safeURL }}" title="{{ .service }}" />
+{{ end -}}

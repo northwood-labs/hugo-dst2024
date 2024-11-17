@@ -1,0 +1,4 @@
+{{ $permalink := .Permalink }}
+{{- range $.Site.Data.structured_data -}}
+  <link rel="{{ .rel }}" type="{{ .type }}" href="{{ .profile }}{{ $permalink }}" title="{{ .service }}" />
+{{ end -}}
