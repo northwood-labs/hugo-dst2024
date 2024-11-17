@@ -1,10 +1,10 @@
 # See https://github.com/gohugoio/hugoThemes#themetoml for an example
 
 name        = "DevSec Tools (2024)"
-license     = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
+license     = "Apache-2.0"
+licenselink = "https://github.com/northwood-labs/hugo-dst2024/blob/main/LICENSE.txt"
 description = ""
-homepage    = "http://example.com/"
+homepage    = "https://github.com/northwood-labs/hugo-dst2024"
 tags        = []
 features    = []
 min_version = "0.111.3"
