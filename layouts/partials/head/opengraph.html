@@ -18,23 +18,11 @@
   <meta property="og:image:alt" content="{{- $.Site.Params.oembedAlt -}}" />
 {{- end -}}
 
-
 <meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML }}" />
 
 {{- with .Site.Params.title -}}
   <meta property="og:site_name" content="{{ . }}" />
 {{- end -}}
-
-
-<meta property="book:author" content="{{- $.Site.Params.og_book_author -}}" />
-<meta property="book:isbn" content="{{- $.Site.Params.og_book_isbn -}}" />
-<meta property="book:release_date" content="{{- $.Site.Params.og_book_release_date -}}" />
-
-{{ with .Params.metaTags }}
-  {{ range first 10 . }}
-    <meta property="book:tag" content="{{ . }}" />
-  {{ end }}
-{{ end }}
 
 {{/* ********************************************************************** */}}
 

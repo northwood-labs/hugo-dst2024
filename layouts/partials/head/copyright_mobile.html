@@ -1,5 +1,5 @@
 <meta name="description" content="{{ $.Param "description" }}" />
-<meta name="copyright" content="Copyright (c) 2021-{{ now.Format "2006" }} PCR Publishing" />
+<meta name="copyright" content="Copyright (c) {{ $.Param "copyrightStart" }}-{{ now.Format "2006" }} {{ $.Param "copyrightEntity" }}" />
 <meta name="application-name" content="{{ .Site.Title }}" />
 <meta name="apple-mobile-web-app-title" content="{{ .Site.Title }}" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
