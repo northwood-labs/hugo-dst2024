@@ -1,0 +1,108 @@
+{{ define "head_element" }}
+  {{ partial "head/_head.html" . }}
+{{ end }}
+
+{{ define "header" }}
+  {{ partial "body/_header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+  {{/* PAGE HEADER */}}
+
+  {{- partial "body/_page_header.html" (dict
+    "ctx" .
+    "title" .Title
+    "description" .Description
+  ) -}}
+
+  {{/* TABLE HEADER */}}
+
+  <div id="tmpl-single">
+    <div class="bg-white dark:bg-[#171e21] shadow ring-1 ring-gray-900/5 sm:rounded-xl md:col-span-2 mx-auto max-w-7xl">
+      <div class="px-4 py-5 sm:p-6">
+
+        <div class="mt-0 flow-root">
+          <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+            <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+
+              {{- .Content -}}
+
+              <div class="mt-10 flex justify-center">
+                <a href="/learning" class="text-sm/6 font-semibold text-indigo-600">
+                  <span aria-hidden="true">&larr;</span>
+                  Back to learning
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <div class="divide-y divide-gray-200 overflow-hidden rounded-lg bg-gray-200 dark:bg-gray-950 sm:grid sm:grid-cols-2 sm:gap-px sm:divide-y-0 shadow ring-1 ring-gray-900/5 sm:rounded-xl">
+
+      {{- $docs := $.Params.docs -}}
+      {{- $icons := $.Site.Data.vendors -}}
+      {{- if gt (len $docs) 0 -}}
+
+        {{- range $vendor, $value := $docs -}}
+        {{- $logo := index (index $icons $vendor) "logo" -}}
+
+        <div class="group relative rounded-tl-lg rounded-tr-lg bg-white dark:bg-[#171e21] p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500 sm:rounded-tr-none">
+          <div>
+            <span class="inline-flex rounded-lg p-3 ring-4 ring-gray-50 dark:ring-gray-950">
+              {{- if hasPrefix $logo "http" -}}
+                <img class="size-10" src="{{- $logo -}}">
+              {{- else -}}
+                {{- $svg := (replace $logo "partial:" "") -}}
+                {{ partial (printf "svg/logo/%s.svg" $svg) (dict "class" "size-10") }}
+              {{- end -}}
+            </span>
+          </div>
+          <div class="mt-8">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">
+              <a href="{{- index (index $docs $vendor) "console" -}}" class="focus:outline-none">
+                {{- index (index $icons $vendor) "name" -}}
+              </a>
+            </h3>
+              {{ if (index (index $docs $vendor) "notes") }}
+                <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">{{ index (index $docs $vendor) "notes" | safeHTML }}</p>
+              {{ end }}
+            <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+              {{ $s := slice }}
+              {{- if index (index $docs $vendor) "console" -}}
+                {{ $s = $s | append (printf "<a href=\"%s\" class=\"text-black dark:text-white underline font-semibold\">Console</a>" (index (index $docs $vendor) "console")) }}
+              {{- end -}}
+              {{- if index (index $docs $vendor) "cli" -}}
+                {{ $s = $s | append (printf "<a href=\"%s\" class=\"text-black dark:text-white underline font-semibold\">Command Line</a>" (index (index $docs $vendor) "cli")) }}
+              {{- end -}}
+              {{- if index (index $docs $vendor) "terrafu" -}}
+                {{ $s = $s | append (printf "<a href=\"%s\" class=\"text-black dark:text-white underline font-semibold\">Terraform/OpenTofu</a>" (index (index $docs $vendor) "terrafu")) }}
+              {{- end -}}
+              {{- if index (index $docs $vendor) "docs" -}}
+                {{ $s = $s | append (printf "<a href=\"%s\" class=\"text-black dark:text-white underline font-semibold\">Documentation</a>" (index (index $docs $vendor) "docs")) }}
+              {{- end -}}
+
+              {{- delimit $s " &bull; " | safeHTML -}}
+            </p>
+          </div>
+          <span class="pointer-events-none absolute right-6 top-6 text-gray-300 group-hover:text-gray-400 dark:text-gray-700 dark:group-hover:text-gray-600" aria-hidden="true">
+            {{ partial "heroicons/solid/arrow-up-right.svg" (dict "class" "size-6") }}
+          </span>
+        </div>
+        {{- end -}}
+
+      {{- end -}}
+
+    </div>
+  </div>
+
+{{ end }}
+
+{{ define "footer" }}
+  {{ partial "body/_footer.html" . }}
+{{ end }}

@@ -26,6 +26,13 @@
 
 {{/* ********************************************************************** */}}
 
+{{- $mastodon := index $.Site.Data.social "mastodon" -}}
+{{- with $mastodon -}}
+<meta name="fediverse:creator" content="{{ .handle }}">
+{{- end -}}
+
+{{/* ********************************************************************** */}}
+
 {{ if $.Params.featured_image }}
   {{- with $.Params.featured_image -}}
     <meta name="twitter:card" content="summary_large_image" />

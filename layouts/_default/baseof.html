@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" class="h-full bg-gray-100 dark:bg-black">
   {{- block "head_element" . }}{{- end }}
-  <body>
-    <div class="bg-white text-gray-900 dark:bg-gray-800">
+  <body class="h-full">
+    <div>
       {{- block "header" . }}{{- end }}
 
-      <main>
-        {{- block "main" . }}{{- end }}
-      </main>
+      <div class="min-h-full">
+        <main>
+          {{- block "main" . }}{{- end }}
+
+          <br><br>
+        </main>
+      </div>
 
       {{- block "footer" . }}{{- end }}
     </div>
 
-    {{ $js := resources.Get "js/index.js" | fingerprint "sha256" }}<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+    {{ $js := resources.Get "js/index.js" | fingerprint "sha256" }}<script src="{{/* $js.RelPermalink */}}" integrity="{{/* $js.Data.Integrity */}}"></script>
   </body>
 </html>

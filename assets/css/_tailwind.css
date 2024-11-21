@@ -1,11 +1,74 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@tailwind variants;
 
-@layer base {}
+@layer base {
+  /* https://github.com/tailwindlabs/tailwindcss-typography */
+  #tmpl-single {
+    @apply prose dark:prose-invert mx-auto max-w-7xl py-6 sm:px-6 lg:px-8 prose-p:text-base/6 prose-p:py-2 prose-p:m-0
+  }
+
+  #tmpl-single h2 {
+    @apply m-0 mt-6 first:mt-0 py-1
+  }
+
+  #tmpl-single ol {
+    @apply my-1
+  }
+
+  #tmpl-single li {
+    @apply m-0
+  }
+
+  #tmpl-single blockquote {
+    @apply my-1
+  }
+
+  #tmpl-single blockquote p {
+    @apply mt-1 text-sm/6 text-gray-500 not-italic font-normal
+  }
+}
+
+@layer components {
+  .ui-link {
+    @apply text-indigo-600 hover:text-blue-400 underline decoration-dotted hover:decoration-solid underline-offset-4;
+  }
+
+  .ui-badge-neutral-wrap {
+    @apply inline-flex items-baseline rounded-full pl-2 pr-2.5 py-1 text-sm font-medium bg-gray-100 text-gray-700 md:mt-2 lg:mt-0 ring-1 ring-inset ring-gray-200 mr-1;
+  }
+
+  .ui-badge-neutral-svg {
+    @apply -ml-1 mr-0.5 h-5 w-5 flex-shrink-0 self-center text-gray-500 inline;
+  }
+
+  .ui-badge-success-wrap {
+    @apply inline-flex items-baseline rounded-full pl-2 pr-2.5 py-1 text-sm font-medium bg-green-100 text-green-700 md:mt-2 lg:mt-0 ring-1 ring-inset ring-green-200 mr-1;
+  }
+
+  .ui-badge-success-svg {
+    @apply -ml-1 mr-0.5 h-5 w-5 flex-shrink-0 self-center text-green-600 inline;
+  }
+
+  .ui-badge-alert-wrap {
+    @apply inline-flex items-baseline rounded-full pl-2 pr-2.5 py-1 text-sm font-medium bg-orange-100 text-orange-600 md:mt-2 lg:mt-0 ring-1 ring-inset ring-orange-200 mr-1;
+  }
+
+  .ui-badge-alert-svg {
+    @apply -ml-1 mr-0.5 h-5 w-5 flex-shrink-0 self-center text-orange-400 inline;
+  }
+
+  .ui-badge-error-wrap {
+    @apply inline-flex items-baseline rounded-full pl-2 pr-2.5 py-1 text-sm font-medium bg-red-100 text-red-600 md:mt-2 lg:mt-0 ring-1 ring-inset ring-red-200 mr-1;
+  }
+
+  .ui-badge-error-svg {
+    @apply -ml-1 mr-0.5 h-5 w-5 flex-shrink-0 self-center text-red-600 inline;
+  }
+}
 
 @layer utilities {
-
   /* Things for IE/EdgeHTML to ignore. */
   @supports not (-ms-ime-align: auto) {
     details summary {

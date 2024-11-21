@@ -1,3 +1,52 @@
-<div>
-  <p>list.html</p>
-</div>
+{{ define "head_element" }}
+  {{ partial "head/_head.html" . }}
+{{ end }}
+
+{{ define "header" }}
+  {{ partial "body/_header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+{{ $data := .Data }}
+
+{{ if eq .IsHome true }}
+Load homepage.
+{{ else }}
+  {{/* PAGE HEADER */}}
+
+  {{- partial "body/_page_header.html" (dict
+    "ctx" .
+    "title" .Title
+    "description" .Description
+  ) -}}
+
+  {{/* TABLE HEADER */}}
+
+  <div id="tmpl-single">
+    <div class="bg-white shadow ring-1 ring-gray-900/5 sm:rounded-xl md:col-span-2 mx-auto max-w-7xl">
+      <div class="px-4 py-5 sm:p-6">
+
+        <div class="mt-0 flow-root">
+          <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+            <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+
+              {{ range .Pages }}
+                {{- $term := (index .Data) -}}
+                <li><a href="{{- .RelPermalink -}}">{{- .Title -}}</a></li>
+              {{ end }}
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+{{ end }}
+
+{{ end }}
+
+{{ define "footer" }}
+  {{ partial "body/_footer.html" . }}
+{{ end }}

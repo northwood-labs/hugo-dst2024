@@ -7,10 +7,40 @@
 {{ end }}
 
 {{ define "main" }}
-  {{ partial "body/home/opening_text.html" . }}
-  {{ partial "body/home/deep_dive.html" . }}
-  {{ partial "body/home/chapters.html" . }}
-  {{ partial "body/home/contact.html" . }}
+
+  {{/* PAGE HEADER */}}
+
+  {{- partial "body/_page_header.html" (dict
+    "ctx" .
+    "title" "devsec.tools"
+    "description" "Security and reliability tooling — by software engineers, for software engineers."
+  ) -}}
+
+  {{/* TABLE HEADER */}}
+
+  <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+    <div class="bg-white shadow ring-1 ring-gray-900/5 sm:rounded-xl md:col-span-2 mx-auto max-w-7xl">
+      <div class="px-4 py-5 sm:p-6">
+
+        <div class="px-4 sm:px-0">
+          <h3 class="text-xl font-semibold leading-6 text-gray-900">Connection security</h3>
+          <p class="mt-1 max-w-2xl text-sm leading-6 text-gray-500">TLS and cipher suites.</p>
+        </div>
+
+        <div class="mt-8 flow-root">
+          <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+            <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+
+              <p>testing…</p>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
 {{ end }}
 
 {{ define "footer" }}
