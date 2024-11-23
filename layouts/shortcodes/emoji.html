@@ -1,0 +1,4 @@
+{{- $emoji := .Get 0 -}}
+{{- $class := .Get 1 -}}
+{{- $path := printf "images/emoji/%s.png" $emoji -}}
+<img src="{{- (resources.Get $path).Permalink -}}" class="emoji not-prose {{ $class }}">

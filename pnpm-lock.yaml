@@ -18,9 +18,6 @@ importers:
       '@eslint/js':
         specifier: ^9.15.0
         version: 9.15.0
-      '@hyqo/parcel-reporter-asset-map':
-        specifier: ^1.0.3
-        version: 1.0.3(@parcel/core@2.13.0(@swc/helpers@0.5.15))(parcel@2.13.0(@swc/helpers@0.5.15)(cssnano@7.0.6(postcss@8.4.49))(postcss@8.4.49)(svgo@3.3.2))
       '@parcel/bundler-default':
         specifier: ^2.13.0
         version: 2.13.0(@parcel/core@2.13.0(@swc/helpers@0.5.15))
@@ -386,13 +383,6 @@ packages:
   '@humanwhocodes/retry@0.3.1':
     resolution: {integrity: sha512-JBxkERygn7Bv/GbN5Rv8Ul6LVknS+5Bp6RgDC/O8gEBU/yeH5Ui5C/OlWrTb6qct7LjjfT6Re2NxB0ln0yYybA==}
     engines: {node: '>=18.18'}
-
-  '@hyqo/parcel-reporter-asset-map@1.0.3':
-    resolution: {integrity: sha512-Vyni0Bb7y3h/BlL+pVkF9hr0k3alJ4LOenVAZbq6qE6ODjWDd1fenMznOtlVFCUzbtalxYbE89lU8NhG9Q7z8w==}
-    engines: {parcel: ^2.0.0}
-    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
-    peerDependencies:
-      parcel: ^2.0.0
 
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -3145,13 +3135,6 @@ snapshots:
   '@humanwhocodes/module-importer@1.0.1': {}
 
   '@humanwhocodes/retry@0.3.1': {}
-
-  '@hyqo/parcel-reporter-asset-map@1.0.3(@parcel/core@2.13.0(@swc/helpers@0.5.15))(parcel@2.13.0(@swc/helpers@0.5.15)(cssnano@7.0.6(postcss@8.4.49))(postcss@8.4.49)(svgo@3.3.2))':
-    dependencies:
-      '@parcel/plugin': 2.13.0(@parcel/core@2.13.0(@swc/helpers@0.5.15))
-      parcel: 2.13.0(@swc/helpers@0.5.15)(cssnano@7.0.6(postcss@8.4.49))(postcss@8.4.49)(svgo@3.3.2)
-    transitivePeerDependencies:
-      - '@parcel/core'
 
   '@isaacs/cliui@8.0.2':
     dependencies:

@@ -31,6 +31,10 @@
 }
 
 @layer components {
+  .emoji {
+    @apply inline-block m-0 p-0 max-w-none object-scale-down h-[1rem] align-middle;
+  }
+
   .ui-link {
     @apply text-indigo-600 hover:text-blue-400 underline decoration-dotted hover:decoration-solid underline-offset-4;
   }
@@ -65,6 +69,14 @@
 
   .ui-badge-error-svg {
     @apply -ml-1 mr-0.5 h-5 w-5 flex-shrink-0 self-center text-red-600 inline;
+  }
+
+  .ui-badge-blue-wrap {
+    @apply inline-flex items-baseline rounded-full pl-2 pr-2.5 py-1 text-sm font-medium bg-sky-100 text-sky-600 md:mt-2 lg:mt-0 ring-1 ring-inset ring-sky-200 mr-1;
+  }
+
+  .ui-badge-purple-wrap {
+    @apply inline-flex items-baseline rounded-full pl-2 pr-2.5 py-1 text-sm font-medium bg-purple-100 text-purple-600 md:mt-2 lg:mt-0 ring-1 ring-inset ring-purple-200 mr-1;
   }
 }
 
