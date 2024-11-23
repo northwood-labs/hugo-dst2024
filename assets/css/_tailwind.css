@@ -71,23 +71,24 @@
     @apply -ml-1 mr-0.5 h-5 w-5 flex-shrink-0 self-center text-red-600 inline;
   }
 
-  .ui-badge-blue-wrap {
+  .ui-badge-tip-wrap {
     @apply inline-flex items-baseline rounded-full pl-2 pr-2.5 py-1 text-sm font-medium bg-blue-100 text-blue-700 md:mt-2 lg:mt-0 ring-1 ring-inset ring-blue-200 mr-1;
+  }
+
+  .ui-badge-tip-svg {
+    @apply -ml-1 mr-0.5 h-5 w-5 flex-shrink-0 self-center text-blue-600 inline;
+  }
+
+  .ui-badge-indigo-wrap {
+    @apply inline-flex items-baseline rounded-full pl-2 pr-2.5 py-1 text-sm font-medium bg-indigo-100 text-indigo-700 md:mt-2 lg:mt-0 ring-1 ring-inset ring-indigo-200 mr-1;
+  }
+
+  .ui-badge-indigo-svg {
+    @apply -ml-1 mr-0.5 h-5 w-5 flex-shrink-0 self-center text-indigo-600 inline;
   }
 }
 
 @layer utilities {
-  /* Things for IE/EdgeHTML to ignore. */
-  @supports not (-ms-ime-align: auto) {
-    details summary {
-      cursor: pointer;
-    }
-
-    details summary > * {
-      display: inline;
-    }
-  }
-
   .text-shadow {
     text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5)
   }

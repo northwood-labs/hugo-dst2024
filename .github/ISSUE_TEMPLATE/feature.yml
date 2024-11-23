@@ -1,0 +1,22 @@
+---
+name: Feature Request
+description: Request new functionality.
+title: "[Feature]: "
+labels: [feature, triage]
+assignees:
+  - skyzyx
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this feature request!
+  - type: textarea
+    id: what-do-you-want
+    attributes:
+      label: What functionality would you like to see?
+      description: |
+        Is something missing? Could things be explained better? How can we make this more useful?
+      placeholder: I would like to see…
+      value: I would like to see…
+    validations:
+      required: true

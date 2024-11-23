@@ -1,11 +1,17 @@
 /* eslint-disable no-undef */
 module.exports = {
+  attributeGroups: ['$CODE_GUIDE'],
+  attributeSort: 'ASC',
   bracketSameLine: true,
   embeddedLanguageFormatting: 'auto',
   endOfLine: 'lf',
   goTemplateBracketSpacing: true,
   htmlWhitespaceSensitivity: 'css',
-  plugins: [require('prettier-plugin-tailwindcss')],
+  plugins: [
+    'prettier-plugin-organize-attributes',
+    'prettier-plugin-organize-imports',
+    'prettier-plugin-tailwindcss',
+  ],
   printWidth: 10000,
   proseWrap: 'preserve',
   overrides: [
@@ -14,4 +20,6 @@ module.exports = {
       options: {parser: 'go-template'},
     },
   ],
+  tailwindConfig: './tailwind.config.js',
+  tailwindStylesheet: './assets/css/_tailwind.css',
 };
