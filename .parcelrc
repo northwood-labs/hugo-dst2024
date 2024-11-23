@@ -38,8 +38,8 @@
         "*": "@parcel/packager-raw"
     },
     "resolvers": [
-        "...",
         "parcel-resolver-ignore",
+        "...",
         "@parcel/resolver-glob"
     ],
     "compressors": {

@@ -7,13 +7,18 @@
     }
   },
   "engines": {
-    "node": ">=20.17.0",
+    "node": ">=22.0.0",
     "pnpm": ">=9.10.0"
   },
-  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "browserslist": [
+    "> 0.5%, last 2 versions, not dead",
+    "maintained node versions"
+  ],
   "source": [
     "layouts/index.html",
-    "assets/css/index.css",
+    "layouts/_default/*.html",
+    "layouts/partials/.*/*.html",
+    "assets/css/_tailwind.css",
     "assets/js/_core.js"
   ],
   "targets": {
@@ -85,7 +90,7 @@
     "tailwindcss": "^3.4.15"
   },
   "parcelIgnore": [
-    "{{*.*}}",
-    "/images/*.*"
+    "{{.*}}",
+    "/images/.*"
   ]
 }

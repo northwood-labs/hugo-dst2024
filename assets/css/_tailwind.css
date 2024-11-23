@@ -72,11 +72,7 @@
   }
 
   .ui-badge-blue-wrap {
-    @apply inline-flex items-baseline rounded-full pl-2 pr-2.5 py-1 text-sm font-medium bg-sky-100 text-sky-600 md:mt-2 lg:mt-0 ring-1 ring-inset ring-sky-200 mr-1;
-  }
-
-  .ui-badge-purple-wrap {
-    @apply inline-flex items-baseline rounded-full pl-2 pr-2.5 py-1 text-sm font-medium bg-purple-100 text-purple-600 md:mt-2 lg:mt-0 ring-1 ring-inset ring-purple-200 mr-1;
+    @apply inline-flex items-baseline rounded-full pl-2 pr-2.5 py-1 text-sm font-medium bg-blue-100 text-blue-700 md:mt-2 lg:mt-0 ring-1 ring-inset ring-blue-200 mr-1;
   }
 }
 
