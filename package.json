@@ -56,7 +56,7 @@
     "@parcel/packager-css": "^2.13.0",
     "@parcel/packager-html": "^2.13.0",
     "@parcel/packager-js": "^2.13.0",
-    "@parcel/packager-raw": "^2.13.0",
+    "@parcel/packager-raw": "^2.13.2",
     "@parcel/reporter-cli": "^2.13.0",
     "@parcel/resolver-default": "^2.13.0",
     "@parcel/resolver-glob": "^2.13.0",
