@@ -79,8 +79,8 @@ importers:
         specifier: ^2.13.0
         version: 2.13.0(@parcel/core@2.13.0(@swc/helpers@0.5.15))
       '@parcel/transformer-vue':
-        specifier: ^2.13.0
-        version: 2.13.0(@parcel/core@2.13.0(@swc/helpers@0.5.15))
+        specifier: ^2.13.2
+        version: 2.13.2(@parcel/core@2.13.0(@swc/helpers@0.5.15))
       '@tailwindcss/forms':
         specifier: ^0.5.9
         version: 0.5.9(tailwindcss@3.4.15)
@@ -936,9 +936,9 @@ packages:
     resolution: {integrity: sha512-9lV9ab6TBBs1GQhNcgs9IwpdqvWnfOeZiORqGH7aSpiAaTy9w9Nm+1hSycK5Fz4EZ9wavvdcHftf0LGyymK2MQ==}
     engines: {node: '>= 16.0.0', parcel: ^2.13.0}
 
-  '@parcel/transformer-vue@2.13.0':
-    resolution: {integrity: sha512-cWGw1n6Hqx91Y9aVIrqeRhNxj1NcHrb/PGB33oECAJu8I71DnRs+6ZCJDm3R+9/iGAgttFru9W/JF2fK8ikK3w==}
-    engines: {node: '>= 16.0.0', parcel: ^2.13.0}
+  '@parcel/transformer-vue@2.13.2':
+    resolution: {integrity: sha512-LTdJuEf8ZLJ40YQNczSKfGG7A++QzDKctk/pkk8WxkCWqbD5LkyM0kMLVhMYxiNEacU5zCDKdjvma3HUiu8CIA==}
+    engines: {node: '>= 16.0.0', parcel: ^2.13.2}
 
   '@parcel/types-internal@2.13.0':
     resolution: {integrity: sha512-yhIbaH+VXQB7Leifsnwifr80R6q2Yqeo+xN4KcPGuGH94iX7LrxJ3V0iwUMIg5nGmh5hmNbq0MEYFFxqVuZ8wQ==}
@@ -3998,13 +3998,13 @@ snapshots:
     transitivePeerDependencies:
       - '@parcel/core'
 
-  '@parcel/transformer-vue@2.13.0(@parcel/core@2.13.0(@swc/helpers@0.5.15))':
+  '@parcel/transformer-vue@2.13.2(@parcel/core@2.13.0(@swc/helpers@0.5.15))':
     dependencies:
       '@ladjs/consolidate': 1.0.4
-      '@parcel/diagnostic': 2.13.0
-      '@parcel/plugin': 2.13.0(@parcel/core@2.13.0(@swc/helpers@0.5.15))
+      '@parcel/diagnostic': 2.13.2
+      '@parcel/plugin': 2.13.2(@parcel/core@2.13.0(@swc/helpers@0.5.15))
       '@parcel/source-map': 2.1.1
-      '@parcel/utils': 2.13.0
+      '@parcel/utils': 2.13.2
       '@vue/compiler-sfc': 3.5.13
       nullthrows: 1.1.1
       semver: 7.6.3
