@@ -64,8 +64,8 @@ importers:
         specifier: ^2.13.2
         version: 2.13.2(@parcel/core@2.13.0(@swc/helpers@0.5.15))
       '@parcel/transformer-css':
-        specifier: ^2.13.0
-        version: 2.13.0(@parcel/core@2.13.0(@swc/helpers@0.5.15))
+        specifier: ^2.13.2
+        version: 2.13.2(@parcel/core@2.13.0(@swc/helpers@0.5.15))
       '@parcel/transformer-html':
         specifier: ^2.13.0
         version: 2.13.0(@parcel/core@2.13.0(@swc/helpers@0.5.15))
@@ -887,6 +887,10 @@ packages:
   '@parcel/transformer-css@2.13.0':
     resolution: {integrity: sha512-zxQ5mYFonnv5LR+7CQNH0KxuO+Lao/mtkwRSS+KqsgM/h3liVOumZ406jgag08f22gwXxndQDCE+khys/ODMIA==}
     engines: {node: '>= 16.0.0', parcel: ^2.13.0}
+
+  '@parcel/transformer-css@2.13.2':
+    resolution: {integrity: sha512-QR9I4wYc+Tw7eET5ak3BvXLdsmDJGzq+Gd4KaULa0sNKioDUXCi79E5rGICW8E+BbHGKar7boNzk7HrNZX7PLg==}
+    engines: {node: '>= 16.0.0', parcel: ^2.13.2}
 
   '@parcel/transformer-html@2.13.0':
     resolution: {integrity: sha512-iCgW95Nb+Hvu5y+2owjipuzxGOMzLdw2OHcGAN4iw+lyQtXD1TnovL4kzHxjURk5Jj+or0xRAjACtdHjAz7O8Q==}
@@ -3866,6 +3870,18 @@ snapshots:
       '@parcel/plugin': 2.13.0(@parcel/core@2.13.0(@swc/helpers@0.5.15))
       '@parcel/source-map': 2.1.1
       '@parcel/utils': 2.13.0
+      browserslist: 4.24.2
+      lightningcss: 1.28.1
+      nullthrows: 1.1.1
+    transitivePeerDependencies:
+      - '@parcel/core'
+
+  '@parcel/transformer-css@2.13.2(@parcel/core@2.13.0(@swc/helpers@0.5.15))':
+    dependencies:
+      '@parcel/diagnostic': 2.13.2
+      '@parcel/plugin': 2.13.2(@parcel/core@2.13.0(@swc/helpers@0.5.15))
+      '@parcel/source-map': 2.1.1
+      '@parcel/utils': 2.13.2
       browserslist: 4.24.2
       lightningcss: 1.28.1
       nullthrows: 1.1.1
