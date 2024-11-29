@@ -46,8 +46,8 @@ importers:
         specifier: ^2.13.0
         version: 2.13.0(@parcel/core@2.13.0(@swc/helpers@0.5.15))
       '@parcel/packager-html':
-        specifier: ^2.13.0
-        version: 2.13.0(@parcel/core@2.13.0(@swc/helpers@0.5.15))
+        specifier: ^2.13.2
+        version: 2.13.2(@parcel/core@2.13.0(@swc/helpers@0.5.15))
       '@parcel/packager-js':
         specifier: ^2.13.2
         version: 2.13.2(@parcel/core@2.13.0(@swc/helpers@0.5.15))
@@ -799,6 +799,10 @@ packages:
   '@parcel/packager-html@2.13.0':
     resolution: {integrity: sha512-L/QrmiG3Zib3WnPy7kxC8njT4r8yvIpNveyv2NE8MRwwlsHf5GytTyK0euRPVLlnl4wCg3z15nrA3081E/OPjw==}
     engines: {node: '>= 16.0.0', parcel: ^2.13.0}
+
+  '@parcel/packager-html@2.13.2':
+    resolution: {integrity: sha512-RHoYR4sp5VZATQbKE2Rn7DrJKK7HnvUTKB0WPFSppWJbJrqrZgvVCqnBMI2FPkbCoznGdt20rQ1R6vs591fuxQ==}
+    engines: {node: '>= 16.0.0', parcel: ^2.13.2}
 
   '@parcel/packager-js@2.13.0':
     resolution: {integrity: sha512-aObsQMSTyZtyvozuAoIRH3Qr7Xqcp+7w8mZNbhxjQsReQoRcnWfoN02yJ658f9vy+JT5lQkgdkNN3k6YfI7lsw==}
@@ -3736,6 +3740,16 @@ snapshots:
       '@parcel/plugin': 2.13.0(@parcel/core@2.13.0(@swc/helpers@0.5.15))
       '@parcel/types': 2.13.0(@parcel/core@2.13.0(@swc/helpers@0.5.15))
       '@parcel/utils': 2.13.0
+      nullthrows: 1.1.1
+      posthtml: 0.16.6
+    transitivePeerDependencies:
+      - '@parcel/core'
+
+  '@parcel/packager-html@2.13.2(@parcel/core@2.13.0(@swc/helpers@0.5.15))':
+    dependencies:
+      '@parcel/plugin': 2.13.2(@parcel/core@2.13.0(@swc/helpers@0.5.15))
+      '@parcel/types': 2.13.2(@parcel/core@2.13.0(@swc/helpers@0.5.15))
+      '@parcel/utils': 2.13.2
       nullthrows: 1.1.1
       posthtml: 0.16.6
     transitivePeerDependencies:
