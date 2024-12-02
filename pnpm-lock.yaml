@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       alpinejs:
-        specifier: ^3.14.4
-        version: 3.14.4
+        specifier: ^3.14.6
+        version: 3.14.6
     devDependencies:
       '@eslint/eslintrc':
         specifier: ^3.2.0
@@ -1331,8 +1331,8 @@ packages:
   ajv@6.12.6:
     resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
 
-  alpinejs@3.14.4:
-    resolution: {integrity: sha512-fRRQaNO/CbY2jmMsu3xV38XmUlltxfoOZug7UwhX6Q6FcjloFcKdjzepeGhH2YC7LDbY6Nk1SMPOmnbZW2rOLA==}
+  alpinejs@3.14.6:
+    resolution: {integrity: sha512-8Abdd6u8oVurOChPqWCHS2Lr3C9g4+zb/kL1vNPykK/2dVkb3giTcpQ1wykzzWmX7wbTvWLnHX3I3CPPnnAMCA==}
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -4780,7 +4780,7 @@ snapshots:
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
 
-  alpinejs@3.14.4:
+  alpinejs@3.14.6:
     dependencies:
       '@vue/reactivity': 3.1.5
 
