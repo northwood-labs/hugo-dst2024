@@ -40,7 +40,7 @@
     "prod:parcel": "rm -f assets/js/index.js && parcel build --detailed-report=10 --no-cache --log-level=verbose && cp -vf ../../dist/assets/js/_core.js assets/js/index.js"
   },
   "dependencies": {
-    "alpinejs": "^3.14.4"
+    "alpinejs": "^3.14.6"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
