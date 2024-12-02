@@ -62,7 +62,7 @@
     "@parcel/resolver-glob": "^2.13.2",
     "@parcel/transformer-css": "^2.13.2",
     "@parcel/transformer-html": "^2.13.2",
-    "@parcel/transformer-js": "^2.13.0",
+    "@parcel/transformer-js": "^2.13.2",
     "@parcel/transformer-postcss": "^2.13.2",
     "@parcel/transformer-raw": "^2.13.2",
     "@parcel/transformer-vue": "^2.13.2",
