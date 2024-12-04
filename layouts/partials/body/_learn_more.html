@@ -1,0 +1,8 @@
+{{- if .Params.learn_more -}}
+<h2 id="learn-more">Learn more…</h2>
+<ul>
+  {{- range $link := .Params.learn_more -}}
+    <li><a href="{{- $link.url -}}">{{- $link.text -}}</a> {{ with $link.source }}({{- . -}}){{- end -}}</li>
+  {{- end -}}
+</ul>
+{{- end -}}

@@ -9,6 +9,14 @@
 {{ define "main" }}
 {{ $data := .Data }}
 
+{{ $taxonomy := .Section }}
+{{ if eq $taxonomy "" }}
+  {{ $taxonomy = substr .Path 1 }}
+{{ end }}
+
+{{ $dirFile := path.Split .Path }}
+{{ $leaf := $dirFile.File }}
+
 {{ if eq .IsHome true }}
 Load homepage.
 {{ else }}
@@ -19,6 +27,10 @@ Load homepage.
     "title" .Title
     "description" .Description
   ) -}}
+
+  {{/* GOOD/BETTER/BEST */}}
+
+  {{ partial "body/good-better-best.html" . }}
 
   {{/* TABLE HEADER */}}
 
@@ -37,6 +49,8 @@ Load homepage.
                 <li><a href="{{- .RelPermalink -}}">{{- .Title -}}</a></li>
               {{ end }}
 
+              {{ partial "body/backlink.html" . }}
+
             </div>
           </div>
         </div>
@@ -44,6 +58,10 @@ Load homepage.
       </div>
     </div>
   </div>
+
+  {{/* DOCUMENTATION GRID */}}
+
+  {{ partial "body/docs.html" . }}
 
 {{ end }}
 

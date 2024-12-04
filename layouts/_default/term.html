@@ -7,6 +7,16 @@
 {{ end }}
 
 {{ define "main" }}
+{{ $data := .Data }}
+
+{{ $taxonomy := .Section }}
+{{ if eq $taxonomy "" }}
+  {{ $taxonomy = substr .Path 1 }}
+{{ end }}
+
+{{ $dirFile := path.Split .Path }}
+{{ $leaf := $dirFile.File }}
+
   {{/* PAGE HEADER */}}
 
   {{- partial "body/_page_header.html" (dict
@@ -27,6 +37,12 @@
 
               {{- .Content -}}
 
+              {{ partial "body/_terms_reverse.html" (dict "context" . "leaf" $leaf) }}
+
+              {{ partial "body/_learn_more.html" . }}
+
+              {{ partial "body/backlink.html" . }}
+
             </div>
           </div>
         </div>
@@ -34,6 +50,7 @@
       </div>
     </div>
   </div>
+
 {{ end }}
 
 {{ define "footer" }}

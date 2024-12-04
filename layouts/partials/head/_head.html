@@ -3,7 +3,7 @@
   {{ partial "head/link_rel.html" . }}
   {{/* partial "head/oembed.html" . */}}
   {{ partial "head/robots.html" . }}
-  <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} •{{ end }}{{ .Site.Title }}{{ end }}</title>
+  <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} • {{ end }}{{ .Site.Title }}{{ end }}</title>
 
   {{ partial "head/stylesheets.html" . }}
   {{/* partial "head/favicons.html" . */}}

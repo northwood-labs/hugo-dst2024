@@ -13,7 +13,11 @@
     @apply m-0 mt-6 first:mt-0 py-1
   }
 
-  #tmpl-single ol {
+  #tmpl-single h3 {
+    @apply m-0 mt-4 mb-1 py-1
+  }
+
+  #tmpl-single ol, #tmpl-single ul {
     @apply my-1
   }
 

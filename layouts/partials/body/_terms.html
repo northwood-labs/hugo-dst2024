@@ -1,0 +1,10 @@
+{{- if .Params.vulns -}}
+<h2 id="known-vulnerabilities">Known vulnerabilities</h2>
+<ul>
+  {{- range $vuln := .Params.vulns -}}
+    {{- $v := $.Site.GetPage (printf "/vulns/%s" $vuln) -}}
+    <li><a href="{{- $v.Path -}}">{{- $v.LinkTitle -}}</a><br>
+      <span class="text-sm text-gray-600 dark:text-gray-400">{{- $v.Description -}}</span></li>
+  {{- end -}}
+</ul>
+{{- end -}}
