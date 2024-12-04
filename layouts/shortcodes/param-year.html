@@ -1,0 +1,8 @@
+{{- $type := (printf "%T" .Page.Params.year) -}}
+{{- if eq $type "int" -}}
+  {{- .Page.Params.year -}}
+{{- else if eq $type "string" -}}
+  {{- .Page.Params.year -}}
+{{- else -}}
+  {{- delimit .Page.Params.year ", " -}}
+{{- end -}}

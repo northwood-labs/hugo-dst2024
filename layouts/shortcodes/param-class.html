@@ -1,0 +1,6 @@
+{{- $type := (printf "%T" .Page.Params.class) -}}
+{{- if eq $type "string" -}}
+  {{- .Page.Params.class -}}
+{{- else -}}
+  {{- delimit .Page.Params.class ", " -}}
+{{- end -}}
