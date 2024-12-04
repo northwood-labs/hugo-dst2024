@@ -130,17 +130,17 @@ importers:
         specifier: ^1.1.1
         version: 1.1.1
       prettier:
-        specifier: ^3.4.1
-        version: 3.4.1
+        specifier: ^3.4.2
+        version: 3.4.2
       prettier-plugin-go-template:
         specifier: ^0.0.15
-        version: 0.0.15(prettier@3.4.1)
+        version: 0.0.15(prettier@3.4.2)
       prettier-plugin-organize-imports:
         specifier: ^4.1.0
-        version: 4.1.0(prettier@3.4.1)(typescript@5.7.2)
+        version: 4.1.0(prettier@3.4.2)(typescript@5.7.2)
       prettier-plugin-tailwindcss:
         specifier: ^0.6.9
-        version: 0.6.9(prettier-plugin-organize-imports@4.1.0(prettier@3.4.1)(typescript@5.7.2))(prettier@3.4.1)
+        version: 0.6.9(prettier-plugin-organize-imports@4.1.0(prettier@3.4.2)(typescript@5.7.2))(prettier@3.4.2)
       snyk:
         specifier: ^1.1294.2
         version: 1.1294.2
@@ -769,10 +769,6 @@ packages:
     engines: {node: '>= 16.0.0'}
     peerDependencies:
       '@parcel/core': ^2.13.2
-
-  '@parcel/packager-css@2.13.0':
-    resolution: {integrity: sha512-Zgf2lr0erqiCh4zqmGjnuo63Q6JhouXfYNVTXYWEf+vgCnSanuy7q4e17YC6SU4QmHdy6IF0zoAz1D+x23hsQA==}
-    engines: {node: '>= 16.0.0', parcel: ^2.13.0}
 
   '@parcel/packager-css@2.13.2':
     resolution: {integrity: sha512-agao71rIHU1lR776IMwxKvknl1/Yglhkr2qSY0JQC10PRQXHs7nj0GXd69p568W42A3/rkMWrXjWkGzhbAcPRg==}
@@ -2698,8 +2694,8 @@ packages:
       prettier-plugin-svelte:
         optional: true
 
-  prettier@3.4.1:
-    resolution: {integrity: sha512-G+YdqtITVZmOJje6QkXQWzl3fSfMxFwm1tjTyo9exhkmWSqC4Yhd1+lug++IlR2mvRVAxEDDWYkQdeSztajqgg==}
+  prettier@3.4.2:
+    resolution: {integrity: sha512-e9MewbtFo+Fevyuxn/4rrcDAaq0IYxPGLvObpQjiZBMAzB9IGmzlnG9RZy3FFas+eBMu2vA0CszMeduow5dIuQ==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -3615,17 +3611,6 @@ snapshots:
       semver: 7.6.3
     transitivePeerDependencies:
       - '@swc/helpers'
-
-  '@parcel/packager-css@2.13.0(@parcel/core@2.13.2(@swc/helpers@0.5.15))':
-    dependencies:
-      '@parcel/diagnostic': 2.13.0
-      '@parcel/plugin': 2.13.0(@parcel/core@2.13.2(@swc/helpers@0.5.15))
-      '@parcel/source-map': 2.1.1
-      '@parcel/utils': 2.13.0
-      lightningcss: 1.28.1
-      nullthrows: 1.1.1
-    transitivePeerDependencies:
-      - '@parcel/core'
 
   '@parcel/packager-css@2.13.2(@parcel/core@2.13.2(@swc/helpers@0.5.15))':
     dependencies:
@@ -5788,23 +5773,23 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier-plugin-go-template@0.0.15(prettier@3.4.1):
+  prettier-plugin-go-template@0.0.15(prettier@3.4.2):
     dependencies:
-      prettier: 3.4.1
+      prettier: 3.4.2
       ulid: 2.3.0
 
-  prettier-plugin-organize-imports@4.1.0(prettier@3.4.1)(typescript@5.7.2):
+  prettier-plugin-organize-imports@4.1.0(prettier@3.4.2)(typescript@5.7.2):
     dependencies:
-      prettier: 3.4.1
+      prettier: 3.4.2
       typescript: 5.7.2
 
-  prettier-plugin-tailwindcss@0.6.9(prettier-plugin-organize-imports@4.1.0(prettier@3.4.1)(typescript@5.7.2))(prettier@3.4.1):
+  prettier-plugin-tailwindcss@0.6.9(prettier-plugin-organize-imports@4.1.0(prettier@3.4.2)(typescript@5.7.2))(prettier@3.4.2):
     dependencies:
-      prettier: 3.4.1
+      prettier: 3.4.2
     optionalDependencies:
-      prettier-plugin-organize-imports: 4.1.0(prettier@3.4.1)(typescript@5.7.2)
+      prettier-plugin-organize-imports: 4.1.0(prettier@3.4.2)(typescript@5.7.2)
 
-  prettier@3.4.1: {}
+  prettier@3.4.2: {}
 
   pretty-hrtime@1.0.3: {}
 
