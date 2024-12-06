@@ -153,7 +153,7 @@
     {{ else if $typeIsPage }}
       <!-- https://github.com/gohugoio/hugo/blob/master/hugolib/page.go -->
       {{ $PageVarNames   := (slice "Name" "Title" "ResourceType" "Kind" "Section" "Draft" "Type" "Layout" "Permalink" "RelPermalink" "Data") }}
-      {{ $PageVarSymbols := (slice .Name  .Title  .ResourceType  .Kind  .Section  .Draft  .Type  .Layout  .Permalink  .RelPermalink  .Data ) }}
+      {{ $PageVarSymbols := (slice .Name  .Title  .ResourceType  .Kind  .Section  .Draft  .Type  .Layout  .RelPermalink  .RelPermalink  .Data ) }}
       <table class="debugprint">
         <tr>
           <th class="key">Page Variable</th>
@@ -166,22 +166,22 @@
           {{ printf "</td></tr>" | safeHTML }}
         {{ end }}
         {{ with .Next }}
-          {{ printf `<tr><td class="key">NextPage</td><td class="value"><a href="%s">%s</a></td></tr>` .Permalink .Title | safeHTML }}
+          {{ printf `<tr><td class="key">NextPage</td><td class="value"><a href="%s">%s</a></td></tr>` .RelPermalink .Title | safeHTML }}
         {{ else }}
           {{ printf `<tr><td class="key">NextPage</td><td class="value">None</td></tr>` | safeHTML }}
         {{ end }}
         {{ with .Prev }}
-          {{ printf `<tr><td class="key">PrevPage</td><td class="value"><a href="%s">%s</a></td></tr>` .Permalink .Title | safeHTML }}
+          {{ printf `<tr><td class="key">PrevPage</td><td class="value"><a href="%s">%s</a></td></tr>` .RelPermalink .Title | safeHTML }}
         {{ else }}
           {{ printf `<tr><td class="key">PrevPage</td><td class="value">None</td></tr>` | safeHTML }}
         {{ end }}
         {{ with .NextInSection }}
-          {{ printf `<tr><td class="key">NextInSection</td><td class="value"><a href="%s">%s</a></td></tr>` .Permalink .Title | safeHTML }}
+          {{ printf `<tr><td class="key">NextInSection</td><td class="value"><a href="%s">%s</a></td></tr>` .RelPermalink .Title | safeHTML }}
         {{ else }}
           {{ printf `<tr><td class="key">NextInSection</td><td class="value">None</td></tr>` | safeHTML }}
         {{ end }}
         {{ with .PrevInSection }}
-          {{ printf `<tr><td class="key">PrevInSection</td><td class="value"><a href="%s">%s</a></td></tr>` .Permalink .Title | safeHTML }}
+          {{ printf `<tr><td class="key">PrevInSection</td><td class="value"><a href="%s">%s</a></td></tr>` .RelPermalink .Title | safeHTML }}
         {{ else }}
           {{ printf `<tr><td class="key">PrevInSection</td><td class="value">None</td></tr>` | safeHTML }}
         {{ end }}
@@ -225,7 +225,7 @@
     {{ if $typeIsResource }}
       <!-- https://github.com/gohugoio/hugo/blob/master/resource/resource.go -->
       {{ $ResourceVarNames   := (slice "Name" "Title" "ResourceType" "Permalink" "RelPermalink" "Params") }}
-      {{ $ResourceVarSymbols := (slice .Name  .Title  .ResourceType  .Permalink  .RelPermalink  .Params ) }}
+      {{ $ResourceVarSymbols := (slice .Name  .Title  .ResourceType  .RelPermalink  .RelPermalink  .Params ) }}
       <!-- There's .AbsSourceFilename too, but it's not very useful. -->
       <table class="debugprint">
         <tr>

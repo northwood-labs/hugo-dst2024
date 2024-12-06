@@ -11,7 +11,7 @@
   {{- end -}}
 {{- end -}}
 
-{{- $permalink := .Permalink -}}
+{{- $permalink := .RelPermalink -}}
 {{- $title := .Title -}}
 
 {{- $media := "" -}}
@@ -23,7 +23,7 @@
   {{- $featured := cond (ne $featured nil) $featured ($images.GetMatch "{*cover*,*thumbnail*}") -}}
 
   {{- with $featured -}}
-    {{ $media = $featured.Permalink }}
+    {{ $media = $featured.RelPermalink }}
   {{- else -}}
     {{- with $.Site.Params.images -}}
       {{ $media = index . 0 | absURL }}

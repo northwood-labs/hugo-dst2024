@@ -1,6 +1,12 @@
-{{- $type := (printf "%T" .Page.Params.class) -}}
+{{- $root := . -}}
+{{- $type := (printf "%T" .Page.Params.classes) -}}
 {{- if eq $type "string" -}}
-  {{- .Page.Params.class -}}
+  <a href="{{- ref .Page.Params.classes -}}">{{- .Page.Params.classes -}}</a>
 {{- else -}}
-  {{- delimit .Page.Params.class ", " -}}
+  {{- $links := slice -}}
+  {{- range .Page.Params.classes -}}
+    {{- $link := printf "<a href=\"%s\">%s</a>" (urls.Ref $root . ) . -}}
+    {{- $links = $links | append $link -}}
+  {{- end -}}
+  {{- delimit $links ", " | safeHTML -}}
 {{- end -}}

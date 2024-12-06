@@ -1,0 +1,18 @@
+{{- $selfPath := .Path -}}
+{{- $pages := slice -}}
+{{- $sectionPages := where .Site.Pages "Section" .Section -}}
+
+{{- range $sectionPages -}}
+  {{- $page := .Site.GetPage .Path -}}
+  {{- if eq .Parent.Path $selfPath -}}
+    {{- $pages = $pages | append $page -}}
+  {{- end -}}
+{{- end -}}
+
+{{ if ge (len $pages) 1 }}
+  <ul>
+    {{ range $pages }}
+    <li><a href="{{- .RelPermalink -}}">{{- .Title -}}</a></li>
+    {{ end }}
+  </ul>
+{{ end }}

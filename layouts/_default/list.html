@@ -9,14 +9,6 @@
 {{ define "main" }}
 {{ $data := .Data }}
 
-{{ $taxonomy := .Section }}
-{{ if eq $taxonomy "" }}
-  {{ $taxonomy = substr .Path 1 }}
-{{ end }}
-
-{{ $dirFile := path.Split .Path }}
-{{ $leaf := $dirFile.File }}
-
 {{ if eq .IsHome true }}
 Load homepage.
 {{ else }}
@@ -44,10 +36,7 @@ Load homepage.
 
               {{- .Content -}}
 
-              {{ range .Pages }}
-                {{- $term := (index .Data) -}}
-                <li><a href="{{- .RelPermalink -}}">{{- .Title -}}</a></li>
-              {{ end }}
+              {{ partial "body/direct-children.html" . }}
 
               {{ partial "body/backlink.html" . }}
 

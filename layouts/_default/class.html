@@ -7,6 +7,7 @@
 {{ end }}
 
 {{ define "main" }}
+{{ $data := .Data }}
 
 {{ $taxonomy := .Section }}
 {{ if eq $taxonomy "" }}
@@ -14,7 +15,8 @@
 {{ end }}
 
 {{ $dirFile := path.Split .Path }}
-{{ $leaf := $dirFile.File }}
+{{ $leaf := $dirFile.File | urlize }}
+
   {{/* PAGE HEADER */}}
 
   {{- partial "body/_page_header.html" (dict
@@ -22,10 +24,6 @@
     "title" .Title
     "description" .Description
   ) -}}
-
-  {{/* GOOD/BETTER/BEST */}}
-
-  {{ partial "body/good-better-best.html" . }}
 
   {{/* TABLE HEADER */}}
 
@@ -40,7 +38,27 @@
 
               {{- .Content -}}
 
-              {{ partial "body/_terms.html" . }}
+              {{- $selfPath := .Path -}}
+              {{- $pages := slice -}}
+              {{- $sectionPages := where .Site.Pages "Section" "vulns" -}}
+
+              {{- range $sectionPages -}}
+                {{- $page := .Site.GetPage .Path -}}
+                {{- $classes := apply $page.Params.classes "urlize" "." -}}
+
+                {{- if in $classes $leaf -}}
+                  {{- $pages = $pages | append $page -}}
+                {{- end -}}
+              {{- end -}}
+
+              {{ if ge (len $pages) 1 }}
+                <h2 id="vulnerabilities-of-this-type">Vulnerabilities of this type</h2>
+                <ul>
+                  {{ range $pages }}
+                  <li><a href="{{- .RelPermalink -}}">{{- .Title -}}</a>{{- with .Description}} <span class="text-sm text-gray-600 dark:text-gray-400">— {{ . -}}</span>{{- end -}}</li>
+                  {{ end }}
+                </ul>
+              {{ end }}
 
               {{ partial "body/_learn_more.html" . }}
 
@@ -59,14 +77,14 @@
 
               {{ partial "body/children-of.html" (dict
                   "context" .
-                  "heading" "Learning topics"
-                  "childrenOf" "learning"
+                  "heading" "Vulnerabilites"
+                  "childrenOf" "vulns"
               )}}
 
               {{ partial "body/children-of.html" (dict
                   "context" .
-                  "heading" "Vulnerabilites"
-                  "childrenOf" "vulns"
+                  "heading" "Classes of vulns"
+                  "childrenOf" "classes"
               )}}
 
             </div>
@@ -76,10 +94,6 @@
     </div>
 
   </div>
-
-  {{/* DOCUMENTATION GRID */}}
-
-  {{ partial "body/docs.html" . }}
 
 {{ end }}
 

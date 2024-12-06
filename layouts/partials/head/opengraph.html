@@ -1,7 +1,7 @@
 <meta property="og:title" content="{{ .Title }}" />
 <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
-<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:url" content="{{ .RelPermalink }}" />
 <meta property="og:locale" content="{{- $.Site.Params.locale -}}" />
 
 {{- with .Params.images }}
@@ -50,7 +50,7 @@
 
   {{- with $featured -}}
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="{{ $featured.Permalink }}" />
+    <meta name="twitter:image" content="{{ $featured.RelPermalink }}" />
   {{- else -}}
     {{- with $.Site.Params.images -}}
       <meta name="twitter:card" content="summary_large_image" />
