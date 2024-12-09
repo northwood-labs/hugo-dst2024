@@ -1,13 +1,14 @@
 {{- $selfPath := $.context.Path -}}
 {{- $pages := slice -}}
-{{- $sectionPages := where $.context.Site.Pages "Section" $.childrenOf -}}
+{{- $sectionPages := where $.context.Site.Pages "Path" "like" (printf `(?i)^%s` $.childrenOf) -}}
 
 {{- if $sectionPages -}}
 <h2 class="not-prose font-semibold">{{- $.heading -}}</h2>
-<ul>
+<ul class="not-prose list-none">
 {{- range $sectionPages -}}
-  {{- if ne .Path ( printf "/%s" $.childrenOf ) -}}
-  <li><a href="{{- .RelPermalink -}}" class="text-sm" title="{{- .Description -}}">{{- .Title -}}</a></li>
+  {{- if ne .Path $.childrenOf -}}
+  <li><a href="{{- .RelPermalink -}}" class="text-sm block px-2 py-1 rounded-lg {{ if eq $selfPath .Path }}bg-indigo-600 text-white font-semibold{{ else }}hover:bg-indigo-400 hover:text-white{{ end }}" title="{{- .Description -}}">{{- .Title -}}</a>
+    <pre>{{- debug.Dump $selfPath -}}</pre><pre>{{- debug.Dump .Path -}}</pre></li>
   {{- end -}}
 {{- end -}}
 </ul>
