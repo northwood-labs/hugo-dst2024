@@ -7,8 +7,7 @@
 <ul class="not-prose list-none">
 {{- range $sectionPages -}}
   {{- if ne .Path $.childrenOf -}}
-  <li><a href="{{- .RelPermalink -}}" class="text-sm block px-2 py-1 rounded-lg {{ if eq $selfPath .Path }}bg-indigo-600 text-white font-semibold{{ else }}hover:bg-indigo-400 hover:text-white{{ end }}" title="{{- .Description -}}">{{- .Title -}}</a>
-    <pre>{{- debug.Dump $selfPath -}}</pre><pre>{{- debug.Dump .Path -}}</pre></li>
+  <li><a href="{{- .RelPermalink -}}" class="text-sm block px-2 py-1 rounded-lg {{ if eq $selfPath .Path }}bg-indigo-600 text-white font-semibold{{ else }}hover:bg-indigo-400 hover:text-white{{ end }}" title="{{- .Description -}}">{{- .Title -}}</a></li>
   {{- end -}}
 {{- end -}}
 </ul>

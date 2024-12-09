@@ -40,7 +40,7 @@
 
               {{- $selfPath := .Path -}}
               {{- $pages := slice -}}
-              {{- $sectionPages := where .Site.Pages "Section" "vulns" -}}
+              {{- $sectionPages := where .Site.Pages "Path" "like" `(?i)^/learning/vulns` -}}
 
               {{- range $sectionPages -}}
                 {{- $page := .Site.GetPage .Path -}}
@@ -74,6 +74,12 @@
         <div class="px-4 py-5 sm:p-6 mt-0 flow-root">
           <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div class="inline-block min-w-full py-2 align-middle px-4 sm:px-6 lg:px-8">
+
+              {{ partial "body/children-of.html" (dict
+                  "context" .
+                  "heading" "TLS cipher suites"
+                  "childrenOf" "/learning/tls"
+              )}}
 
               {{ partial "body/children-of.html" (dict
                   "context" .

@@ -59,14 +59,20 @@
 
               {{ partial "body/children-of.html" (dict
                   "context" .
-                  "heading" "Learning topics"
-                  "childrenOf" "learning"
+                  "heading" "TLS cipher suites"
+                  "childrenOf" "/learning/tls"
               )}}
 
               {{ partial "body/children-of.html" (dict
                   "context" .
                   "heading" "Vulnerabilites"
-                  "childrenOf" "vulns"
+                  "childrenOf" "/learning/vulns"
+              )}}
+
+              {{ partial "body/children-of.html" (dict
+                  "context" .
+                  "heading" "Classes of vulns"
+                  "childrenOf" "/learning/classes"
               )}}
 
             </div>

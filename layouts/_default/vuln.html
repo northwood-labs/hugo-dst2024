@@ -77,6 +77,12 @@
 
               {{ partial "body/children-of.html" (dict
                   "context" .
+                  "heading" "TLS cipher suites"
+                  "childrenOf" "/learning/tls"
+              )}}
+
+              {{ partial "body/children-of.html" (dict
+                  "context" .
                   "heading" "Vulnerabilites"
                   "childrenOf" "/learning/vulns"
               )}}
