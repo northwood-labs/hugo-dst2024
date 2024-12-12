@@ -64,7 +64,7 @@ jobs:
           ./scripts/generate-contributors.sh
 
       - name: Git commit if changed
-        run: |
+        run: |-
           git config user.name "Northwood Labs (Bot)"
           git config user.email "bot@northwood-labs.com"
 
