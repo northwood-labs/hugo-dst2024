@@ -13,8 +13,16 @@
     @apply m-0 mt-6 first:mt-0 py-1
   }
 
+  #tmpl-single #content h2 {
+    @apply m-0 mt-6 first:mt-0 py-2 my-2 block border-solid border-b-2 border-gray-200 dark:border-gray-700
+  }
+
   #tmpl-single h3 {
     @apply m-0 mt-4 mb-1 py-1
+  }
+
+  #tmpl-single #content h3 {
+    @apply underline underline-offset-2
   }
 
   #tmpl-single ol,
@@ -71,27 +79,27 @@
   }
 
   .ui-badge-success-wrap {
-    @apply inline-flex items-baseline rounded-full pl-2 pr-2.5 py-1 text-sm font-medium bg-green-100 text-green-700 md:mt-2 lg:mt-0 ring-1 ring-inset ring-green-200 mr-1;
+    @apply inline-flex items-baseline rounded-full pl-2 pr-2.5 py-1 text-sm font-medium bg-green-100 dark:bg-green-600 text-green-700 dark:text-green-100 md:mt-2 lg:mt-0 ring-1 ring-inset ring-green-200 dark:ring-green-700 mr-1;
   }
 
   .ui-badge-success-svg {
-    @apply -ml-1 mr-0.5 h-5 w-5 flex-shrink-0 self-center text-green-600 inline;
+    @apply -ml-1 mr-0.5 h-5 w-5 flex-shrink-0 self-center text-green-600 dark:text-green-100 inline;
   }
 
   .ui-badge-alert-wrap {
-    @apply inline-flex items-baseline rounded-full pl-2 pr-2.5 py-1 text-sm font-medium bg-orange-100 text-orange-600 md:mt-2 lg:mt-0 ring-1 ring-inset ring-orange-200 mr-1;
+    @apply inline-flex items-baseline rounded-full pl-2 pr-2.5 py-1 text-sm font-medium bg-orange-100 dark:bg-orange-500 text-orange-600 dark:text-orange-100 md:mt-2 lg:mt-0 ring-1 ring-inset ring-orange-200 dark:ring-orange-700 mr-1;
   }
 
   .ui-badge-alert-svg {
-    @apply -ml-1 mr-0.5 h-5 w-5 flex-shrink-0 self-center text-orange-400 inline;
+    @apply -ml-1 mr-0.5 h-5 w-5 flex-shrink-0 self-center text-orange-400 dark:text-orange-100 inline;
   }
 
   .ui-badge-error-wrap {
-    @apply inline-flex items-baseline rounded-full pl-2 pr-2.5 py-1 text-sm font-medium bg-red-100 text-red-600 md:mt-2 lg:mt-0 ring-1 ring-inset ring-red-200 mr-1;
+    @apply inline-flex items-baseline rounded-full pl-2 pr-2.5 py-1 text-sm font-medium bg-red-100 dark:bg-red-600 text-red-600 dark:text-red-100 md:mt-2 lg:mt-0 ring-1 ring-inset ring-red-200 dark:ring-red-700 mr-1;
   }
 
   .ui-badge-error-svg {
-    @apply -ml-1 mr-0.5 h-5 w-5 flex-shrink-0 self-center text-red-600 inline;
+    @apply -ml-1 mr-0.5 h-5 w-5 flex-shrink-0 self-center text-red-600 dark:text-red-100 inline;
   }
 
   .ui-badge-tip-wrap {

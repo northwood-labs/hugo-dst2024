@@ -7,11 +7,14 @@
 {{ end }}
 
 {{ define "main" }}
-{{ $data := .Data }}
 
-{{ if eq .IsHome true }}
-Load homepage.
-{{ else }}
+{{ $taxonomy := .Section }}
+{{ if eq $taxonomy "" }}
+  {{ $taxonomy = substr .Path 1 }}
+{{ end }}
+
+{{ $dirFile := path.Split .Path }}
+{{ $leaf := $dirFile.File }}
   {{/* PAGE HEADER */}}
 
   {{- partial "body/_page_header.html" (dict
@@ -27,12 +30,13 @@ Load homepage.
   {{/* TABLE HEADER */}}
 
   <div id="tmpl-single">
-    <div class="bg-white dark:bg-[#171e21] shadow ring-1 ring-gray-900/5 sm:rounded-xl md:col-span-2 mx-auto max-w-7xl">
-      <div class="px-4 py-5 sm:p-6">
 
-        <div class="mt-0 flow-root">
+    <div class="grid lg:grid-cols-4 md:grid-cols-1 gap-4 mx-auto max-w-7xl">
+      {{/* CONTENT */}}
+      <div class="lg:col-span-3 md:col-span-1 bg-white dark:bg-[#171e21] shadow ring-1 ring-gray-900/5 sm:rounded-xl">
+        <div class="px-4 py-5 sm:p-6 mt-0 flow-root">
           <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-            <div class="inline-block min-w-full py-2 align-middle px-4 sm:px-6 lg:px-8">
+            <div class="inline-block min-w-full py-2 align-middle px-4 sm:px-6 lg:px-8" id="content">
 
               {{- .Content -}}
 
@@ -43,16 +47,43 @@ Load homepage.
             </div>
           </div>
         </div>
+      </div>
 
+      {{/* SIDEBAR */}}
+      <div class="col-span-1 bg-white dark:bg-[#171e21] shadow ring-1 ring-gray-900/5 sm:rounded-xl">
+        <div class="px-4 py-5 sm:p-6 mt-0 flow-root">
+          <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+            <div class="inline-block min-w-full py-2 align-middle px-4 sm:px-6 lg:px-8" id="sidebar">
+
+              {{ partial "body/children-of.html" (dict
+                  "context" .
+                  "heading" "Cipher algorithms"
+                  "childrenOf" "/learning/tls"
+              )}}
+
+              {{ partial "body/children-of.html" (dict
+                  "context" .
+                  "heading" "Vulnerabilites"
+                  "childrenOf" "/learning/vulns"
+              )}}
+
+              {{ partial "body/children-of.html" (dict
+                  "context" .
+                  "heading" "Classes of vulns"
+                  "childrenOf" "/learning/classes"
+              )}}
+
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
   </div>
 
   {{/* DOCUMENTATION GRID */}}
 
   {{ partial "body/docs.html" . }}
-
-{{ end }}
 
 {{ end }}
 
