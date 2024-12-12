@@ -1,0 +1,10 @@
+{{- $kind := .Page.Params.tls_part -}}
+{{- if eq $kind "key-exchange" -}}
+  Key exchange
+{{- else if eq $kind "auth-sig" -}}
+  Authentication signature
+{{- else if eq $kind "encryption-algo" -}}
+  Encryption algorithm
+{{- else if eq $kind "hash" -}}
+  Hashing function
+{{- end -}}

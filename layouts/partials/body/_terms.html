@@ -2,8 +2,8 @@
 <h2 id="known-vulnerabilities">Known vulnerabilities</h2>
 <ul>
   {{- range $vuln := .Params.vulns -}}
-    {{- $v := $.Site.GetPage (printf "/learning/vulns/%s" $vuln) -}}
-    <li><a href="{{- $v.Path -}}">{{- $v.LinkTitle -}}</a><span class="text-sm text-gray-600 dark:text-gray-400"> &mdash; {{ $v.Description -}}</span></li>
+    {{- $v := $.Site.GetPage (printf "/vulns/%s" $vuln) -}}
+    <li><a href="/learning{{- $v.Path -}}">{{- $v.LinkTitle -}}</a><span class="text-sm text-gray-600 dark:text-gray-400"> &mdash; {{ $v.Description -}}</span></li>
   {{- end -}}
 </ul>
 {{- end -}}

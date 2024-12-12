@@ -1,5 +1,8 @@
-{{/* TOP NAVIGATION BAR */}}
+{{- $isApi := (eq .Section "api") -}}
+{{- $isScan := (eq .Section "scan") -}}
 {{- $isLearning := or (eq .Section "learning") (eq .Section "vulns") (eq .Section "classes") (eq .Section "years") -}}
+
+{{/* TOP NAVIGATION BAR */}}
 <nav class="bg-indigo-600">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="flex h-16 items-center justify-between">
@@ -10,10 +13,10 @@
         <div class="hidden md:block">
           <div class="ml-10 flex items-baseline space-x-4">
             {{/* Current: "bg-indigo-700 text-white", Default: "text-white hover:bg-indigo-500 hover:bg-opacity-75" */}}
-            <a href="/"         class="text-white rounded-md px-3 py-2 text-sm font-medium {{ if .IsHome            -}}bg-indigo-700{{ else -}}hover:bg-indigo-500 hover:bg-opacity-75{{ end -}}" {{ if .IsHome            -}}aria-current="page"{{ end -}}>Home</a>
-            <a href="/scan"     class="text-white rounded-md px-3 py-2 text-sm font-medium {{ if eq .Section "scan" -}}bg-indigo-700{{ else -}}hover:bg-indigo-500 hover:bg-opacity-75{{ end -}}" {{ if eq .Section "scan" -}}aria-current="page"{{ end -}}>Scan</a>
-            <a href="/api"      class="text-white rounded-md px-3 py-2 text-sm font-medium {{ if eq .Section "api"  -}}bg-indigo-700{{ else -}}hover:bg-indigo-500 hover:bg-opacity-75{{ end -}}" {{ if eq .Section "api"  -}}aria-current="page"{{ end -}}>API</a>
-            <a href="/learning" class="text-white rounded-md px-3 py-2 text-sm font-medium {{ if $isLearning        -}}bg-indigo-700{{ else -}}hover:bg-indigo-500 hover:bg-opacity-75{{ end -}}" {{ if $isLearning        -}}aria-current="page"{{ end -}}>Learning</a>
+            <a href="/"         class="text-white rounded-md px-3 py-2 text-sm font-medium {{ if .IsHome     -}}bg-indigo-700{{ else -}}hover:bg-indigo-500 hover:bg-opacity-75{{ end -}}" {{ if .IsHome     -}}aria-current="page"{{ end -}}>Home</a>
+            <a href="/scan"     class="text-white rounded-md px-3 py-2 text-sm font-medium {{ if $isScan     -}}bg-indigo-700{{ else -}}hover:bg-indigo-500 hover:bg-opacity-75{{ end -}}" {{ if $isScan     -}}aria-current="page"{{ end -}}>Scan</a>
+            <a href="/api"      class="text-white rounded-md px-3 py-2 text-sm font-medium {{ if $isApi      -}}bg-indigo-700{{ else -}}hover:bg-indigo-500 hover:bg-opacity-75{{ end -}}" {{ if $isApi      -}}aria-current="page"{{ end -}}>API</a>
+            <a href="/learning" class="text-white rounded-md px-3 py-2 text-sm font-medium {{ if $isLearning -}}bg-indigo-700{{ else -}}hover:bg-indigo-500 hover:bg-opacity-75{{ end -}}" {{ if $isLearning -}}aria-current="page"{{ end -}}>Learning</a>
           </div>
         </div>
       </div>
@@ -37,10 +40,10 @@
   <div class="md:hidden bg-indigo-600" id="mobile-menu">
     <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
       {{/* Current: "bg-indigo-700 text-white", Default: "text-white hover:bg-indigo-500 hover:bg-opacity-75" */}}
-      <a href="/"         class="text-white rounded-md px-3 py-2 text-sm font-medium {{ if .IsHome            -}}bg-indigo-700{{ else -}}hover:bg-indigo-500 hover:bg-opacity-75{{ end -}}" {{ if .IsHome            -}}aria-current="page"{{ end -}}>Home</a>
-      <a href="/scan"     class="text-white rounded-md px-3 py-2 text-sm font-medium {{ if eq .Section "scan" -}}bg-indigo-700{{ else -}}hover:bg-indigo-500 hover:bg-opacity-75{{ end -}}" {{ if eq .Section "scan" -}}aria-current="page"{{ end -}}>Scan</a>
-      <a href="/api"      class="text-white rounded-md px-3 py-2 text-sm font-medium {{ if eq .Section "api"  -}}bg-indigo-700{{ else -}}hover:bg-indigo-500 hover:bg-opacity-75{{ end -}}" {{ if eq .Section "api"  -}}aria-current="page"{{ end -}}>API</a>
-      <a href="/learning" class="text-white rounded-md px-3 py-2 text-sm font-medium {{ if $isLearning        -}}bg-indigo-700{{ else -}}hover:bg-indigo-500 hover:bg-opacity-75{{ end -}}" {{ if $isLearning        -}}aria-current="page"{{ end -}}>Learning</a>
+      <a href="/"         class="text-white rounded-md px-3 py-2 text-sm font-medium {{ if .IsHome     -}}bg-indigo-700{{ else -}}hover:bg-indigo-500 hover:bg-opacity-75{{ end -}}" {{ if .IsHome     -}}aria-current="page"{{ end -}}>Home</a>
+      <a href="/scan"     class="text-white rounded-md px-3 py-2 text-sm font-medium {{ if $isScan     -}}bg-indigo-700{{ else -}}hover:bg-indigo-500 hover:bg-opacity-75{{ end -}}" {{ if $isScan     -}}aria-current="page"{{ end -}}>Scan</a>
+      <a href="/api"      class="text-white rounded-md px-3 py-2 text-sm font-medium {{ if $isApi      -}}bg-indigo-700{{ else -}}hover:bg-indigo-500 hover:bg-opacity-75{{ end -}}" {{ if $isApi      -}}aria-current="page"{{ end -}}>API</a>
+      <a href="/learning" class="text-white rounded-md px-3 py-2 text-sm font-medium {{ if $isLearning -}}bg-indigo-700{{ else -}}hover:bg-indigo-500 hover:bg-opacity-75{{ end -}}" {{ if $isLearning -}}aria-current="page"{{ end -}}>Learning</a>
     </div>
   </div>
 

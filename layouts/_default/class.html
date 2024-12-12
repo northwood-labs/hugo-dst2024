@@ -40,7 +40,7 @@
 
               {{- $selfPath := .Path -}}
               {{- $pages := slice -}}
-              {{- $sectionPages := where .Site.Pages "Path" "like" `(?i)^/learning/vulns` -}}
+              {{- $sectionPages := where .Site.Pages "Path" "like" `(?i)^/vulns` -}}
 
               {{- range $sectionPages -}}
                 {{- $page := .Site.GetPage .Path -}}
@@ -84,13 +84,13 @@
               {{ partial "body/children-of.html" (dict
                   "context" .
                   "heading" "Vulnerabilites"
-                  "childrenOf" "/learning/vulns"
+                  "childrenOf" "/vulns"
               )}}
 
               {{ partial "body/children-of.html" (dict
                   "context" .
                   "heading" "Classes of vulns"
-                  "childrenOf" "/learning/classes"
+                  "childrenOf" "/classes"
               )}}
 
             </div>

@@ -13,6 +13,11 @@
   {{ $taxonomy = substr .Path 1 }}
 {{ end }}
 
+{{ $shouldHaveSidebar := false }}
+{{ if or (strings.Contains .Path "/learning/tls") ($.Params.sidebar) }}
+  {{ $shouldHaveSidebar = true }}
+{{ end }}
+
 {{ $dirFile := path.Split .Path }}
 {{ $leaf := $dirFile.File }}
   {{/* PAGE HEADER */}}
@@ -33,7 +38,7 @@
 
     <div class="grid lg:grid-cols-4 md:grid-cols-1 gap-4 mx-auto max-w-7xl">
       {{/* CONTENT */}}
-      <div class="lg:col-span-3 md:col-span-1 bg-white dark:bg-[#171e21] shadow ring-1 ring-gray-900/5 sm:rounded-xl">
+      <div class="{{ if $shouldHaveSidebar }}lg:col-span-3{{ else }}lg:col-span-4{{ end }} md:col-span-1 bg-white dark:bg-[#171e21] shadow ring-1 ring-gray-900/5 sm:rounded-xl">
         <div class="px-4 py-5 sm:p-6 mt-0 flow-root">
           <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div class="inline-block min-w-full py-2 align-middle px-4 sm:px-6 lg:px-8" id="content">
@@ -50,33 +55,43 @@
       </div>
 
       {{/* SIDEBAR */}}
+      {{ if $shouldHaveSidebar }}
       <div class="col-span-1 bg-white dark:bg-[#171e21] shadow ring-1 ring-gray-900/5 sm:rounded-xl">
         <div class="px-4 py-5 sm:p-6 mt-0 flow-root">
           <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div class="inline-block min-w-full py-2 align-middle px-4 sm:px-6 lg:px-8" id="sidebar">
 
-              {{ partial "body/children-of.html" (dict
-                  "context" .
-                  "heading" "Cipher algorithms"
-                  "childrenOf" "/learning/tls"
-              )}}
+              {{ if strings.Contains .Path "/learning/tls" }}
 
-              {{ partial "body/children-of.html" (dict
-                  "context" .
-                  "heading" "Vulnerabilites"
-                  "childrenOf" "/learning/vulns"
-              )}}
+                {{ partial "body/children-of.html" (dict
+                    "context" .
+                    "heading" "Cipher algorithms"
+                    "childrenOf" "/learning/tls"
+                )}}
 
-              {{ partial "body/children-of.html" (dict
-                  "context" .
-                  "heading" "Classes of vulns"
-                  "childrenOf" "/learning/classes"
-              )}}
+                {{ partial "body/children-of.html" (dict
+                    "context" .
+                    "heading" "Vulnerabilites"
+                    "childrenOf" "/vulns"
+                )}}
+
+                {{ partial "body/children-of.html" (dict
+                    "context" .
+                    "heading" "Classes of vulns"
+                    "childrenOf" "/classes"
+                )}}
+
+              {{- else if $.Params.sidebar -}}
+
+                {{ partial "body/docs-side.html" . }}
+
+              {{ end }}
 
             </div>
           </div>
         </div>
       </div>
+      {{ end }}
     </div>
 
   </div>
