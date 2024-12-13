@@ -5,6 +5,8 @@
   Authentication signature
 {{- else if eq $kind "encryption-algo" -}}
   Encryption algorithm
+{{- else if eq $kind "mode" -}}
+  Mode of operation
 {{- else if eq $kind "hash" -}}
   Hashing function
 {{- end -}}

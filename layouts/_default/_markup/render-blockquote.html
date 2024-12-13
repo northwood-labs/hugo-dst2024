@@ -1,0 +1,20 @@
+{{ $emoji := dict
+  "caution"   "heroicons/solid/exclamation-triangle"
+  "important" "heroicons/solid/check-circle"
+  "note"      "heroicons/solid/information-circle"
+  "tip"       "heroicons/solid/light-bulb"
+  "warning"   "heroicons/solid/exclamation-triangle"
+}}
+
+{{ if eq .Type "alert" }}
+  <blockquote class="alert alert-{{ .AlertType }}">
+    <p class="alert-heading">
+      {{ partial (printf "%s.svg" (index $emoji .AlertType)) (dict "class" "h-5 w-5 inline-block align-middle") }}{{ with .AlertTitle }}{{ . }}{{ else }}{{ .AlertType | upper }}{{ end }}
+    </p>
+    {{ .Text }}
+  </blockquote>
+{{ else }}
+  <blockquote>
+    {{ .Text }}
+  </blockquote>
+{{ end }}
