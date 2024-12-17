@@ -55,8 +55,8 @@ importers:
         specifier: ^2.13.3
         version: 2.13.3(@parcel/core@2.13.2(@swc/helpers@0.5.15))
       '@parcel/reporter-cli':
-        specifier: ^2.13.2
-        version: 2.13.2(@parcel/core@2.13.2(@swc/helpers@0.5.15))
+        specifier: ^2.13.3
+        version: 2.13.3(@parcel/core@2.13.2(@swc/helpers@0.5.15))
       '@parcel/resolver-default':
         specifier: ^2.13.3
         version: 2.13.3(@parcel/core@2.13.2(@swc/helpers@0.5.15))
@@ -851,6 +851,10 @@ packages:
   '@parcel/reporter-cli@2.13.2':
     resolution: {integrity: sha512-dIx4d/B+P+7n+lPCnjorM3ygHf3E/P3os3g6BjUe7gOlq/acTwtM0TNXNdRLcsw3K+RzA2VkHLnvdgjIJ18F5g==}
     engines: {node: '>= 16.0.0', parcel: ^2.13.2}
+
+  '@parcel/reporter-cli@2.13.3':
+    resolution: {integrity: sha512-EA5tKt/6bXYNMEavSs35qHlFdx6cZmRazlZxPBgxPePQYoouNAPMNLUOEQozaPhz9f5fvNDN7EHOFaAWcdO2LA==}
+    engines: {node: '>= 16.0.0', parcel: ^2.13.3}
 
   '@parcel/reporter-dev-server@2.13.2':
     resolution: {integrity: sha512-alWCPZiXEy5a1/mVnxQTJwJhWrnjaR+JOHQSu69eBGuWHqhXt2SCyKpczT08nm37GIxkhsiIaVR8sP4lVriApw==}
@@ -3873,6 +3877,16 @@ snapshots:
       '@parcel/plugin': 2.13.2(@parcel/core@2.13.2(@swc/helpers@0.5.15))
       '@parcel/types': 2.13.2(@parcel/core@2.13.2(@swc/helpers@0.5.15))
       '@parcel/utils': 2.13.2
+      chalk: 4.1.2
+      term-size: 2.2.1
+    transitivePeerDependencies:
+      - '@parcel/core'
+
+  '@parcel/reporter-cli@2.13.3(@parcel/core@2.13.2(@swc/helpers@0.5.15))':
+    dependencies:
+      '@parcel/plugin': 2.13.3(@parcel/core@2.13.2(@swc/helpers@0.5.15))
+      '@parcel/types': 2.13.3(@parcel/core@2.13.2(@swc/helpers@0.5.15))
+      '@parcel/utils': 2.13.3
       chalk: 4.1.2
       term-size: 2.2.1
     transitivePeerDependencies:
