@@ -37,8 +37,8 @@ importers:
         specifier: ^2.13.2
         version: 2.13.2(@parcel/core@2.13.2(@swc/helpers@0.5.15))
       '@parcel/optimizer-esbuild':
-        specifier: ^2.13.2
-        version: 2.13.2(@parcel/core@2.13.2(@swc/helpers@0.5.15))
+        specifier: ^2.13.3
+        version: 2.13.3(@parcel/core@2.13.2(@swc/helpers@0.5.15))
       '@parcel/optimizer-htmlnano':
         specifier: ^2.13.2
         version: 2.13.2(@parcel/core@2.13.2(@swc/helpers@0.5.15))(cssnano@7.0.6(postcss@8.4.49))(postcss@8.4.49)(svgo@3.3.2)(typescript@5.7.2)
@@ -760,9 +760,9 @@ packages:
     resolution: {integrity: sha512-V9JszWd1Lk3b/9hpfRp6U8lfOIaFPyevGFNTrT+CFMviuipCMWrkUgBa7wtFvqN1i8IJ5NV5FhIlc12qfBBBgA==}
     engines: {node: '>= 16.0.0', parcel: ^2.13.2}
 
-  '@parcel/optimizer-esbuild@2.13.2':
-    resolution: {integrity: sha512-zEn3US5CBcoePqEjSsPCM2AgrLVYot+c2ADazahWeXMgcyG+80JUpYEfWkpneOVHO9xgs6hIJ7TgFzH9kWJoog==}
-    engines: {node: '>= 10.0.0', parcel: ^2.13.2}
+  '@parcel/optimizer-esbuild@2.13.3':
+    resolution: {integrity: sha512-BT/f7jlcdtA5eJnqGUCwnIlW7HuKR2pSO1nK/esACkvNK1Yn3UO7KHdlqbz5WmoJFpdIEiGVnalrF6LnUlwDdw==}
+    engines: {node: '>= 10.0.0', parcel: ^2.13.3}
 
   '@parcel/optimizer-htmlnano@2.13.2':
     resolution: {integrity: sha512-/ikDOZrnO4tdt99h34OyqnNIhugdeqWgnpfqEQ6Xi7odIn8OIGfwAHBXoyKRyUU8YUTqLhzOhckbSMwFTPRmXg==}
@@ -3635,12 +3635,12 @@ snapshots:
     transitivePeerDependencies:
       - '@parcel/core'
 
-  '@parcel/optimizer-esbuild@2.13.2(@parcel/core@2.13.2(@swc/helpers@0.5.15))':
+  '@parcel/optimizer-esbuild@2.13.3(@parcel/core@2.13.2(@swc/helpers@0.5.15))':
     dependencies:
-      '@parcel/diagnostic': 2.13.2
-      '@parcel/plugin': 2.13.2(@parcel/core@2.13.2(@swc/helpers@0.5.15))
+      '@parcel/diagnostic': 2.13.3
+      '@parcel/plugin': 2.13.3(@parcel/core@2.13.2(@swc/helpers@0.5.15))
       '@parcel/source-map': 2.1.1
-      '@parcel/utils': 2.13.2
+      '@parcel/utils': 2.13.3
       esbuild: 0.24.0
       nullthrows: 1.1.1
     transitivePeerDependencies:
