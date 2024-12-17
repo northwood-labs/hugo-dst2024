@@ -58,8 +58,8 @@ importers:
         specifier: ^2.13.2
         version: 2.13.2(@parcel/core@2.13.2(@swc/helpers@0.5.15))
       '@parcel/resolver-default':
-        specifier: ^2.13.2
-        version: 2.13.2(@parcel/core@2.13.2(@swc/helpers@0.5.15))
+        specifier: ^2.13.3
+        version: 2.13.3(@parcel/core@2.13.2(@swc/helpers@0.5.15))
       '@parcel/resolver-glob':
         specifier: ^2.13.2
         version: 2.13.2(@parcel/core@2.13.2(@swc/helpers@0.5.15))
@@ -710,6 +710,12 @@ packages:
     peerDependencies:
       '@parcel/core': ^2.13.2
 
+  '@parcel/fs@2.13.3':
+    resolution: {integrity: sha512-+MPWAt0zr+TCDSlj1LvkORTjfB/BSffsE99A9AvScKytDSYYpY2s0t4vtV9unSh0FHMS2aBCZNJ4t7KL+DcPIg==}
+    engines: {node: '>= 16.0.0'}
+    peerDependencies:
+      '@parcel/core': ^2.13.3
+
   '@parcel/graph@3.3.2':
     resolution: {integrity: sha512-aAysQLRr8SOonSHWqdKHMJzfcrDFXKK8IYZEurlOzosiSgZXrAK7q8b8JcaJ4r84/jlvQYNYneNZeFQxKjHXkA==}
     engines: {node: '>= 16.0.0'}
@@ -736,6 +742,10 @@ packages:
 
   '@parcel/node-resolver-core@3.4.2':
     resolution: {integrity: sha512-SwnKLcZRG1VdB5JeM/Ax5VMWWh2QfXufmMQCKKx0/Kk41nUpie+aIZKj3LH6Z/fJsnKig/vXpeWoxGhmG523qg==}
+    engines: {node: '>= 16.0.0'}
+
+  '@parcel/node-resolver-core@3.4.3':
+    resolution: {integrity: sha512-IEnMks49egEic1ITBp59VQyHzkSQUXqpU9hOHwqN3KoSTdZ6rEgrXcS3pa6tdXay4NYGlcZ88kFCE8i/xYoVCg==}
     engines: {node: '>= 16.0.0'}
 
   '@parcel/optimizer-css@2.13.2':
@@ -829,6 +839,10 @@ packages:
   '@parcel/resolver-default@2.13.2':
     resolution: {integrity: sha512-8bMK04AxUmLF0+rsEl9u2LiboAsTjAemer9N/qMnWfsbxvEDunfTR39fwEEXpGAQV2sFb0ZPYtTxOc8bk5ygcQ==}
     engines: {node: '>= 16.0.0', parcel: ^2.13.2}
+
+  '@parcel/resolver-default@2.13.3':
+    resolution: {integrity: sha512-urBZuRALWT9pFMeWQ8JirchLmsQEyI9lrJptiwLbJWrwvmlwSUGkcstmPwoNRf/aAQjICB7ser/247Vny0pFxA==}
+    engines: {node: '>= 16.0.0', parcel: ^2.13.3}
 
   '@parcel/resolver-glob@2.13.2':
     resolution: {integrity: sha512-io7v2nbld4BZDWL5zd6La0Fqo/0BSQEshbUv03d5AjjBxYRwEUoTV7IpCY8+56SQ/uF/ygRK1M/nUMhrMQ98Fg==}
@@ -3520,6 +3534,16 @@ snapshots:
       '@parcel/watcher': 2.5.0
       '@parcel/workers': 2.13.2(@parcel/core@2.13.2(@swc/helpers@0.5.15))
 
+  '@parcel/fs@2.13.3(@parcel/core@2.13.2(@swc/helpers@0.5.15))':
+    dependencies:
+      '@parcel/core': 2.13.2(@swc/helpers@0.5.15)
+      '@parcel/feature-flags': 2.13.3
+      '@parcel/rust': 2.13.3
+      '@parcel/types-internal': 2.13.3
+      '@parcel/utils': 2.13.3
+      '@parcel/watcher': 2.5.0
+      '@parcel/workers': 2.13.3(@parcel/core@2.13.2(@swc/helpers@0.5.15))
+
   '@parcel/graph@3.3.2':
     dependencies:
       '@parcel/feature-flags': 2.13.2
@@ -3558,6 +3582,18 @@ snapshots:
       '@parcel/fs': 2.13.2(@parcel/core@2.13.2(@swc/helpers@0.5.15))
       '@parcel/rust': 2.13.2
       '@parcel/utils': 2.13.2
+      nullthrows: 1.1.1
+      semver: 7.6.3
+    transitivePeerDependencies:
+      - '@parcel/core'
+
+  '@parcel/node-resolver-core@3.4.3(@parcel/core@2.13.2(@swc/helpers@0.5.15))':
+    dependencies:
+      '@mischnic/json-sourcemap': 0.1.1
+      '@parcel/diagnostic': 2.13.3
+      '@parcel/fs': 2.13.3(@parcel/core@2.13.2(@swc/helpers@0.5.15))
+      '@parcel/rust': 2.13.3
+      '@parcel/utils': 2.13.3
       nullthrows: 1.1.1
       semver: 7.6.3
     transitivePeerDependencies:
@@ -3767,6 +3803,13 @@ snapshots:
     dependencies:
       '@parcel/node-resolver-core': 3.4.2(@parcel/core@2.13.2(@swc/helpers@0.5.15))
       '@parcel/plugin': 2.13.2(@parcel/core@2.13.2(@swc/helpers@0.5.15))
+    transitivePeerDependencies:
+      - '@parcel/core'
+
+  '@parcel/resolver-default@2.13.3(@parcel/core@2.13.2(@swc/helpers@0.5.15))':
+    dependencies:
+      '@parcel/node-resolver-core': 3.4.3(@parcel/core@2.13.2(@swc/helpers@0.5.15))
+      '@parcel/plugin': 2.13.3(@parcel/core@2.13.2(@swc/helpers@0.5.15))
     transitivePeerDependencies:
       - '@parcel/core'
 
