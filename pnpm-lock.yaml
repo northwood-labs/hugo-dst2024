@@ -67,8 +67,8 @@ importers:
         specifier: ^2.13.3
         version: 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
       '@parcel/transformer-html':
-        specifier: ^2.13.2
-        version: 2.13.2(@parcel/core@2.13.3(@swc/helpers@0.5.15))
+        specifier: ^2.13.3
+        version: 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
       '@parcel/transformer-js':
         specifier: ^2.13.2
         version: 2.13.2(@parcel/core@2.13.3(@swc/helpers@0.5.15))
