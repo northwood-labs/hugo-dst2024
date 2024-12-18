@@ -53,7 +53,7 @@
     "@parcel/optimizer-css": "^2.13.2",
     "@parcel/optimizer-esbuild": "^2.13.3",
     "@parcel/optimizer-htmlnano": "^2.13.3",
-    "@parcel/packager-css": "^2.13.2",
+    "@parcel/packager-css": "^2.13.3",
     "@parcel/packager-html": "^2.13.3",
     "@parcel/packager-js": "^2.13.3",
     "@parcel/packager-raw": "^2.13.3",
