@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US" class="h-full bg-gray-100 dark:bg-black">
+  {{/* https://www.srihash.org */}}
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js" integrity="sha256-tgDjY9mdlURNtUrL+y3v/smueSqpmgkim82geOW1VkM=" crossorigin="anonymous" defer></script>
   {{- block "head_element" . }}{{- end }}
   <body class="h-full">
     <div>
@@ -16,6 +18,7 @@
       {{- block "footer" . }}{{- end }}
     </div>
 
-    {{ $js := resources.Get "js/index.js" | fingerprint "sha256" }}<script src="{{/* $js.RelPermalink */}}" integrity="{{/* $js.Data.Integrity */}}"></script>
+    {{ $js := resources.Get "js/index.js" | fingerprint "sha256" }}<script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+    {{- block "scripts" . }}{{- end }}
   </body>
 </html>

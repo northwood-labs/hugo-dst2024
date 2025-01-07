@@ -12,7 +12,8 @@
   {{- partial "body/_page_header.html" (dict
     "ctx" .
     "title" .Title
-    "description" .Description
+    "domain" "loading…"
+    "date" "loading…"
   ) -}}
 
   {{/* TABLE HEADER */}}
@@ -27,32 +28,49 @@
             <div class="inline-block min-w-full py-2 align-middle px-4 sm:px-6 lg:px-8">
 
               <div class="px-4 sm:px-0">
-                <h3 class="text-xl font-semibold leading-6 text-gray-900">Connection security</h3>
-                <p class="mt-1 max-w-2xl text-sm leading-6 text-gray-500">TLS and cipher suites.</p>
+                <h2 class="text-2xl font-semibold leading-6 text-gray-900">HTTP versions<span id="http-spinner" class="inline-block ml-2">
+                  {{ partial "svg/spinner.svg" (dict "class" "animate-spin h-5 w-5 text-indigo-600 inline-block") }}
+                </span></h2>
+                {{/* <p class="mt-1 max-w-2xl text-sm leading-6 text-gray-500"></p> */}}
               </div>
 
-              <table class="min-w-full divide-y divide-gray-300">
-                <tbody class="divide-y divide-gray-200">
+              <div class="min-w-full py-4 hidden" id="http-versions">
+                <span class="ui-badge-neutral-wrap" x-ref="http11">
+                  {{ partial "heroicons/solid/question-mark-circle.svg" (dict "class" "ui-badge-neutral-svg") }}HTTP/1.1
+                </span>
 
-                  <tr class="border-t border-gray-200">
-                    <th colspan="2" scope="colgroup" class="bg-gray-100 py-2 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-3">Access</th>
+                <span class="ui-badge-neutral-wrap" x-ref="http2">
+                  {{ partial "heroicons/solid/question-mark-circle.svg" (dict "class" "ui-badge-neutral-svg") }}HTTP/2
+                </span>
+
+                <span class="ui-badge-neutral-wrap" x-ref="http3">
+                  {{ partial "heroicons/solid/question-mark-circle.svg" (dict "class" "ui-badge-neutral-svg") }}HTTP/3
+                </span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-4 md:col-span-1 bg-white dark:bg-[#171e21] shadow ring-1 ring-gray-900/5 sm:rounded-xl">
+        <div class="px-4 py-5 sm:p-6 mt-0 flow-root">
+          <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+            <div class="inline-block min-w-full py-2 align-middle px-4 sm:px-6 lg:px-8">
+
+              <div class="px-4 sm:px-0">
+                <h2 class="text-2xl font-semibold leading-6 text-gray-900">TLS and cipher suites</h2>
+                {{/* <p class="mt-1 max-w-2xl text-sm leading-6 text-gray-500"></p> */}}
+              </div>
+
+              <table class="min-w-full divide-y divide-gray-300 dark:divide-gray-700">
+                <tbody class="divide-y divide-gray-200 dark:divide-gray-800">
+
+                  <tr class="border-t border-gray-200 dark:border-gray-800">
+                    <th colspan="2" scope="colgroup" class="bg-gray-100 dark:bg-black py-2 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 dark:text-gray-100 sm:pl-3">Protocols</th>
                   </tr>
                   <tr>
-                    <td class="whitespace-nowrap py-2 pl-4 pr-3 text-sm text-gray-500 sm:pl-3">Server signature(s)</td>
-                    <td class="whitespace-nowrap px-2 py-2 text-sm font-medium text-gray-900"><a href="https://cloudflare.com" class="ui-link">Cloudflare</a>, <a href="https://fastly.com" class="ui-link">Fastly</a>, <a href="https://github.com" class="ui-link">GitHub</a></td>
-                  </tr>
-                  <tr>
-                    <td class="whitespace-nowrap py-2 pl-4 pr-3 text-sm text-gray-500 sm:pl-3">HTTP status</td>
-                    <td class="whitespace-nowrap px-2 py-2 text-sm font-medium text-gray-900">200</td>
-                  </tr>
-
-                  <tr class="h-8"></tr>
-
-                  <tr class="border-t border-gray-200">
-                    <th colspan="2" scope="colgroup" class="bg-gray-100 py-2 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-3">Protocols</th>
-                  </tr>
-                  <tr>
-                    <td class="whitespace-nowrap py-2 pl-4 pr-3 text-sm text-gray-500 sm:pl-3">Secure protocols (should be enabled)</td>
+                    <td class="whitespace-nowrap py-2 pl-4 pr-3 text-sm text-gray-500 dark:text-gray-100 sm:pl-3">Secure protocols (should be enabled)</td>
                     <td class="whitespace-nowrap px-2 py-2 text-sm font-medium text-gray-900">
                       <span class="ui-badge-success-wrap">
                         {{ partial "heroicons/solid/check-circle.svg" (dict "class" "ui-badge-success-svg") }}TLS 1.3: Enabled
@@ -63,7 +81,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td class="whitespace-nowrap py-2 pl-4 pr-3 text-sm text-gray-500 sm:pl-3">Insecure protocols (should be disabled)</td>
+                    <td class="whitespace-nowrap py-2 pl-4 pr-3 text-sm text-gray-500 dark:text-gray-100 sm:pl-3">Insecure protocols (should be disabled)</td>
                     <td class="px-2 py-2 text-sm font-medium text-gray-900" colspan="2">
                       <span class="ui-badge-success-wrap">
                         {{ partial "heroicons/solid/check-circle.svg" (dict "class" "ui-badge-success-svg") }}TLS 1.1: Disabled
@@ -82,11 +100,11 @@
 
                   <tr class="h-8"></tr>
 
-                  <tr class="border-t border-gray-200">
-                    <th colspan="2" scope="colgroup" class="bg-gray-100 py-2 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-3">TLS 1.3 cipher suites</th>
+                  <tr class="border-t border-gray-200 dark:border-gray-800">
+                    <th colspan="2" scope="colgroup" class="bg-gray-100 dark:bg-black py-2 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 dark:text-gray-100 sm:pl-3">TLS 1.3 cipher suites</th>
                   </tr>
                   <tr>
-                    <td class="whitespace-nowrap py-2 pl-4 pr-3 text-sm text-gray-500 sm:pl-3"><code>TLS_AES_128_GCM_SHA256</code></td>
+                    <td class="whitespace-nowrap py-2 pl-4 pr-3 text-sm text-gray-500 dark:text-gray-100 sm:pl-3"><code>TLS_AES_128_GCM_SHA256</code></td>
                     <td class="whitespace-nowrap px-2 py-2 text-sm font-medium text-gray-900">
                       <span class="ui-badge-success-wrap">
                         {{ partial "heroicons/solid/check-circle.svg" (dict "class" "ui-badge-success-svg") }}Forward Secrecy
@@ -94,38 +112,14 @@
                       <span class="ui-badge-success-wrap">
                         {{ partial "heroicons/solid/check-circle.svg" (dict "class" "ui-badge-success-svg") }}Strong
                       </span>
-                      <span title="Elliptic-curve Diffie-Hellman">ECDH</span> x25519 (eq. 3072 bits RSA)
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="whitespace-nowrap py-2 pl-4 pr-3 text-sm text-gray-500 sm:pl-3"><code>TLS_AES_256_GCM_SHA384</code></td>
-                    <td class="whitespace-nowrap px-2 py-2 text-sm font-medium text-gray-900">
-                      <span class="ui-badge-success-wrap">
-                        {{ partial "heroicons/solid/check-circle.svg" (dict "class" "ui-badge-success-svg") }}Forward Secrecy
-                      </span>
-                      <span class="ui-badge-success-wrap">
-                        {{ partial "heroicons/solid/check-circle.svg" (dict "class" "ui-badge-success-svg") }}Strong
-                      </span>
-                      <span title="Elliptic-curve Diffie-Hellman">ECDH</span> x25519 (eq. 3072 bits RSA)
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="whitespace-nowrap py-2 pl-4 pr-3 text-sm text-gray-500 sm:pl-3"><code>TLS_CHACHA20_POLY1305_SHA256</code></td>
-                    <td class="whitespace-nowrap px-2 py-2 text-sm font-medium text-gray-900">
-                      <span class="ui-badge-success-wrap">
-                        {{ partial "heroicons/solid/check-circle.svg" (dict "class" "ui-badge-success-svg") }}Forward Secrecy
-                      </span>
-                      <span class="ui-badge-success-wrap">
-                        {{ partial "heroicons/solid/check-circle.svg" (dict "class" "ui-badge-success-svg") }}Strong
-                      </span>
-                      <span title="Elliptic-curve Diffie-Hellman">ECDH</span> x25519 (eq. 3072 bits RSA)
+                      <span title="Elliptic-curve Diffie-Hellman">ECDH</span>
                     </td>
                   </tr>
 
                   <tr class="h-8"></tr>
 
-                  <tr class="border-t border-gray-200">
-                    <th colspan="2" scope="colgroup" class="bg-gray-100 py-2 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-3">TLS 1.2 cipher suites</th>
+                  <tr class="border-t border-gray-200 dark:border-gray-800">
+                    <th colspan="2" scope="colgroup" class="bg-gray-100 dark:bg-black py-2 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 dark:text-gray-100 sm:pl-3">TLS 1.2 cipher suites</th>
                   </tr>
                   <tr>
                     <td class="whitespace-nowrap py-2 pl-4 pr-3 text-sm text-gray-500 sm:pl-3"><code>TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256</code></td>
@@ -136,91 +130,7 @@
                       <span class="ui-badge-success-wrap">
                         {{ partial "heroicons/solid/check-circle.svg" (dict "class" "ui-badge-success-svg") }}Strong
                       </span>
-                      <span title="Elliptic-curve Diffie-Hellman">ECDH</span> x25519 (eq. 3072 bits RSA)
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="whitespace-nowrap py-2 pl-4 pr-3 text-sm text-gray-500 sm:pl-3"><code>OLD_TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256</code></td>
-                    <td class="whitespace-nowrap px-2 py-2 text-sm font-medium text-gray-900">
-                      <span class="ui-badge-success-wrap">
-                        {{ partial "heroicons/solid/check-circle.svg" (dict "class" "ui-badge-success-svg") }}Forward Secrecy
-                      </span>
-                      <span class="ui-badge-success-wrap">
-                        {{ partial "heroicons/solid/check-circle.svg" (dict "class" "ui-badge-success-svg") }}Strong
-                      </span>
-                      <span title="Elliptic-curve Diffie-Hellman">ECDH</span> x25519 (eq. 3072 bits RSA)
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="whitespace-nowrap py-2 pl-4 pr-3 text-sm text-gray-500 sm:pl-3"><code>TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256</code></td>
-                    <td class="whitespace-nowrap px-2 py-2 text-sm font-medium text-gray-900">
-                      <span class="ui-badge-success-wrap">
-                        {{ partial "heroicons/solid/check-circle.svg" (dict "class" "ui-badge-success-svg") }}Forward Secrecy
-                      </span>
-                      <span class="ui-badge-success-wrap">
-                        {{ partial "heroicons/solid/check-circle.svg" (dict "class" "ui-badge-success-svg") }}Strong
-                      </span>
-                      <span title="Elliptic-curve Diffie-Hellman">ECDH</span> x25519 (eq. 3072 bits RSA)
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="whitespace-nowrap py-2 pl-4 pr-3 text-sm text-gray-500 sm:pl-3"><code>TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA</code></td>
-                    <td class="whitespace-nowrap px-2 py-2 text-sm font-medium text-gray-900">
-                      <span class="ui-badge-success-wrap">
-                        {{ partial "heroicons/solid/check-circle.svg" (dict "class" "ui-badge-success-svg") }}Forward Secrecy
-                      </span>
-                      <span class="ui-badge-alert-wrap">
-                        {{ partial "heroicons/solid/exclamation-triangle.svg" (dict "class" "ui-badge-alert-svg") }}No AEAD
-                      </span>
-                      <span title="Elliptic-curve Diffie-Hellman">ECDH</span> x25519 (eq. 3072 bits RSA)
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="whitespace-nowrap py-2 pl-4 pr-3 text-sm text-gray-500 sm:pl-3"><code>TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384</code></td>
-                    <td class="whitespace-nowrap px-2 py-2 text-sm font-medium text-gray-900">
-                      <span class="ui-badge-success-wrap">
-                        {{ partial "heroicons/solid/check-circle.svg" (dict "class" "ui-badge-success-svg") }}Forward Secrecy
-                      </span>
-                      <span class="ui-badge-success-wrap">
-                        {{ partial "heroicons/solid/check-circle.svg" (dict "class" "ui-badge-success-svg") }}Strong
-                      </span>
-                      <span title="Elliptic-curve Diffie-Hellman">ECDH</span> x25519 (eq. 3072 bits RSA)
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="whitespace-nowrap py-2 pl-4 pr-3 text-sm text-gray-500 sm:pl-3"><code>TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA</code></td>
-                    <td class="whitespace-nowrap px-2 py-2 text-sm font-medium text-gray-900">
-                      <span class="ui-badge-success-wrap">
-                        {{ partial "heroicons/solid/check-circle.svg" (dict "class" "ui-badge-success-svg") }}Forward Secrecy
-                      </span>
-                      <span class="ui-badge-alert-wrap">
-                        {{ partial "heroicons/solid/exclamation-triangle.svg" (dict "class" "ui-badge-alert-svg") }}No AEAD
-                      </span>
-                      <span title="Elliptic-curve Diffie-Hellman">ECDH</span> x25519 (eq. 3072 bits RSA)
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="whitespace-nowrap py-2 pl-4 pr-3 text-sm text-gray-500 sm:pl-3"><code>TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256</code></td>
-                    <td class="whitespace-nowrap px-2 py-2 text-sm font-medium text-gray-900">
-                      <span class="ui-badge-success-wrap">
-                        {{ partial "heroicons/solid/check-circle.svg" (dict "class" "ui-badge-success-svg") }}Forward Secrecy
-                      </span>
-                      <span class="ui-badge-alert-wrap">
-                        {{ partial "heroicons/solid/exclamation-triangle.svg" (dict "class" "ui-badge-alert-svg") }}No AEAD
-                      </span>
-                      <span title="Elliptic-curve Diffie-Hellman">ECDH</span> x25519 (eq. 3072 bits RSA)
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="whitespace-nowrap py-2 pl-4 pr-3 text-sm text-gray-500 sm:pl-3"><code>TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384</code></td>
-                    <td class="whitespace-nowrap px-2 py-2 text-sm font-medium text-gray-900">
-                      <span class="ui-badge-success-wrap">
-                        {{ partial "heroicons/solid/check-circle.svg" (dict "class" "ui-badge-success-svg") }}Forward Secrecy
-                      </span>
-                      <span class="ui-badge-alert-wrap">
-                        {{ partial "heroicons/solid/exclamation-triangle.svg" (dict "class" "ui-badge-alert-svg") }}No AEAD
-                      </span>
-                      <span title="Elliptic-curve Diffie-Hellman">ECDH</span> x25519 (eq. 3072 bits RSA)
+                      <span title="Elliptic-curve Diffie-Hellman">ECDH</span>
                     </td>
                   </tr>
 
@@ -235,7 +145,33 @@
     </div>
 
   </div>
+{{ end }}
 
+{{ define "scripts" }}
+<script>
+  window.apiHostname = '{{ .Site.Params.apiHostname | safe.URL }}';
+
+  window.imageX = `{{ partial "heroicons/solid/x-circle.svg" (dict "class" "ui-badge-error-svg") }}`;
+  window.imageCheck = `{{ partial "heroicons/solid/check-circle.svg" (dict "class" "ui-badge-success-svg") }}`;
+
+  function init() {
+    if (location.search !== '') {
+      api('http', handleHTTP);
+
+      window.setTimeout(() => {
+        api('tls', handleTLS);
+      }, 1000);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      init();
+    });
+  } else {
+    init();
+  }
+</script>
 {{ end }}
 
 {{ define "footer" }}
