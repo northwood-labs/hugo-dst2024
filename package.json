@@ -77,7 +77,7 @@
     "parcel": "^2.13.3",
     "parcel-reporter-clean-dist": "^1.0.4",
     "parcel-resolver-ignore": "^2.2.0",
-    "postcss": "^8.4.49",
+    "postcss": "^8.5.1",
     "postcss-cli": "^11.0.0",
     "postcss-custom-properties": "^14.0.4",
     "postcss-import": "^16.1.0",
