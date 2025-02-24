@@ -3,7 +3,7 @@
     "postcss-import": {},
     "postcss-url": {},
     "postcss-custom-properties": {},
-    "tailwindcss": {},
+    "@tailwindcss/postcss": {},
     "cssnano": {}
   }
 }

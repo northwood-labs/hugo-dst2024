@@ -38,7 +38,7 @@
 
     <div class="grid lg:grid-cols-4 md:grid-cols-1 gap-4 mx-auto max-w-7xl">
       {{/* CONTENT */}}
-      <div class="{{ if $shouldHaveSidebar }}lg:col-span-3{{ else }}lg:col-span-4{{ end }} md:col-span-1 bg-white dark:bg-[#171e21] shadow ring-1 ring-gray-900/5 sm:rounded-xl">
+      <div class="{{ if $shouldHaveSidebar }}lg:col-span-3{{ else }}lg:col-span-4{{ end }} md:col-span-1 bg-white dark:bg-[#171e21] shadow-sm ring-1 ring-gray-900/5 sm:rounded-xl">
         <div class="px-4 py-5 sm:p-6 mt-0 flow-root">
           <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div class="inline-block min-w-full py-2 align-middle px-4 sm:px-6 lg:px-8" id="content">
@@ -58,7 +58,7 @@
 
       {{/* SIDEBAR */}}
       {{ if $shouldHaveSidebar }}
-      <div class="col-span-1 bg-white dark:bg-[#171e21] shadow ring-1 ring-gray-900/5 sm:rounded-xl">
+      <div class="col-span-1 bg-white dark:bg-[#171e21] shadow-sm ring-1 ring-gray-900/5 sm:rounded-xl">
         <div class="px-4 py-5 sm:p-6 mt-0 flow-root">
           <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div class="inline-block min-w-full py-2 align-middle px-4 sm:px-6 lg:px-8" id="sidebar">

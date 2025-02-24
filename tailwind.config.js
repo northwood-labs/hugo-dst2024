@@ -10,7 +10,6 @@ module.exports = {
   darkMode: 'media',
   plugins: [
     require('@tailwindcss/forms')({strategy: 'class'}),
-    require('@tailwindcss/typography'),
   ],
   safelist: [
     'ui-badge-tip-wrap',
