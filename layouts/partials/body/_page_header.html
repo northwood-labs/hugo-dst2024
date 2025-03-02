@@ -7,19 +7,19 @@
 
       {{ with .domain }}
       <div class="mt-2 flex items-center text-sm text-gray-500 dark:text-gray-400">
-        {{ partial "heroicons/solid/at-symbol.svg" (dict "class" "mr-1.5 h-5 w-5 shrink-0 text-gray-400") }} <code id="h_domain">{{ . }}</code>
+        {{ partial "heroicons/solid/at-symbol.svg" (dict "class" "mr-1.5 h-5 w-5 shrink-0 text-gray-400") }} <code id="h-domain">{{ . }}</code>
       </div>
       {{ end }}
 
       {{ with .ip }}
       <div class="mt-2 flex items-center text-sm text-gray-500 dark:text-gray-400">
-        {{ partial "bootstrap/hdd-network.svg" (dict "class" "mr-1.5 h-5 w-5 shrink-0 text-gray-400") }} <code id="h_ip">{{ . }}</code>
+        {{ partial "bootstrap/hdd-network.svg" (dict "class" "mr-1.5 h-5 w-5 shrink-0 text-gray-400") }} <code id="h-ip">{{ . }}</code>
       </div>
       {{ end }}
 
       {{ with .date }}
       <div class="mt-2 flex items-center text-sm text-gray-500 dark:text-gray-400">
-        {{ partial "heroicons/solid/calendar.svg" (dict "class" "mr-1.5 h-5 w-5 shrink-0 text-gray-400") }} <span x-text="getDate">{{ . }}</span>
+        {{ partial "heroicons/solid/calendar.svg" (dict "class" "mr-1.5 h-5 w-5 shrink-0 text-gray-400") }} <span id="h-date">{{ . }}</span>
       </div>
       {{ end }}
 
