@@ -17,7 +17,6 @@
       {{- block "footer" . }}{{- end }}
     </div>
 
-    {{ $js := resources.Get "js/index.js" | fingerprint "sha256" }}<script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
     {{- block "scripts" . }}{{- end }}
   </body>
 </html>

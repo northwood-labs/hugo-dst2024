@@ -1,46 +1,20 @@
+import { render } from 'preact';
+import Domain from './Domain';
+import HttpScore from './HttpScore';
+import Timestamp from './Timestamp';
+import TlsScore from './TlsScore';
+
 (() => {
   const $ = e => document.getElementById(e),
     $q = s => document.querySelector(s);
 
-  window.getDate = function() {
-    const now = new Date();
+  render(<Domain />, $("h-domain"));
+  render(<Timestamp />, $("h-date"));
+  render(<HttpScore />, $("http-versions"));
+  render(<TlsScore />, $("tls-versions"));
 
-    return now.toLocaleTimeString(undefined, { // eslint-disable-line no-undefined
-      weekday: 'long',
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    });
-  };
-
-  window.api = function(endpoint, cb) {
-    const apiEndpoint = `${ window.apiHostname }/${ endpoint }${ location.search }`;
-
-    try {
-      window.fetch(apiEndpoint, {
-        method: 'GET',
-        mode: 'cors',
-        referrerPolicy: 'no-referrer',
-      }).then((response) => {
-        response.json().then((data) => {
-          cb(data);
-        });
-      });
-    } catch (error) {
-      window.console.error(error.message);
-    }
-  };
-
-  async function apiAsync(endpoint) {
-    const apiEndpoint = `${ window.apiHostname }/${ endpoint }${ location.search }`,
-      response = await window.fetch(apiEndpoint, {
-        method: 'GET',
-        mode: 'cors',
-        referrerPolicy: 'no-referrer',
-      });
-
-    return response.json();
-  };
-
-  window.apiAsync = apiAsync;
+  const $url = $('url');
+  $url.value = (new URLSearchParams(location.search)).get('url');
+  $url.onfocus = $url.select();
+  $url.focus();
 })();

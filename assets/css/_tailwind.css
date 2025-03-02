@@ -166,12 +166,11 @@
 }
 
 @utility ui-tbody-td-key {
-  @apply py-2 pl-4 text-sm text-gray-500 dark:text-gray-100 sm:w-2/5 block sm:table-cell;
-  @apply py-2 pl-4 text-sm text-gray-500 dark:text-gray-100 sm:w-2/5 block sm:table-cell;
+  @apply py-2 text-sm text-gray-500 dark:text-gray-100 sm:w-2/5 block sm:table-cell;
 }
 
 @utility ui-tbody-td-value {
-  @apply py-2 px-2 text-sm font-medium text-gray-900 sm:w-3/5 block sm:table-cell;
+  @apply py-2 text-sm font-medium text-gray-900 sm:w-3/5 block sm:table-cell;
 }
 
 /***************************** REUSABLE UI ELEMENTS *****************************/

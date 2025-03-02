@@ -11,10 +11,10 @@ module.exports = {
   plugins: [
     require('@tailwindcss/forms')({strategy: 'class'}),
   ],
-  safelist: [
-    'ui-badge-tip-wrap',
-    'ui-badge-indigo-wrap',
-  ],
+  // safelist: [
+  //   'ui-badge-tip-wrap',
+  //   'ui-badge-indigo-wrap',
+  // ],
   theme: {
     extend: {
       animation: {
