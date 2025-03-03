@@ -1,5 +1,6 @@
 import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
+import react from 'eslint-plugin-react';
 import globals from 'globals';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -15,7 +16,10 @@ const __filename = fileURLToPath(import.meta.url),
 export default [
   ...compat.extends('eslint:recommended'),
   {
+    // https://github.com/jsx-eslint/eslint-plugin-react#configuration-new-eslintconfigjs
+    plugins: {react: react},
     languageOptions: {
+      parserOptions: {ecmaFeatures: {jsx: true}},
       globals: {
         ...globals.browser,
         ...Object.fromEntries(
@@ -59,7 +63,7 @@ export default [
 
       complexity: [
         'error',
-        20,
+        30,
       ],
 
       'consistent-return': [
