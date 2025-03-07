@@ -1,4 +1,4 @@
-import {render} from 'preact';
+import { render } from 'preact';
 import Domain from './Domain';
 import HttpScore from './HttpScore';
 import Timestamp from './Timestamp';
