@@ -1,0 +1,4 @@
+{{- $prelude := .Get 0 -}}
+{{- $path := .Get 0 -}}
+{{- $data := partial $path | encoding.Base64Encode -}}
+{{- $prelude -}}{{- $data -}}

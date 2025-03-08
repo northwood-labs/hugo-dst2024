@@ -1,0 +1,56 @@
+      _                           _              _
+     | |                         | |            | |
+   __| | _____   _____  ___  ___ | |_ ___   ___ | |___
+  / _` |/ _ \ \ / / __|/ _ \/ __|| __/ _ \ / _ \| / __|
+ | (_| |  __/\ V /\__ \  __/ (__ | || (_) | (_) | \__ \
+  \__,_|\___| \_/ |___/\___|\___(_)__\___/ \___/|_|___/
+
+
+Security and reliability tooling — by software engineers, for software engineers.
+devsec.tools is a product of Northwood Labs, LLC.
+
+Its code is open-sourced under the terms of the Apache-2.0 license.
+https://opensource.org/license/apache-2-0
+
+You can find its source code on GitHub.
+https://github.com/orgs/northwood-labs/repositories?q=devsec-tools+sort%3Aname-asc
+
+────────────────────────────────────────────────────────────────────────────────
+
+Team:
+
+  RYAN PARMAN, Founder and CEO
+  Site: https://ryanparman.com
+  Mastodon: https://techhub.social/@skyzyx
+  Bluesky: https://bsky.app/profile/skyzyx.bsky.social
+  Threads: https://www.threads.net/@skyzyx
+  Location: Colorado, United States
+
+────────────────────────────────────────────────────────────────────────────────
+
+Contacts:
+
+  General questions
+  https://github.com/orgs/northwood-labs/discussions/categories/general
+
+  General questions that should not be public
+  hello@northwood-labs.com
+
+  DevSecTools API
+  api@devsec.tools
+
+  Social Media
+  social@northwood-labs.com
+
+  Signing keys
+  signing-keys@northwood-labs.com
+
+  Legal stuff
+  legal@northwood-labs.com
+
+  Software licensing
+  license@northwood-labs.com
+
+  Responsible disclosure of security issues
+  https://github.com/northwood-labs/devsec-tools/security/policy
+  security-issues@northwood-labs.com

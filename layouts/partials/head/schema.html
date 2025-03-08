@@ -5,10 +5,8 @@
     <meta itemprop="dateModified" content="{{ .Date.Format $ISO8601 | safeHTML }}" />
   {{ end }}
 
-
   <meta itemprop="image" content="{{- $.Site.Params.defaultOembed -}}" />
   <meta itemprop="keywords" content="{{ delimit $.Site.Params.metaTags "," }}" />
 {{ end -}}
 
-
-<meta itemprop="copyrightYear" content="2023-{{ now.Format "2006" | safeHTML }}" />
+<meta itemprop="copyrightYear" content="2024-{{ now.Format "2006" | safeHTML }}" />

@@ -1,8 +1,8 @@
 {{/* @NOTE: For Production make sure you add `HUGO_ENV="production"` before your build command */}}
 {{- if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
-  <meta name="robots" content="index,follow" />
-  <meta name="googlebot" content="index,follow" />
+  <meta name="robots" content="index,follow,noarchive" />
+  <meta name="robots" content="max-image-preview:standard">
+  <meta name="robots" content="max-video-preview:-1">
 {{- else -}}
   <meta name="robots" content="noindex,nofollow" />
-  <meta name="googlebot" content="noindex, nofollow" />
 {{ end -}}

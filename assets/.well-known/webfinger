@@ -1,0 +1,28 @@
+{
+  "subject": "acct:hello@northwood-labs.com",
+  "aliases": [
+    "https://techhub.social/@northwoodlabs",
+    "https://techhub.social/users/northwoodlabs"
+  ],
+  "links": [
+    {
+      "rel": "http://webfinger.net/rel/profile-page",
+      "type": "text/html",
+      "href": "https://techhub.social/@northwoodlabs"
+    },
+    {
+      "rel": "self",
+      "type": "application/activity+json",
+      "href": "https://techhub.social/users/northwoodlabs"
+    },
+    {
+      "rel": "http://ostatus.org/schema/1.0/subscribe",
+      "template": "https://techhub.social/authorize_interaction?uri={uri}"
+    },
+    {
+      "rel": "http://webfinger.net/rel/avatar",
+      "type": "image/png",
+      "href": "https://files.techhub.social/accounts/avatars/113/501/451/825/882/155/original/59401a524647ce48.png"
+    }
+  ]
+}

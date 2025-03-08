@@ -1,12 +1,12 @@
 <head prefix="og:http://ogp.me/ns# fb:http://ogp.me/ns/fb# book:https://ogp.me/ns/book# profile:http://ogp.me/ns/profile# website:http://ogp.me/ns/website#">
+  <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} • {{ end }}{{ .Site.Params.title }}{{ end }}</title>
   {{ partial "head/meta_toplevel.html" . }}
   {{ partial "head/link_rel.html" . }}
   {{/* partial "head/oembed.html" . */}}
   {{ partial "head/robots.html" . }}
-  <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} • {{ end }}{{ .Site.Title }}{{ end }}</title>
 
   {{ partial "head/stylesheets.html" . }}
-  {{/* partial "head/favicons.html" . */}}
+  {{ partial "head/favicons.html" . }}
   {{ partial "head/copyright_mobile.html" . }}
   {{ partial "head/google_news.html" . }}
   {{ partial "head/gravatar.html" . }}
