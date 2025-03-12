@@ -107,13 +107,13 @@ importers:
         version: 4.0.12
       '@tailwindcss/forms':
         specifier: ^0.5.10
-        version: 0.5.10(tailwindcss@4.0.12)
+        version: 0.5.10(tailwindcss@4.0.13)
       '@tailwindcss/postcss':
         specifier: ^4.0.12
         version: 4.0.12
       '@tailwindcss/typography':
         specifier: ^0.5.16
-        version: 0.5.16(tailwindcss@4.0.12)
+        version: 0.5.16(tailwindcss@4.0.13)
       '@testing-library/preact':
         specifier: ^3.2.4
         version: 3.2.4(preact@10.26.4)
@@ -190,8 +190,8 @@ importers:
         specifier: ^3.3.2
         version: 3.3.2
       tailwindcss:
-        specifier: ^4.0.12
-        version: 4.0.12
+        specifier: ^4.0.13
+        version: 4.0.13
 
 packages:
 
@@ -3896,6 +3896,9 @@ packages:
   tailwindcss@4.0.12:
     resolution: {integrity: sha512-bT0hJo91FtncsAMSsMzUkoo/iEU0Xs5xgFgVC9XmdM9bw5MhZuQFjPNl6wxAE0SiQF/YTZJa+PndGWYSDtuxAg==}
 
+  tailwindcss@4.0.13:
+    resolution: {integrity: sha512-gbvFrB0fOsTv/OugXWi2PtflJ4S6/ctu6Mmn3bCftmLY/6xRsQVEJPgIIpABwpZ52DpONkCA3bEj5b54MHxF2Q==}
+
   tapable@2.2.1:
     resolution: {integrity: sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ==}
     engines: {node: '>=6'}
@@ -5530,10 +5533,10 @@ snapshots:
       picocolors: 1.1.1
       tailwindcss: 4.0.12
 
-  '@tailwindcss/forms@0.5.10(tailwindcss@4.0.12)':
+  '@tailwindcss/forms@0.5.10(tailwindcss@4.0.13)':
     dependencies:
       mini-svg-data-uri: 1.4.4
-      tailwindcss: 4.0.12
+      tailwindcss: 4.0.13
 
   '@tailwindcss/node@4.0.12':
     dependencies:
@@ -5597,13 +5600,13 @@ snapshots:
       postcss: 8.5.3
       tailwindcss: 4.0.12
 
-  '@tailwindcss/typography@0.5.16(tailwindcss@4.0.12)':
+  '@tailwindcss/typography@0.5.16(tailwindcss@4.0.13)':
     dependencies:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
-      tailwindcss: 4.0.12
+      tailwindcss: 4.0.13
 
   '@testing-library/dom@8.20.1':
     dependencies:
@@ -8435,6 +8438,8 @@ snapshots:
       picocolors: 1.1.1
 
   tailwindcss@4.0.12: {}
+
+  tailwindcss@4.0.13: {}
 
   tapable@2.2.1: {}
 
