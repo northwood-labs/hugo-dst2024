@@ -64,8 +64,8 @@ importers:
         specifier: ^2.13.3
         version: 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
       '@parcel/reporter-cli':
-        specifier: ^2.13.3
-        version: 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
+        specifier: ^2.14.0
+        version: 2.14.0(@parcel/core@2.13.3(@swc/helpers@0.5.15))
       '@parcel/resolver-default':
         specifier: ^2.13.3
         version: 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
@@ -1134,6 +1134,10 @@ packages:
   '@parcel/reporter-cli@2.13.3':
     resolution: {integrity: sha512-EA5tKt/6bXYNMEavSs35qHlFdx6cZmRazlZxPBgxPePQYoouNAPMNLUOEQozaPhz9f5fvNDN7EHOFaAWcdO2LA==}
     engines: {node: '>= 16.0.0', parcel: ^2.13.3}
+
+  '@parcel/reporter-cli@2.14.0':
+    resolution: {integrity: sha512-WMrzOb7ZAuCWm7TR5gZ9Ey+TAXdlFcJVu4DjNK7AB8zIG8U6vYr0//JWRuduMGSbDSiKvLa7+9MVobwughkk0A==}
+    engines: {node: '>= 16.0.0', parcel: ^2.14.0}
 
   '@parcel/reporter-dev-server@2.13.3':
     resolution: {integrity: sha512-ZNeFp6AOIQFv7mZIv2P5O188dnZHNg0ymeDVcakfZomwhpSva2dFNS3AnvWo4eyWBlUxkmQO8BtaxeWTs7jAuA==}
@@ -5299,6 +5303,17 @@ snapshots:
       term-size: 2.2.1
     transitivePeerDependencies:
       - '@parcel/core'
+
+  '@parcel/reporter-cli@2.14.0(@parcel/core@2.13.3(@swc/helpers@0.5.15))':
+    dependencies:
+      '@parcel/plugin': 2.14.0(@parcel/core@2.13.3(@swc/helpers@0.5.15))
+      '@parcel/types': 2.14.0(@parcel/core@2.13.3(@swc/helpers@0.5.15))
+      '@parcel/utils': 2.14.0
+      chalk: 4.1.2
+      term-size: 2.2.1
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
 
   '@parcel/reporter-dev-server@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))':
     dependencies:
