@@ -70,8 +70,8 @@ importers:
         specifier: ^2.13.3
         version: 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
       '@parcel/resolver-glob':
-        specifier: ^2.13.3
-        version: 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
+        specifier: ^2.14.0
+        version: 2.14.0(@parcel/core@2.13.3(@swc/helpers@0.5.15))
       '@parcel/transformer-css':
         specifier: ^2.14.0
         version: 2.14.0(@parcel/core@2.13.3(@swc/helpers@0.5.15))
@@ -1009,6 +1009,12 @@ packages:
     peerDependencies:
       '@parcel/core': ^2.13.3
 
+  '@parcel/fs@2.14.0':
+    resolution: {integrity: sha512-r10003gyxvW1Qn/LTiNS2oCNPv22nLUW7dJIEEZb/0v8UNbzrZhVB7s+iBok2CNBg3AFPMi6W10jqnvkjOBB9Q==}
+    engines: {node: '>= 16.0.0'}
+    peerDependencies:
+      '@parcel/core': ^2.14.0
+
   '@parcel/graph@3.3.3':
     resolution: {integrity: sha512-pxs4GauEdvCN8nRd6wG3st6LvpHske3GfqGwUSR0P0X0pBPI1/NicvXz6xzp3rgb9gPWfbKXeI/2IOTfIxxVfg==}
     engines: {node: '>= 16.0.0'}
@@ -1039,6 +1045,10 @@ packages:
 
   '@parcel/node-resolver-core@3.4.3':
     resolution: {integrity: sha512-IEnMks49egEic1ITBp59VQyHzkSQUXqpU9hOHwqN3KoSTdZ6rEgrXcS3pa6tdXay4NYGlcZ88kFCE8i/xYoVCg==}
+    engines: {node: '>= 16.0.0'}
+
+  '@parcel/node-resolver-core@3.5.0':
+    resolution: {integrity: sha512-c6yWNh24k8F5+rgp1ekCKJ5Ftb8D4kl+1CzuWr6Yghcg+0hytwhNORrUsH4cp9yI/st13FcHUZTzRlllF47RQg==}
     engines: {node: '>= 16.0.0'}
 
   '@parcel/optimizer-css@2.13.3':
@@ -1133,9 +1143,9 @@ packages:
     resolution: {integrity: sha512-urBZuRALWT9pFMeWQ8JirchLmsQEyI9lrJptiwLbJWrwvmlwSUGkcstmPwoNRf/aAQjICB7ser/247Vny0pFxA==}
     engines: {node: '>= 16.0.0', parcel: ^2.13.3}
 
-  '@parcel/resolver-glob@2.13.3':
-    resolution: {integrity: sha512-aAtwlEGwuagJPLMaRqwmtXZXMQCwgBEwdfRk85znxaqVlyy349JkZfg11m1jDI4t2al04vlIL6bYthj4AHEstw==}
-    engines: {node: '>= 16.0.0', parcel: ^2.13.3}
+  '@parcel/resolver-glob@2.14.0':
+    resolution: {integrity: sha512-L7kfSGo7JhwqSb+KN5BakMuOfy6BHiYtEwpElsEUG/HpagAR1IxJfprS44XBvhCtdCxhPjRRcgbHiZbPC0jY9Q==}
+    engines: {node: '>= 16.0.0', parcel: ^2.14.0}
 
   '@parcel/runtime-browser-hmr@2.13.3':
     resolution: {integrity: sha512-EAcPojQFUNUGUrDk66cu3ySPO0NXRVS5CKPd4QrxPCVVbGzde4koKu8krC/TaGsoyUqhie8HMnS70qBP0GFfcQ==}
@@ -5010,6 +5020,18 @@ snapshots:
       '@parcel/watcher': 2.5.1
       '@parcel/workers': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
 
+  '@parcel/fs@2.14.0(@parcel/core@2.13.3(@swc/helpers@0.5.15))':
+    dependencies:
+      '@parcel/core': 2.13.3(@swc/helpers@0.5.15)
+      '@parcel/feature-flags': 2.14.0
+      '@parcel/rust': 2.14.0
+      '@parcel/types-internal': 2.14.0
+      '@parcel/utils': 2.14.0
+      '@parcel/watcher': 2.5.1
+      '@parcel/workers': 2.14.0(@parcel/core@2.13.3(@swc/helpers@0.5.15))
+    transitivePeerDependencies:
+      - napi-wasm
+
   '@parcel/graph@3.3.3':
     dependencies:
       '@parcel/feature-flags': 2.13.3
@@ -5057,6 +5079,19 @@ snapshots:
       semver: 7.7.1
     transitivePeerDependencies:
       - '@parcel/core'
+
+  '@parcel/node-resolver-core@3.5.0(@parcel/core@2.13.3(@swc/helpers@0.5.15))':
+    dependencies:
+      '@mischnic/json-sourcemap': 0.1.1
+      '@parcel/diagnostic': 2.14.0
+      '@parcel/fs': 2.14.0(@parcel/core@2.13.3(@swc/helpers@0.5.15))
+      '@parcel/rust': 2.14.0
+      '@parcel/utils': 2.14.0
+      nullthrows: 1.1.1
+      semver: 7.7.1
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
 
   '@parcel/optimizer-css@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))':
     dependencies:
@@ -5272,15 +5307,16 @@ snapshots:
     transitivePeerDependencies:
       - '@parcel/core'
 
-  '@parcel/resolver-glob@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))':
+  '@parcel/resolver-glob@2.14.0(@parcel/core@2.13.3(@swc/helpers@0.5.15))':
     dependencies:
-      '@parcel/diagnostic': 2.13.3
-      '@parcel/node-resolver-core': 3.4.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
-      '@parcel/plugin': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
-      '@parcel/utils': 2.13.3
+      '@parcel/diagnostic': 2.14.0
+      '@parcel/node-resolver-core': 3.5.0(@parcel/core@2.13.3(@swc/helpers@0.5.15))
+      '@parcel/plugin': 2.14.0(@parcel/core@2.13.3(@swc/helpers@0.5.15))
+      '@parcel/utils': 2.14.0
       nullthrows: 1.1.1
     transitivePeerDependencies:
       - '@parcel/core'
+      - napi-wasm
 
   '@parcel/runtime-browser-hmr@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))':
     dependencies:
