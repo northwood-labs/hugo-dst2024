@@ -34,8 +34,8 @@ importers:
         specifier: ^2.13.3
         version: 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
       '@parcel/compressor-gzip':
-        specifier: ^2.13.3
-        version: 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
+        specifier: ^2.14.0
+        version: 2.14.0(@parcel/core@2.13.3(@swc/helpers@0.5.15))
       '@parcel/config-default':
         specifier: ^2.13.3
         version: 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))(@swc/helpers@0.5.15)(cssnano@7.0.6(postcss@8.5.3))(postcss@8.5.3)(svgo@3.3.2)(typescript@5.7.2)
@@ -958,9 +958,9 @@ packages:
     resolution: {integrity: sha512-+onbbqPGcWfzxUkmOwOihnZuO5jNkB0+YgqDprTpXI/vJ/0+qvfk1UCdzVGbSCmKAehWS4LT+LbvBbTF3l3uJw==}
     engines: {node: '>= 16.0.0', parcel: ^2.13.3}
 
-  '@parcel/compressor-gzip@2.13.3':
-    resolution: {integrity: sha512-5zn2mEjY6On/bsV7uequZNLgUH0ORnxHHTCPAXR2z9y/9NDYZ23l3dbye0xQdRn0dXeyk8VehYQUEm1y9nUpoA==}
-    engines: {node: '>= 16.0.0', parcel: ^2.13.3}
+  '@parcel/compressor-gzip@2.14.0':
+    resolution: {integrity: sha512-nUZvRyyNhIZ+SrgavHbhsjT9ctoGu6C6amZFyLH9plAYl/tGEF4AMc5rXJVXFvF3xki0U6XI5OrUtKsJPdkn9w==}
+    engines: {node: '>= 16.0.0', parcel: ^2.14.0}
 
   '@parcel/compressor-raw@2.13.3':
     resolution: {integrity: sha512-C6vjDlgTLjYc358i7LA/dqcL0XDQZ1IHXFw6hBaHHOfxPKW2T4bzUI6RURyToEK9Q1X7+ggDKqgdLxwp4veCFg==}
@@ -4875,11 +4875,12 @@ snapshots:
     transitivePeerDependencies:
       - '@parcel/core'
 
-  '@parcel/compressor-gzip@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))':
+  '@parcel/compressor-gzip@2.14.0(@parcel/core@2.13.3(@swc/helpers@0.5.15))':
     dependencies:
-      '@parcel/plugin': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
+      '@parcel/plugin': 2.14.0(@parcel/core@2.13.3(@swc/helpers@0.5.15))
     transitivePeerDependencies:
       - '@parcel/core'
+      - napi-wasm
 
   '@parcel/compressor-raw@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))':
     dependencies:
