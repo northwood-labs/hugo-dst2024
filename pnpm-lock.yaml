@@ -82,8 +82,8 @@ importers:
         specifier: ^2.13.3
         version: 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
       '@parcel/transformer-postcss':
-        specifier: ^2.14.0
-        version: 2.14.0(@parcel/core@2.13.3(@swc/helpers@0.5.15))
+        specifier: ^2.14.1
+        version: 2.14.1(@parcel/core@2.13.3(@swc/helpers@0.5.15))
       '@parcel/transformer-raw':
         specifier: ^2.14.0
         version: 2.14.0(@parcel/core@2.13.3(@swc/helpers@0.5.15))
@@ -1273,9 +1273,9 @@ packages:
     resolution: {integrity: sha512-AIiWpU0QSFBrPcYIqAnhqB8RGE6yHFznnxztfg1t2zMSOnK3xoU6xqYKv8H/MduShGGrC3qVOeDfM8MUwzL3cw==}
     engines: {node: '>= 16.0.0', parcel: ^2.13.3}
 
-  '@parcel/transformer-postcss@2.14.0':
-    resolution: {integrity: sha512-ih5SM7YB8evNe/zOPauWrh8TGIYw4qdyKrMNLiSN5mGeWkBkVWaf8bM68GeLWtOkToFxue885Mjz+aJ2M7Jyuw==}
-    engines: {node: '>= 16.0.0', parcel: ^2.14.0}
+  '@parcel/transformer-postcss@2.14.1':
+    resolution: {integrity: sha512-YkRLmglO9gGq4Ds/KFFPTU2VpsKcMPi5gcPp1ZGlvJQYXjjMXhHksDsOgDWiPXA+aQuTk9truO93QPdOol3U3w==}
+    engines: {node: '>= 16.0.0', parcel: ^2.14.1}
 
   '@parcel/transformer-posthtml@2.13.3':
     resolution: {integrity: sha512-5GSLyccpHASwFAu3uJ83gDIBSvfsGdVmhJvy0Vxe+K1Fklk2ibhvvtUHMhB7mg6SPHC+R9jsNc3ZqY04ZLeGjw==}
@@ -5621,12 +5621,12 @@ snapshots:
     transitivePeerDependencies:
       - '@parcel/core'
 
-  '@parcel/transformer-postcss@2.14.0(@parcel/core@2.13.3(@swc/helpers@0.5.15))':
+  '@parcel/transformer-postcss@2.14.1(@parcel/core@2.13.3(@swc/helpers@0.5.15))':
     dependencies:
-      '@parcel/diagnostic': 2.14.0
-      '@parcel/plugin': 2.14.0(@parcel/core@2.13.3(@swc/helpers@0.5.15))
-      '@parcel/rust': 2.14.0
-      '@parcel/utils': 2.14.0
+      '@parcel/diagnostic': 2.14.1
+      '@parcel/plugin': 2.14.1(@parcel/core@2.13.3(@swc/helpers@0.5.15))
+      '@parcel/rust': 2.14.1
+      '@parcel/utils': 2.14.1
       clone: 2.1.2
       nullthrows: 1.1.1
       postcss-value-parser: 4.2.0
