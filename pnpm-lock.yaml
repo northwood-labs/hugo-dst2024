@@ -43,8 +43,8 @@ importers:
         specifier: ^2.13.3
         version: 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
       '@parcel/optimizer-css':
-        specifier: ^2.13.3
-        version: 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
+        specifier: ^2.14.1
+        version: 2.14.1(@parcel/core@2.13.3(@swc/helpers@0.5.15))
       '@parcel/optimizer-esbuild':
         specifier: ^2.14.0
         version: 2.14.0(@parcel/core@2.13.3(@swc/helpers@0.5.15))
@@ -1078,6 +1078,10 @@ packages:
   '@parcel/optimizer-css@2.13.3':
     resolution: {integrity: sha512-A8o9IVCv919vhv69SkLmyW2WjJR5WZgcMqV6L1uiGF8i8z18myrMhrp2JuSHx29PRT9uNyzNC4Xrd4StYjIhJg==}
     engines: {node: '>= 16.0.0', parcel: ^2.13.3}
+
+  '@parcel/optimizer-css@2.14.1':
+    resolution: {integrity: sha512-uerUTAFzer23wDD+CeGDxRSpGJrpYNU7RIkvUKrWBaYPG2ztKQ4NWWZ7/xVL8EdU6TilRec6xihrONFUE1Pa3Q==}
+    engines: {node: '>= 16.0.0', parcel: ^2.14.1}
 
   '@parcel/optimizer-esbuild@2.14.0':
     resolution: {integrity: sha512-0+09L5hY5l2xOBGbkQvWQIP+83cCeU4SCSzCmIs48QZh69xB5zP//eLYfpcUCRG+RPFfnlLvaOQ/n2cCrZMhfg==}
@@ -5196,10 +5200,23 @@ snapshots:
       '@parcel/source-map': 2.1.1
       '@parcel/utils': 2.13.3
       browserslist: 4.24.4
-      lightningcss: 1.29.2
+      lightningcss: 1.29.3
       nullthrows: 1.1.1
     transitivePeerDependencies:
       - '@parcel/core'
+
+  '@parcel/optimizer-css@2.14.1(@parcel/core@2.13.3(@swc/helpers@0.5.15))':
+    dependencies:
+      '@parcel/diagnostic': 2.14.1
+      '@parcel/plugin': 2.14.1(@parcel/core@2.13.3(@swc/helpers@0.5.15))
+      '@parcel/source-map': 2.1.1
+      '@parcel/utils': 2.14.1
+      browserslist: 4.24.4
+      lightningcss: 1.29.3
+      nullthrows: 1.1.1
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
 
   '@parcel/optimizer-esbuild@2.14.0(@parcel/core@2.13.3(@swc/helpers@0.5.15))':
     dependencies:
