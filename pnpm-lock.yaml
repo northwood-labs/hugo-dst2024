@@ -58,8 +58,8 @@ importers:
         specifier: ^2.14.1
         version: 2.14.1(@parcel/core@2.14.1(@swc/helpers@0.5.15))
       '@parcel/packager-js':
-        specifier: ^2.13.3
-        version: 2.13.3(@parcel/core@2.14.1(@swc/helpers@0.5.15))
+        specifier: ^2.14.1
+        version: 2.14.1(@parcel/core@2.14.1(@swc/helpers@0.5.15))
       '@parcel/packager-raw':
         specifier: ^2.14.1
         version: 2.14.1(@parcel/core@2.14.1(@swc/helpers@0.5.15))
