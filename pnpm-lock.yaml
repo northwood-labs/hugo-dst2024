@@ -79,8 +79,8 @@ importers:
         specifier: ^2.14.1
         version: 2.14.1(@parcel/core@2.14.1(@swc/helpers@0.5.15))
       '@parcel/transformer-js':
-        specifier: ^2.13.3
-        version: 2.13.3(@parcel/core@2.14.1(@swc/helpers@0.5.15))
+        specifier: ^2.14.1
+        version: 2.14.1(@parcel/core@2.14.1(@swc/helpers@0.5.15))
       '@parcel/transformer-postcss':
         specifier: ^2.14.1
         version: 2.14.1(@parcel/core@2.14.1(@swc/helpers@0.5.15))
@@ -2375,8 +2375,8 @@ packages:
     resolution: {integrity: sha512-KIN/nDJBQRcXw0MLVhZE9iQHmG68qAVIBg9CqmUYjmQIhgij9U5MFvrqkUL5FbtyyzZuOeOt0zdeRe4UY7ct+A==}
     engines: {node: '>= 0.4'}
 
-  electron-to-chromium@1.5.120:
-    resolution: {integrity: sha512-oTUp3gfX1gZI+xfD2djr2rzQdHCwHzPQrrK0CD7WpTdF0nPdQ/INcRVjWgLdCT4a9W3jFObR9DAfsuyFQnI8CQ==}
+  electron-to-chromium@1.5.122:
+    resolution: {integrity: sha512-EML1wnwkY5MFh/xUnCvY8FrhUuKzdYhowuZExZOfwJo+Zu9OsNCI23Cgl5y7awy7HrUHSwB1Z8pZX5TI34lsUg==}
 
   emittery@0.13.1:
     resolution: {integrity: sha512-DeWwawk6r5yR9jFgnDKYt4sLS0LmHJJi3ZOnb5/JdbYwj3nW+FxQnHIjhBKz8YLC7oRNPVM9NQ47I3CVx34eqQ==}
@@ -6997,7 +6997,7 @@ snapshots:
   browserslist@4.24.4:
     dependencies:
       caniuse-lite: 1.0.30001706
-      electron-to-chromium: 1.5.120
+      electron-to-chromium: 1.5.122
       node-releases: 2.0.19
       update-browserslist-db: 1.1.3(browserslist@4.24.4)
 
@@ -7345,7 +7345,7 @@ snapshots:
       es-errors: 1.3.0
       gopd: 1.2.0
 
-  electron-to-chromium@1.5.120: {}
+  electron-to-chromium@1.5.122: {}
 
   emittery@0.13.1: {}
 
