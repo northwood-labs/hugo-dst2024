@@ -79,7 +79,7 @@
     "@parcel/packager-html": "^2.14.1",
     "@parcel/packager-js": "^2.13.3",
     "@parcel/packager-raw": "^2.14.1",
-    "@parcel/reporter-cli": "^2.14.0",
+    "@parcel/reporter-cli": "^2.14.1",
     "@parcel/resolver-default": "^2.14.1",
     "@parcel/resolver-glob": "^2.14.1",
     "@parcel/transformer-css": "^2.14.1",
