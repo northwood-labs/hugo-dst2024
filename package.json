@@ -77,7 +77,7 @@
     "@parcel/optimizer-htmlnano": "^2.14.1",
     "@parcel/packager-css": "^2.14.1",
     "@parcel/packager-html": "^2.14.1",
-    "@parcel/packager-js": "^2.13.3",
+    "@parcel/packager-js": "^2.14.1",
     "@parcel/packager-raw": "^2.14.1",
     "@parcel/reporter-cli": "^2.14.0",
     "@parcel/resolver-default": "^2.14.1",
