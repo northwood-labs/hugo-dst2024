@@ -1,2 +1,3 @@
-{{- $width := .Get 0 -}}
-{{- partial "svg/nwl/dst-reversible.svg" (dict "width" $width) -}}
+{{- $width := .Get "width" -}}
+{{- $class := .Get "class" -}}
+{{- partial "svg/nwl/dst-reversible.svg" (dict "width" $width "class" $class) -}}
