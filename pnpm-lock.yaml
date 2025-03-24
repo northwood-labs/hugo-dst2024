@@ -70,8 +70,8 @@ importers:
         specifier: ^2.14.1
         version: 2.14.1(@parcel/core@2.14.2(@swc/helpers@0.5.15))
       '@parcel/resolver-glob':
-        specifier: ^2.14.1
-        version: 2.14.1(@parcel/core@2.14.2(@swc/helpers@0.5.15))
+        specifier: ^2.14.2
+        version: 2.14.2(@parcel/core@2.14.2(@swc/helpers@0.5.15))
       '@parcel/transformer-css':
         specifier: ^2.14.1
         version: 2.14.1(@parcel/core@2.14.2(@swc/helpers@0.5.15))
@@ -1250,9 +1250,9 @@ packages:
     resolution: {integrity: sha512-HzfLPK1NUiYYuONlfPg92Lv0qfF/GtZ3hP4bNI7L0MI/eOtkd19dDxXADVaF4bTY2WmnL7m2pfaZ0+Y1+zuJuw==}
     engines: {node: '>= 16.0.0', parcel: ^2.14.2}
 
-  '@parcel/resolver-glob@2.14.1':
-    resolution: {integrity: sha512-a7AOEaEH12zIEW10cSlHgCdWAhv86UA0XTyAqRi7IfU1h3A2UGcalHDGwGDtp0+D4TGqZhLXbU3vBz56wmJTNQ==}
-    engines: {node: '>= 16.0.0', parcel: ^2.14.1}
+  '@parcel/resolver-glob@2.14.2':
+    resolution: {integrity: sha512-eOsOKd3mUjypOETKBOSLGjGeFxcrXqz62hbm09+l1iS/5XBL+PTzdoga/OroF1HfnXCERT1saIJnTna8jQS7Kw==}
+    engines: {node: '>= 16.0.0', parcel: ^2.14.2}
 
   '@parcel/runtime-browser-hmr@2.14.1':
     resolution: {integrity: sha512-HaRMkQhco25klcTKfqL6UD6iRA+fkurbbsEo0p7gSfy9d6HoPS7Sml7duddQ13eBIcbTdYVclucwSIuoDFNoqQ==}
@@ -5842,12 +5842,12 @@ snapshots:
       - '@parcel/core'
       - napi-wasm
 
-  '@parcel/resolver-glob@2.14.1(@parcel/core@2.14.2(@swc/helpers@0.5.15))':
+  '@parcel/resolver-glob@2.14.2(@parcel/core@2.14.2(@swc/helpers@0.5.15))':
     dependencies:
-      '@parcel/diagnostic': 2.14.1
-      '@parcel/node-resolver-core': 3.5.1(@parcel/core@2.14.2(@swc/helpers@0.5.15))
-      '@parcel/plugin': 2.14.1(@parcel/core@2.14.2(@swc/helpers@0.5.15))
-      '@parcel/utils': 2.14.1
+      '@parcel/diagnostic': 2.14.2
+      '@parcel/node-resolver-core': 3.5.2(@parcel/core@2.14.2(@swc/helpers@0.5.15))
+      '@parcel/plugin': 2.14.2(@parcel/core@2.14.2(@swc/helpers@0.5.15))
+      '@parcel/utils': 2.14.2
       nullthrows: 1.1.1
     transitivePeerDependencies:
       - '@parcel/core'
