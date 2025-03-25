@@ -70,7 +70,7 @@
     "@parcel/bundler-library": "^2.14.1",
     "@parcel/compressor-brotli": "^2.14.1",
     "@parcel/compressor-gzip": "^2.14.1",
-    "@parcel/config-default": "^2.14.1",
+    "@parcel/config-default": "^2.14.2",
     "@parcel/namer-default": "^2.14.2",
     "@parcel/optimizer-css": "^2.14.1",
     "@parcel/optimizer-esbuild": "^2.14.1",
