@@ -64,8 +64,8 @@ importers:
         specifier: ^2.14.1
         version: 2.14.1(@parcel/core@2.14.2(@swc/helpers@0.5.15))
       '@parcel/reporter-cli':
-        specifier: ^2.14.1
-        version: 2.14.1(@parcel/core@2.14.2(@swc/helpers@0.5.15))
+        specifier: ^2.14.2
+        version: 2.14.2(@parcel/core@2.14.2(@swc/helpers@0.5.15))
       '@parcel/resolver-default':
         specifier: ^2.14.1
         version: 2.14.1(@parcel/core@2.14.2(@swc/helpers@0.5.15))
@@ -1178,10 +1178,6 @@ packages:
   '@parcel/profiler@2.14.2':
     resolution: {integrity: sha512-kNgEz7FDC1hb7gpA/Z3s9vp6NiAJ5tEvxGhRAV64CDx98Jd/FES5MJLZ7A0vDWMHqDChgtprCkh0u3KnWrXRqg==}
     engines: {node: '>= 16.0.0'}
-
-  '@parcel/reporter-cli@2.14.1':
-    resolution: {integrity: sha512-wNG2JbwpJ5qLRPhwoXgm0LxRNjePRflFzfgwX1NlSKwJp7FtNoczraTt8lZPtoM5e1ChzS2ggKz5XUnYhLQa9A==}
-    engines: {node: '>= 16.0.0', parcel: ^2.14.1}
 
   '@parcel/reporter-cli@2.14.2':
     resolution: {integrity: sha512-qzsn8GXBsl6dc8rLdmFsVVYAvzzSP+q+c6dvxvspC5NMu9N/fE4zfeZ0ShLexsxlpjn/ipa7cJo0gZa6E8F8qg==}
@@ -5476,17 +5472,6 @@ snapshots:
       '@parcel/events': 2.14.2
       '@parcel/types-internal': 2.14.2
       chrome-trace-event: 1.0.4
-
-  '@parcel/reporter-cli@2.14.1(@parcel/core@2.14.2(@swc/helpers@0.5.15))':
-    dependencies:
-      '@parcel/plugin': 2.14.1(@parcel/core@2.14.2(@swc/helpers@0.5.15))
-      '@parcel/types': 2.14.1(@parcel/core@2.14.2(@swc/helpers@0.5.15))
-      '@parcel/utils': 2.14.1
-      chalk: 4.1.2
-      term-size: 2.2.1
-    transitivePeerDependencies:
-      - '@parcel/core'
-      - napi-wasm
 
   '@parcel/reporter-cli@2.14.2(@parcel/core@2.14.2(@swc/helpers@0.5.15))':
     dependencies:
