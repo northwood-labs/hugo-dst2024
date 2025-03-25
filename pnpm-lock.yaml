@@ -25,8 +25,8 @@ importers:
         specifier: ^9.23.0
         version: 9.23.0
       '@parcel/bundler-default':
-        specifier: ^2.14.1
-        version: 2.14.1(@parcel/core@2.14.2(@swc/helpers@0.5.15))
+        specifier: ^2.14.2
+        version: 2.14.2(@parcel/core@2.14.2(@swc/helpers@0.5.15))
       '@parcel/bundler-library':
         specifier: ^2.14.1
         version: 2.14.1(@parcel/core@2.14.2(@swc/helpers@0.5.15))
