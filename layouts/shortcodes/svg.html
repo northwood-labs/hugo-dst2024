@@ -1,3 +1,4 @@
-{{- $path := .Get 0 -}}
-{{- $class := .Get 1 -}}
-{{- partial $path (dict "class" $class) -}}
+{{- $path := .Get "path" -}}
+{{- $width := .Get "width" -}}
+{{- $class := .Get "class" -}}
+{{- partial $path (dict "width" $width "class" $class) -}}

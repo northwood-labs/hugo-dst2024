@@ -24,7 +24,7 @@
 @layer base {
   /* https://github.com/tailwindlabs/tailwindcss-typography */
   #tmpl-single {
-    @apply prose dark:prose-invert mx-auto max-w-7xl py-6 sm:px-6 lg:px-8 prose-p:text-base/6 prose-p:py-2 prose-p:m-0
+    @apply prose dark:prose-invert mx-auto max-w-7xl py-6 sm:px-6 lg:px-8 prose-p:text-base/6 prose-p:py-2 prose-p:m-0 prose-a:underline-offset-3 prose-a:decoration-dotted prose-a:hover:decoration-solid prose-a:hover:text-indigo-700 prose-a:dark:hover:text-indigo-300
   }
 
   #tmpl-single h2 {
@@ -40,7 +40,7 @@
   }
 
   #tmpl-single #content h3 {
-    @apply underline underline-offset-2
+    font-size: 1.35em;
   }
 
   #tmpl-single ol,
@@ -50,6 +50,10 @@
 
   #tmpl-single li {
     @apply m-0
+  }
+
+  #tmpl-single code {
+    @apply before:content-none after:content-none inline-flex items-baseline ring-1 ring-inset rounded-md py-1 px-2 text-sm font-semibold text-ellipsis overflow-hidden ring-slate-200 dark:ring-slate-700 bg-slate-50 dark:bg-slate-950 text-indigo-700 dark:text-indigo-300;
   }
 
   #tmpl-single h2 > ul:first-child,
@@ -145,6 +149,18 @@
 
 @utility table-question-mark {
   @apply h-5 w-5 inline-block text-blue-700 dark:text-blue-300;
+}
+
+@utility configure-apple {
+  @apply h-3 w-3 fill-black dark:fill-white inline-block align-baseline;
+}
+
+@utility configure-windows {
+  @apply h-3 w-3 fill-[#0078d4] dark:fill-white inline-block align-baseline;
+}
+
+@utility configure-css {
+  @apply h-3 w-3 fill-[#663399] dark:fill-white inline-block align-baseline;
 }
 
 /***************************** SCAN RESULTS TABLE *****************************/
@@ -250,6 +266,8 @@
 @utility ui-badge-highlight-svg {
   @apply text-amber-600 dark:text-amber-100;
 }
+
+/***************************** OTHER *****************************/
 
 @utility animate-flip-in-x {
   backface-visibility: visible !important;

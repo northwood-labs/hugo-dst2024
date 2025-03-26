@@ -1,8 +1,8 @@
 <div class="mt-10 flex justify-center">
-  {{- with .Parent -}}<a href="{{- .RelPermalink -}}" class="text-sm/6 font-semibold text-indigo-600">
+  {{- with .Parent -}}<a href="{{- .Permalink -}}" class="text-sm/6 font-semibold text-indigo-600 dark:text-white">
     <span aria-hidden="true">&larr;</span>
     Back to {{ with .LinkTitle -}}{{- . -}}{{- else -}}Home{{- end -}}
-  </a>{{- else -}}<a href="/learning" class="text-sm/6 font-semibold text-indigo-600">
+  </a>{{- else -}}<a href="/learning" class="text-sm/6 font-semibold text-indigo-600 dark:text-white">
     <span aria-hidden="true">&larr;</span>
     Back to learning
   </a>{{- end -}}

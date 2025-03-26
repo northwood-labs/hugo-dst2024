@@ -36,7 +36,7 @@
                       <input type="text" name="url" id="url" class="col-start-1 row-start-1 block w-full rounded-l-md bg-white dark:bg-black py-1.5 pr-3 pl-10 text-base text-gray-900 dark:text-gray-100 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:pl-9 sm:text-lg/6" placeholder="example.com">
                       {{ partial "heroicons/solid/at-symbol.svg" (dict "class" "pointer-events-none col-start-1 row-start-1 ml-3 size-5 self-center text-gray-400 dark:text-gray-600 sm:size-4") }}
                     </div>
-                    <button type="button" class="flex shrink-0 items-center gap-x-1.5 rounded-r-md px-3 py-2 text-xl md:text-lg font-semibold outline-1 -outline-offset-1 outline-indigo-600 focus:relative focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 bg-indigo-600 hover:bg-indigo-500 text-white">Scan</button>
+                    <button type="submit" class="flex shrink-0 items-center gap-x-1.5 rounded-r-md px-3 py-2 text-xl md:text-lg font-semibold outline-1 -outline-offset-1 outline-indigo-600 focus:relative focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 bg-indigo-600 hover:bg-indigo-500 text-white">Scan</button>
                   </div>
                 </div>
 
@@ -53,9 +53,9 @@
             <div class="inline-block min-w-full py-2 align-middle px-4 sm:px-6 lg:px-8">
 
               <div class="px-0">
-                <h2 class="text-2xl font-semibold leading-6 text-gray-900 dark:text-gray-100">HTTP versions</h2>
+                <h2 class="text-2xl font-semibold leading-6 text-gray-900 dark:text-gray-100" id="http-header">HTTP versions <a href="#http-header" class="text-gray-300 dark:text-gray-700 no-underline hover:underline" title="Link directly to this section.">#</a></h2>
                 <p class="mt-1 max-w-2xl text-sm leading-6 text-gray-500">
-                  <a href="/learning/http-version/" class="text-sm">Learn how to interpret these results…</a>
+                  <a href="/learning/http-version/" class="text-sm">Learn how to interpret HTTP version results…</a>
                 </p>
               </div>
 
@@ -72,9 +72,9 @@
             <div class="inline-block min-w-full py-2 align-middle px-4 sm:px-6 lg:px-8">
 
               <div class="px-0">
-                <h2 class="text-2xl font-semibold leading-6 text-gray-900 dark:text-gray-100">TLS and cipher suites</h2>
+                <h2 class="text-2xl font-semibold leading-6 text-gray-900 dark:text-gray-100" id="tls-header">TLS and cipher suites <a href="#tls-header" class="text-gray-300 dark:text-gray-700 no-underline hover:underline" title="Link directly to this section.">#</a></h2>
                 <p class="mt-1 max-w-2xl text-sm leading-6 text-gray-500">
-                  <a href="/learning/recommended-cipher-suites/" class="text-sm">Learn how to interpret these results…</a>
+                  <a href="/learning/recommended-cipher-suites/" class="text-sm">Learn how to interpret TLS and cipher suite results…</a>
                 </p>
               </div>
 

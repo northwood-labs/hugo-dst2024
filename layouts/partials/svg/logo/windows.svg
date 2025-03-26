@@ -1,0 +1,7 @@
+<svg class="{{ .class }}" viewBox="0 0 185 185"
+    xmlns="http://www.w3.org/2000/svg">
+    <path d="m0 0h87.327v87.327h-87.327z"/>
+    <path d="m96.908 0h87.327v87.327h-87.327z"/>
+    <path d="m0 96.916h87.327v87.327h-87.327z"/>
+    <path d="m96.908 96.916h87.327v87.327h-87.327z"/>
+</svg>
