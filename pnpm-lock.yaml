@@ -79,8 +79,8 @@ importers:
         specifier: ^2.14.2
         version: 2.14.2(@parcel/core@2.14.2(@swc/helpers@0.5.15))
       '@parcel/transformer-js':
-        specifier: ^2.14.1
-        version: 2.14.1(@parcel/core@2.14.2(@swc/helpers@0.5.15))
+        specifier: ^2.14.2
+        version: 2.14.2(@parcel/core@2.14.2(@swc/helpers@0.5.15))
       '@parcel/transformer-postcss':
         specifier: ^2.14.2
         version: 2.14.2(@parcel/core@2.14.2(@swc/helpers@0.5.15))
@@ -1225,12 +1225,6 @@ packages:
     peerDependencies:
       '@parcel/core': ^2.14.2
 
-  '@parcel/transformer-js@2.14.1':
-    resolution: {integrity: sha512-Zy60nRvZEabNCOTbChh/RbOpk03s5ozLMOXCAIv1VYRTSZmQFjSlIiwlaNgPjRIn2xpf+2c1y4eslk9z7RPy0w==}
-    engines: {node: '>= 16.0.0', parcel: ^2.14.1}
-    peerDependencies:
-      '@parcel/core': ^2.14.1
-
   '@parcel/transformer-js@2.14.2':
     resolution: {integrity: sha512-8urpoFlRpFUHEwbOxXPbqmAI+bRjcg0ED6msuSbzVODIc4qsztVt48gXuSfEBfcQIfFJzDpRTh01GOYjMQQKRA==}
     engines: {node: '>= 16.0.0', parcel: ^2.14.2}
@@ -2167,8 +2161,8 @@ packages:
     resolution: {integrity: sha512-KIN/nDJBQRcXw0MLVhZE9iQHmG68qAVIBg9CqmUYjmQIhgij9U5MFvrqkUL5FbtyyzZuOeOt0zdeRe4UY7ct+A==}
     engines: {node: '>= 0.4'}
 
-  electron-to-chromium@1.5.123:
-    resolution: {integrity: sha512-refir3NlutEZqlKaBLK0tzlVLe5P2wDKS7UQt/3SpibizgsRAPOsqQC3ffw1nlv3ze5gjRQZYHoPymgVZkplFA==}
+  electron-to-chromium@1.5.124:
+    resolution: {integrity: sha512-riELkpDUqBi00gqreV3RIGoowxGrfueEKBd6zPdOk/I8lvuFpBGNkYoHof3zUHbiTBsIU8oxdIIL/WNrAG1/7A==}
 
   emittery@0.13.1:
     resolution: {integrity: sha512-DeWwawk6r5yR9jFgnDKYt4sLS0LmHJJi3ZOnb5/JdbYwj3nW+FxQnHIjhBKz8YLC7oRNPVM9NQ47I3CVx34eqQ==}
@@ -5480,23 +5474,6 @@ snapshots:
     transitivePeerDependencies:
       - napi-wasm
 
-  '@parcel/transformer-js@2.14.1(@parcel/core@2.14.2(@swc/helpers@0.5.15))':
-    dependencies:
-      '@parcel/core': 2.14.2(@swc/helpers@0.5.15)
-      '@parcel/diagnostic': 2.14.1
-      '@parcel/plugin': 2.14.1(@parcel/core@2.14.2(@swc/helpers@0.5.15))
-      '@parcel/rust': 2.14.1
-      '@parcel/source-map': 2.1.1
-      '@parcel/utils': 2.14.1
-      '@parcel/workers': 2.14.1(@parcel/core@2.14.2(@swc/helpers@0.5.15))
-      '@swc/helpers': 0.5.15
-      browserslist: 4.24.4
-      nullthrows: 1.1.1
-      regenerator-runtime: 0.14.1
-      semver: 7.7.1
-    transitivePeerDependencies:
-      - napi-wasm
-
   '@parcel/transformer-js@2.14.2(@parcel/core@2.14.2(@swc/helpers@0.5.15))':
     dependencies:
       '@parcel/core': 2.14.2(@swc/helpers@0.5.15)
@@ -6383,7 +6360,7 @@ snapshots:
   browserslist@4.24.4:
     dependencies:
       caniuse-lite: 1.0.30001707
-      electron-to-chromium: 1.5.123
+      electron-to-chromium: 1.5.124
       node-releases: 2.0.19
       update-browserslist-db: 1.1.3(browserslist@4.24.4)
 
@@ -6731,7 +6708,7 @@ snapshots:
       es-errors: 1.3.0
       gopd: 1.2.0
 
-  electron-to-chromium@1.5.123: {}
+  electron-to-chromium@1.5.124: {}
 
   emittery@0.13.1: {}
 
