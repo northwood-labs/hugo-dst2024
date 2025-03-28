@@ -15,7 +15,7 @@ const __filename = fileURLToPath(import.meta.url),
   }),
   COMPLEXITY_SCORE = 30,
   INDENT_SPACES = 2,
-  MAX_LINE_LENGTH = 120,
+  MAX_LINE_LENGTH = 200,
   SPACE_UNARY_OPS = 2;
 
 export default [

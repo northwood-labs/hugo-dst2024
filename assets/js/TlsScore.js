@@ -84,7 +84,7 @@ export default class TlsScore extends PureComponent {
 
                 <tr class={'ui-thead-tr'}>
                   <th class={'ui-thead-th'} colspan={'2'} scope={'colgroup'}>
-                    <span class={'inline-block pl-2 sm:pl-4'}>{conn.version.replace(/v/, ' ')}{' cipher suites'}</span>
+                    <span class={'inline-block pl-2 sm:pl-4'}>{conn.version.replace(/v/u, ' ')}{' cipher suites'}</span>
                   </th>
                 </tr>
 
