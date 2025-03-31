@@ -71,7 +71,7 @@
     "@parcel/compressor-brotli": "^2.14.2",
     "@parcel/compressor-gzip": "^2.14.2",
     "@parcel/config-default": "^2.14.2",
-    "@parcel/namer-default": "^2.14.2",
+    "@parcel/namer-default": "^2.14.4",
     "@parcel/optimizer-css": "^2.14.2",
     "@parcel/optimizer-esbuild": "^2.14.2",
     "@parcel/optimizer-htmlnano": "^2.14.4",
