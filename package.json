@@ -76,7 +76,7 @@
     "@parcel/optimizer-esbuild": "^2.14.2",
     "@parcel/optimizer-htmlnano": "^2.14.4",
     "@parcel/packager-css": "^2.14.2",
-    "@parcel/packager-html": "^2.14.2",
+    "@parcel/packager-html": "^2.14.4",
     "@parcel/packager-js": "^2.14.2",
     "@parcel/packager-raw": "^2.14.2",
     "@parcel/reporter-cli": "^2.14.2",
