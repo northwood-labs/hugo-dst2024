@@ -67,7 +67,7 @@
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.23.0",
     "@parcel/bundler-default": "^2.14.4",
-    "@parcel/bundler-library": "^2.14.2",
+    "@parcel/bundler-library": "^2.14.4",
     "@parcel/compressor-brotli": "^2.14.4",
     "@parcel/compressor-gzip": "^2.14.4",
     "@parcel/config-default": "^2.14.2",
