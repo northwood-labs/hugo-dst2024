@@ -88,8 +88,8 @@ importers:
         specifier: ^2.14.4
         version: 2.14.4(@parcel/core@2.14.2(@swc/helpers@0.5.15))
       '@parcel/transformer-vue':
-        specifier: ^2.14.2
-        version: 2.14.2(@babel/core@7.26.9)(@parcel/core@2.14.2(@swc/helpers@0.5.15))(react@19.0.0)
+        specifier: ^2.14.4
+        version: 2.14.4(@babel/core@7.26.9)(@parcel/core@2.14.2(@swc/helpers@0.5.15))(react@19.0.0)
       '@stylistic/eslint-plugin':
         specifier: ^4.2.0
         version: 4.2.0(eslint@9.23.0(jiti@2.4.2))(typescript@5.7.2)
@@ -1321,9 +1321,9 @@ packages:
     resolution: {integrity: sha512-WFyh/JwAeJWwQX2NUrKGWolXrtL6Uu/BbrYAFvWIH9GHVlq24GofRDKnncrbtF8CJ4y3K7S5ztExLpirLQT0Tg==}
     engines: {node: '>= 16.0.0', parcel: ^2.14.2}
 
-  '@parcel/transformer-vue@2.14.2':
-    resolution: {integrity: sha512-bVs8tSZy6wtVZG86J61s7euLjbu3NsDdS6DPWc/Z2zuA3COMXpNQwgaRQRYKsjLiRcIpUBcPduo6v1hZV7Jr8Q==}
-    engines: {node: '>= 16.0.0', parcel: ^2.14.2}
+  '@parcel/transformer-vue@2.14.4':
+    resolution: {integrity: sha512-WUsnLm63QWdltqDc7HxzCQxyOA5sTcParkbR4fXQ40Ke9tQm0ItxuIq4Amzmn7YfO0Luy9cZ2id+N+1De87x6w==}
+    engines: {node: '>= 16.0.0', parcel: ^2.14.4}
 
   '@parcel/types-internal@2.13.3':
     resolution: {integrity: sha512-Lhx0n+9RCp+Ipktf/I+CLm3zE9Iq9NtDd8b2Vr5lVWyoT8AbzBKIHIpTbhLS4kjZ80L3I6o93OYjqAaIjsqoZw==}
@@ -5797,13 +5797,13 @@ snapshots:
       - '@parcel/core'
       - napi-wasm
 
-  '@parcel/transformer-vue@2.14.2(@babel/core@7.26.9)(@parcel/core@2.14.2(@swc/helpers@0.5.15))(react@19.0.0)':
+  '@parcel/transformer-vue@2.14.4(@babel/core@7.26.9)(@parcel/core@2.14.2(@swc/helpers@0.5.15))(react@19.0.0)':
     dependencies:
       '@ladjs/consolidate': 1.0.4(@babel/core@7.26.9)(react@19.0.0)
-      '@parcel/diagnostic': 2.14.2
-      '@parcel/plugin': 2.14.2(@parcel/core@2.14.2(@swc/helpers@0.5.15))
+      '@parcel/diagnostic': 2.14.4
+      '@parcel/plugin': 2.14.4(@parcel/core@2.14.2(@swc/helpers@0.5.15))
       '@parcel/source-map': 2.1.1
-      '@parcel/utils': 2.14.2
+      '@parcel/utils': 2.14.4
       '@vue/compiler-sfc': 3.5.13
       nullthrows: 1.1.1
       semver: 7.7.1
