@@ -1,1 +1,6 @@
-{{- partial "heroicons/solid/check-circle.svg" (dict "class" "ui-badge-svg ui-badge-success-svg") -}}
+{{- $defaultClass := "ui-badge-svg ui-badge-success-svg" -}}
+{{- $class := .Get "class" -}}
+{{- if eq (cast.ToString $class) "" -}}
+  {{- $class = $defaultClass -}}
+{{- end -}}
+{{- partial "heroicons/solid/check-circle.svg" (dict "class" $class) -}}

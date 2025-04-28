@@ -1,0 +1,74 @@
+{{ define "head_element" }}
+  {{ partial "head/_head.html" . }}
+{{ end }}
+
+{{ define "header" }}
+  {{ partial "body/_header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+{{ $data := .Data }}
+
+{{ $taxonomy := .Section }}
+{{ if eq $taxonomy "" }}
+  {{ $taxonomy = substr .Path 1 }}
+{{ end }}
+
+{{ $dirFile := path.Split .Path }}
+{{ $leaf := $dirFile.File | urlize }}
+
+  {{/* PAGE HEADER */}}
+
+  {{- partial "body/_page_header.html" (dict
+    "ctx" .
+    "title" .Title
+    "description" .Description
+  ) -}}
+
+  {{/* TABLE HEADER */}}
+
+  <div id="tmpl-single">
+
+    <div class="grid lg:grid-cols-4 md:grid-cols-1 gap-4 mx-auto max-w-7xl">
+      {{/* CONTENT */}}
+      <div class="lg:col-span-3 md:col-span-1 bg-white dark:bg-[#171e21] shadow-sm ring-1 ring-gray-900/5 sm:rounded-xl">
+        <div class="px-4 py-5 sm:p-6 mt-0 flow-root">
+          <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+            <div class="inline-block min-w-full py-2 align-middle px-4 sm:px-6 lg:px-8" id="content">
+
+              {{- .Content -}}
+
+              {{ partial "body/_learn_more.html" . }}
+
+              {{ partial "body/backlink.html" . }}
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {{/* SIDEBAR */}}
+      <div class="col-span-1 bg-white dark:bg-[#171e21] shadow-sm ring-1 ring-gray-900/5 sm:rounded-xl">
+        <div class="px-4 py-5 sm:p-6 mt-0 flow-root">
+          <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+            <div class="inline-block min-w-full py-2 align-middle px-4 sm:px-6 lg:px-8" id="sidebar">
+
+              {{ partial "body/children-of.html" (dict
+                  "context" .
+                  "heading" "Standards"
+                  "childrenOf" "/learning/standards"
+              )}}
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+{{ end }}
+
+{{ define "footer" }}
+  {{ partial "body/_footer.html" . }}
+{{ end }}
