@@ -85,8 +85,8 @@ importers:
         specifier: ^2.15.0
         version: 2.15.0(@parcel/core@2.14.4(@swc/helpers@0.5.15))
       '@parcel/transformer-raw':
-        specifier: ^2.14.4
-        version: 2.14.4(@parcel/core@2.14.4(@swc/helpers@0.5.15))
+        specifier: ^2.15.0
+        version: 2.15.0(@parcel/core@2.14.4(@swc/helpers@0.5.15))
       '@parcel/transformer-vue':
         specifier: ^2.15.0
         version: 2.15.0(@babel/core@7.26.10)(@parcel/core@2.14.4(@swc/helpers@0.5.15))(react@19.0.0)
@@ -1304,6 +1304,10 @@ packages:
   '@parcel/transformer-raw@2.14.4':
     resolution: {integrity: sha512-GCuUWKAb9YHB/krmzBeQbtHKKZopT3c3AzoPTq/4woV4Ti1zUZ83oFyTX1tBKQ+MMB1BW+HrPkFld0iY4gp/Ng==}
     engines: {node: '>= 16.0.0', parcel: ^2.14.4}
+
+  '@parcel/transformer-raw@2.15.0':
+    resolution: {integrity: sha512-06xJEXDF9YX5ffm+MKvQJIXpFqx2G6RND6L091L/BmLl+FH2SNYKO3RZ4rIx8TbkjyuBnE+awRh9xl7AiLIjaA==}
+    engines: {node: '>= 16.0.0', parcel: ^2.15.0}
 
   '@parcel/transformer-react-refresh-wrap@2.14.4':
     resolution: {integrity: sha512-nb70CAvjDizAIQ1naZ39P/PxYWtPllWvvxrkpldNnk8AF74OcHodrsuHKwhyPZHMmnMdexFonsenf+VeN4l/aQ==}
@@ -5965,6 +5969,13 @@ snapshots:
   '@parcel/transformer-raw@2.14.4(@parcel/core@2.14.4(@swc/helpers@0.5.15))':
     dependencies:
       '@parcel/plugin': 2.14.4(@parcel/core@2.14.4(@swc/helpers@0.5.15))
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
+  '@parcel/transformer-raw@2.15.0(@parcel/core@2.14.4(@swc/helpers@0.5.15))':
+    dependencies:
+      '@parcel/plugin': 2.15.0(@parcel/core@2.14.4(@swc/helpers@0.5.15))
     transitivePeerDependencies:
       - '@parcel/core'
       - napi-wasm
