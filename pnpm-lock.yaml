@@ -58,8 +58,8 @@ importers:
         specifier: ^2.15.0
         version: 2.15.0(@parcel/core@2.15.0(@swc/helpers@0.5.17))
       '@parcel/packager-js':
-        specifier: ^2.14.4
-        version: 2.14.4(@parcel/core@2.15.0(@swc/helpers@0.5.17))
+        specifier: ^2.15.0
+        version: 2.15.0(@parcel/core@2.15.0(@swc/helpers@0.5.17))
       '@parcel/packager-raw':
         specifier: ^2.15.0
         version: 2.15.0(@parcel/core@2.15.0(@swc/helpers@0.5.17))
@@ -1097,10 +1097,6 @@ packages:
     resolution: {integrity: sha512-1oA+bgqTny7yTXPgRUbBwi4TLy0ywPtpFJZcxwI6GONORVHDC/178PpjCbkD4q9O61J2e1Ms793aZam7zeBkjg==}
     engines: {node: '>= 16.0.0', parcel: ^2.15.0}
 
-  '@parcel/packager-js@2.14.4':
-    resolution: {integrity: sha512-Fz98TzYFcd9xCj6jqMtyd7c3n65GRmuoG7u0S/2g4sJrR5Zen70n1zlBGX7mEoOvB5lKRijzoNqBtB+7bWqS5A==}
-    engines: {node: '>= 16.0.0', parcel: ^2.14.4}
-
   '@parcel/packager-js@2.15.0':
     resolution: {integrity: sha512-vAqBujbE/nJ47a7Gdo2p0dhipPuOQV8gy0cfJAuEz50BlCMwn1IRY2fGtE2zMW1KCcvLwGmEFyYVQh/C71wqAQ==}
     engines: {node: '>= 16.0.0', parcel: ^2.15.0}
@@ -1242,10 +1238,6 @@ packages:
   '@parcel/transformer-babel@2.15.0':
     resolution: {integrity: sha512-mJNrV4254gJ9o2pjZvyK88RXCbDmlBdZqlAqg/HXEHTqzae/iOoSGpvxy+NisqXgpMwpIf8wlxmyFna8FL4Yfg==}
     engines: {node: '>= 16.0.0', parcel: ^2.15.0}
-
-  '@parcel/transformer-css@2.14.4':
-    resolution: {integrity: sha512-sf0NuzPH4kSpL4VgV94xY5kPxoAndoNouUFPaHmN3hW6QiTHShRubfDsginSOHl5QhghSfr4qtP7t7HxCSDq6A==}
-    engines: {node: '>= 16.0.0', parcel: ^2.14.4}
 
   '@parcel/transformer-css@2.15.0':
     resolution: {integrity: sha512-GOC/ZFi6lxVfseGCb2kJdYBiliHrQq9dxcFayHGb7zrIRWVf9F9ihzsLkDaZ7a4WBu+gIib7JLGnO0Jy3leWOg==}
@@ -5500,20 +5492,6 @@ snapshots:
       - '@parcel/core'
       - napi-wasm
 
-  '@parcel/packager-js@2.14.4(@parcel/core@2.15.0(@swc/helpers@0.5.17))':
-    dependencies:
-      '@parcel/diagnostic': 2.14.4
-      '@parcel/plugin': 2.14.4(@parcel/core@2.15.0(@swc/helpers@0.5.17))
-      '@parcel/rust': 2.14.4
-      '@parcel/source-map': 2.1.1
-      '@parcel/types': 2.14.4(@parcel/core@2.15.0(@swc/helpers@0.5.17))
-      '@parcel/utils': 2.14.4
-      globals: 13.24.0
-      nullthrows: 1.1.1
-    transitivePeerDependencies:
-      - '@parcel/core'
-      - napi-wasm
-
   '@parcel/packager-js@2.15.0(@parcel/core@2.15.0(@swc/helpers@0.5.17))':
     dependencies:
       '@parcel/diagnostic': 2.15.0
@@ -5718,19 +5696,6 @@ snapshots:
       json5: 2.2.3
       nullthrows: 1.1.1
       semver: 7.7.1
-    transitivePeerDependencies:
-      - '@parcel/core'
-      - napi-wasm
-
-  '@parcel/transformer-css@2.14.4(@parcel/core@2.15.0(@swc/helpers@0.5.17))':
-    dependencies:
-      '@parcel/diagnostic': 2.14.4
-      '@parcel/plugin': 2.14.4(@parcel/core@2.15.0(@swc/helpers@0.5.17))
-      '@parcel/source-map': 2.1.1
-      '@parcel/utils': 2.14.4
-      browserslist: 4.24.5
-      lightningcss: 1.30.0
-      nullthrows: 1.1.1
     transitivePeerDependencies:
       - '@parcel/core'
       - napi-wasm
