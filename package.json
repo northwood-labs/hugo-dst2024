@@ -85,7 +85,7 @@
     "@parcel/transformer-css": "^2.14.4",
     "@parcel/transformer-html": "^2.14.4",
     "@parcel/transformer-js": "^2.14.4",
-    "@parcel/transformer-postcss": "^2.14.4",
+    "@parcel/transformer-postcss": "^2.15.0",
     "@parcel/transformer-raw": "^2.14.4",
     "@parcel/transformer-vue": "^2.14.4",
     "@stylistic/eslint-plugin": "^4.2.0",
