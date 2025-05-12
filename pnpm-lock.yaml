@@ -82,8 +82,8 @@ importers:
         specifier: ^2.14.4
         version: 2.14.4(@parcel/core@2.14.4(@swc/helpers@0.5.15))
       '@parcel/transformer-postcss':
-        specifier: ^2.14.4
-        version: 2.14.4(@parcel/core@2.14.4(@swc/helpers@0.5.15))
+        specifier: ^2.15.0
+        version: 2.15.0(@parcel/core@2.14.4(@swc/helpers@0.5.15))
       '@parcel/transformer-raw':
         specifier: ^2.14.4
         version: 2.14.4(@parcel/core@2.14.4(@swc/helpers@0.5.15))
@@ -1274,6 +1274,10 @@ packages:
   '@parcel/transformer-postcss@2.14.4':
     resolution: {integrity: sha512-GxkXkcgG2XGt6ivoUF5yD1tmQPV+d71gUxyBGv1i1jg4x65R12Gc/npzWk9TCH2dShSdHOA90OJpNL4k0JlLtg==}
     engines: {node: '>= 16.0.0', parcel: ^2.14.4}
+
+  '@parcel/transformer-postcss@2.15.0':
+    resolution: {integrity: sha512-N6DrPK34RfYoYQEah9Gp6SdzTxzBuOK2/ZjkjcAoyEBT2Ong1JtQUIW75Rw3Wdktd8Yez21Ez+fLseAHuXZMDw==}
+    engines: {node: '>= 16.0.0', parcel: ^2.15.0}
 
   '@parcel/transformer-posthtml@2.14.4':
     resolution: {integrity: sha512-V9dnsA5+t7uF/hWc9HwJcaKkmP8K2go6yAQOpxu+knyszfz3t2jw/k4L/VFjqCATf90agal/iRTPVkHvWDCzZw==}
@@ -5947,6 +5951,20 @@ snapshots:
       '@parcel/plugin': 2.14.4(@parcel/core@2.14.4(@swc/helpers@0.5.15))
       '@parcel/rust': 2.14.4
       '@parcel/utils': 2.14.4
+      clone: 2.1.2
+      nullthrows: 1.1.1
+      postcss-value-parser: 4.2.0
+      semver: 7.7.1
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
+  '@parcel/transformer-postcss@2.15.0(@parcel/core@2.14.4(@swc/helpers@0.5.15))':
+    dependencies:
+      '@parcel/diagnostic': 2.15.0
+      '@parcel/plugin': 2.15.0(@parcel/core@2.14.4(@swc/helpers@0.5.15))
+      '@parcel/rust': 2.15.0
+      '@parcel/utils': 2.15.0
       clone: 2.1.2
       nullthrows: 1.1.1
       postcss-value-parser: 4.2.0
