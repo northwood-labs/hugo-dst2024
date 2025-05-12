@@ -34,8 +34,8 @@ importers:
         specifier: ^2.15.0
         version: 2.15.0(@parcel/core@2.15.0(@swc/helpers@0.5.17))
       '@parcel/compressor-gzip':
-        specifier: ^2.14.4
-        version: 2.14.4(@parcel/core@2.15.0(@swc/helpers@0.5.17))
+        specifier: ^2.15.0
+        version: 2.15.0(@parcel/core@2.15.0(@swc/helpers@0.5.17))
       '@parcel/config-default':
         specifier: ^2.15.0
         version: 2.15.0(@parcel/core@2.15.0(@swc/helpers@0.5.17))(@swc/helpers@0.5.17)
@@ -974,9 +974,9 @@ packages:
     resolution: {integrity: sha512-hEqog1AJBJoc+rboNnFrL+YVuaJU/jCWyXgBdO8xVmIjD5lGMPoHPKEbtMuw8PUpiaMThL/HUH0ePjNewSM76w==}
     engines: {node: '>= 16.0.0', parcel: ^2.15.0}
 
-  '@parcel/compressor-gzip@2.14.4':
-    resolution: {integrity: sha512-J/doi4TIeuIZe+dq2SPGJIIYahYO92ThoJ90rMch1XIEZCSZkB5l5Rx116vsh99+UHqFQeOHQjsP89vW9DI7Dg==}
-    engines: {node: '>= 16.0.0', parcel: ^2.14.4}
+  '@parcel/compressor-gzip@2.15.0':
+    resolution: {integrity: sha512-pBwhFXfjRYFub0aHq2o8ghgsznD0/IKxdYQQpU5wdO62lhn1NHdMaF/XrKcpAIy4INhJ4WXpGPLqfJpUANg5Ow==}
+    engines: {node: '>= 16.0.0', parcel: ^2.15.0}
 
   '@parcel/compressor-raw@2.15.0':
     resolution: {integrity: sha512-AoShbbqNCkzTkNMygmcCazV6iFj9nLVwBPZZCAyJ57ooRlxPszMtLO1RIw/cVU9PJg/NlYGg0uEGVt/N56SzWA==}
@@ -1256,12 +1256,6 @@ packages:
     engines: {node: '>= 16.0.0', parcel: ^2.15.0}
     peerDependencies:
       '@parcel/core': ^2.15.0
-
-  '@parcel/transformer-js@2.14.4':
-    resolution: {integrity: sha512-fBC8NVM8xXxjGQY5r88Z46akSErFO5hRVA4kuRI0tkXorjov3Mu4hu6MLq974TEQluSvGXUYGT5Mq2iXZ75M7w==}
-    engines: {node: '>= 16.0.0', parcel: ^2.14.4}
-    peerDependencies:
-      '@parcel/core': ^2.14.4
 
   '@parcel/transformer-js@2.15.0':
     resolution: {integrity: sha512-tVa97+fHO0hROVpN+lmCR6H26NaQ2eq8uc2zrdsaW7XkTOyiCPSIb1oRkWP4jBBkAs73oHBhP+KvpumRhnzodw==}
@@ -5202,9 +5196,9 @@ snapshots:
       - '@parcel/core'
       - napi-wasm
 
-  '@parcel/compressor-gzip@2.14.4(@parcel/core@2.15.0(@swc/helpers@0.5.17))':
+  '@parcel/compressor-gzip@2.15.0(@parcel/core@2.15.0(@swc/helpers@0.5.17))':
     dependencies:
-      '@parcel/plugin': 2.14.4(@parcel/core@2.15.0(@swc/helpers@0.5.17))
+      '@parcel/plugin': 2.15.0(@parcel/core@2.15.0(@swc/helpers@0.5.17))
     transitivePeerDependencies:
       - '@parcel/core'
       - napi-wasm
@@ -5741,23 +5735,6 @@ snapshots:
       '@parcel/utils': 2.15.0
       '@parcel/workers': 2.15.0(@parcel/core@2.15.0(@swc/helpers@0.5.17))
       nullthrows: 1.1.1
-    transitivePeerDependencies:
-      - napi-wasm
-
-  '@parcel/transformer-js@2.14.4(@parcel/core@2.15.0(@swc/helpers@0.5.17))':
-    dependencies:
-      '@parcel/core': 2.15.0(@swc/helpers@0.5.17)
-      '@parcel/diagnostic': 2.14.4
-      '@parcel/plugin': 2.14.4(@parcel/core@2.15.0(@swc/helpers@0.5.17))
-      '@parcel/rust': 2.14.4
-      '@parcel/source-map': 2.1.1
-      '@parcel/utils': 2.14.4
-      '@parcel/workers': 2.14.4(@parcel/core@2.15.0(@swc/helpers@0.5.17))
-      '@swc/helpers': 0.5.17
-      browserslist: 4.24.5
-      nullthrows: 1.1.1
-      regenerator-runtime: 0.14.1
-      semver: 7.7.1
     transitivePeerDependencies:
       - napi-wasm
 
