@@ -67,8 +67,8 @@ importers:
         specifier: ^2.14.4
         version: 2.14.4(@parcel/core@2.14.4(@swc/helpers@0.5.15))
       '@parcel/resolver-default':
-        specifier: ^2.14.4
-        version: 2.14.4(@parcel/core@2.14.4(@swc/helpers@0.5.15))
+        specifier: ^2.15.0
+        version: 2.15.0(@parcel/core@2.14.4(@swc/helpers@0.5.15))
       '@parcel/resolver-glob':
         specifier: ^2.15.0
         version: 2.15.0(@parcel/core@2.14.4(@swc/helpers@0.5.15))
@@ -1178,6 +1178,10 @@ packages:
   '@parcel/resolver-default@2.14.4':
     resolution: {integrity: sha512-s4XKnfScF/cwqGyYG/sB4WpktIJ55dvpu64ZiglHkkPvY5wT4p7A61mTIp6ck0ZPYmeG/zfd+P0B3qPpNF5mUw==}
     engines: {node: '>= 16.0.0', parcel: ^2.14.4}
+
+  '@parcel/resolver-default@2.15.0':
+    resolution: {integrity: sha512-Olnm/eY70keKg0oyG0c5Qkhx0R/6fyj0S8w4E4OVgpAMIuRKt8nDNfHBLgbchYgCJlPb8YwzbHluJLfxZlHLeA==}
+    engines: {node: '>= 16.0.0', parcel: ^2.15.0}
 
   '@parcel/resolver-glob@2.15.0':
     resolution: {integrity: sha512-EjtknFyVCjajkbxvs7lbUJpXrq0PPzirJDXdaSz+f6MkRk9V36YAkVyBhynWLpybYBMI83QszF9BO1xDAblrgg==}
@@ -5784,6 +5788,14 @@ snapshots:
     dependencies:
       '@parcel/node-resolver-core': 3.5.4(@parcel/core@2.14.4(@swc/helpers@0.5.15))
       '@parcel/plugin': 2.14.4(@parcel/core@2.14.4(@swc/helpers@0.5.15))
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
+  '@parcel/resolver-default@2.15.0(@parcel/core@2.14.4(@swc/helpers@0.5.15))':
+    dependencies:
+      '@parcel/node-resolver-core': 3.6.0(@parcel/core@2.14.4(@swc/helpers@0.5.15))
+      '@parcel/plugin': 2.15.0(@parcel/core@2.14.4(@swc/helpers@0.5.15))
     transitivePeerDependencies:
       - '@parcel/core'
       - napi-wasm
