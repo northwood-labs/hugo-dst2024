@@ -25,8 +25,8 @@ importers:
         specifier: ^9.26.0
         version: 9.26.0
       '@parcel/bundler-default':
-        specifier: ^2.14.4
-        version: 2.14.4(@parcel/core@2.14.4(@swc/helpers@0.5.15))
+        specifier: ^2.15.0
+        version: 2.15.0(@parcel/core@2.14.4(@swc/helpers@0.5.15))
       '@parcel/bundler-library':
         specifier: ^2.15.0
         version: 2.15.0(@parcel/core@2.14.4(@swc/helpers@0.5.15))
@@ -952,6 +952,10 @@ packages:
     resolution: {integrity: sha512-JVqi5Sb7wv2KCTJFAAjHbnl6KC61jKNVYw/GtZm5s/Wxqvxx2tcp93rmRoBFo9X3gSgkg8jp4HkNAUHTxnsPnQ==}
     engines: {node: '>= 16.0.0', parcel: ^2.14.4}
 
+  '@parcel/bundler-default@2.15.0':
+    resolution: {integrity: sha512-ILPLWsRdt8GceQSPUGWDg6FpELpHJbIEu5B2+72zx2zgsXHYmkT/d35HKIFHq4NoN2ZGwRFJI0bQ+DJcFAt+Tw==}
+    engines: {node: '>= 16.0.0', parcel: ^2.15.0}
+
   '@parcel/bundler-library@2.15.0':
     resolution: {integrity: sha512-sjuGeYNbQVMhqYf2vkFirdIGDN1TlVQEJ/9v4srGxFxJx0rcFYpT92Q/tLeIvh5evNxhToalExGEQcKoDLM9HA==}
     engines: {node: '>= 16.0.0', parcel: ^2.15.0}
@@ -1033,6 +1037,10 @@ packages:
 
   '@parcel/graph@3.4.4':
     resolution: {integrity: sha512-AIbJ8d8aCPcKAkqc45LENjAMIrp8nRGlmky5LyY5244qqnR1B+tsvU47XoGymM3OaXLdVjv8knJ4K0ci9/l/4w==}
+    engines: {node: '>= 16.0.0'}
+
+  '@parcel/graph@3.5.0':
+    resolution: {integrity: sha512-CLQMSPq1TTwGqt741UIwuzXSXRX4G4skNrZ7OZnUcUNfKfHKjJq5T/tqhpCsfTXzW8KASOt7EJGPD64HYA8nRQ==}
     engines: {node: '>= 16.0.0'}
 
   '@parcel/logger@2.14.4':
@@ -5253,6 +5261,18 @@ snapshots:
       - '@parcel/core'
       - napi-wasm
 
+  '@parcel/bundler-default@2.15.0(@parcel/core@2.14.4(@swc/helpers@0.5.15))':
+    dependencies:
+      '@parcel/diagnostic': 2.15.0
+      '@parcel/graph': 3.5.0
+      '@parcel/plugin': 2.15.0(@parcel/core@2.14.4(@swc/helpers@0.5.15))
+      '@parcel/rust': 2.15.0
+      '@parcel/utils': 2.15.0
+      nullthrows: 1.1.1
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
   '@parcel/bundler-library@2.15.0(@parcel/core@2.14.4(@swc/helpers@0.5.15))':
     dependencies:
       '@parcel/plugin': 2.15.0(@parcel/core@2.14.4(@swc/helpers@0.5.15))
@@ -5426,6 +5446,11 @@ snapshots:
   '@parcel/graph@3.4.4':
     dependencies:
       '@parcel/feature-flags': 2.14.4
+      nullthrows: 1.1.1
+
+  '@parcel/graph@3.5.0':
+    dependencies:
+      '@parcel/feature-flags': 2.15.0
       nullthrows: 1.1.1
 
   '@parcel/logger@2.14.4':
