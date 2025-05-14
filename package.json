@@ -119,7 +119,7 @@
     "prettier-plugin-organize-imports": "^4.1.0",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "process": "^0.11.10",
-    "snyk": "^1.1296.2",
+    "snyk": "^1.1297.0",
     "svgo": "^3.3.2",
     "tailwindcss": "^4.1.6"
   },
