@@ -121,7 +121,7 @@
     "process": "^0.11.10",
     "snyk": "^1.1297.0",
     "svgo": "^3.3.2",
-    "tailwindcss": "^4.1.6"
+    "tailwindcss": "^4.1.7"
   },
   "parcelIgnore": [
     "{{.*}}",
