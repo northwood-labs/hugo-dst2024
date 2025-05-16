@@ -105,7 +105,7 @@
     "globals": "^16.1.0",
     "jest": "^29.7.0",
     "npm-run-all": "^4.1.5",
-    "parcel": "^2.15.0",
+    "parcel": "^2.15.1",
     "parcel-reporter-clean-dist": "^1.0.4",
     "parcel-resolver-ignore": "^2.2.0",
     "postcss": "^8.5.3",
