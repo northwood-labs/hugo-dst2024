@@ -52,8 +52,8 @@ importers:
         specifier: ^2.15.1
         version: 2.15.1(@parcel/core@2.15.0(@swc/helpers@0.5.17))(cssnano@7.0.7(postcss@8.5.3))(postcss@8.5.3)(svgo@3.3.2)(typescript@5.7.2)
       '@parcel/packager-css':
-        specifier: ^2.15.0
-        version: 2.15.0(@parcel/core@2.15.0(@swc/helpers@0.5.17))
+        specifier: ^2.15.1
+        version: 2.15.1(@parcel/core@2.15.0(@swc/helpers@0.5.17))
       '@parcel/packager-html':
         specifier: ^2.15.0
         version: 2.15.0(@parcel/core@2.15.0(@swc/helpers@0.5.17))
@@ -1124,6 +1124,10 @@ packages:
   '@parcel/packager-css@2.15.0':
     resolution: {integrity: sha512-NIO3/wBbdBpajCwBon+wrdRHZl4ei+5JoZU3uW4Np8ECaoRdBmseyGoyYqiHCO7dxhu+iAa5WrRFOAjQGtNOOw==}
     engines: {node: '>= 16.0.0', parcel: ^2.15.0}
+
+  '@parcel/packager-css@2.15.1':
+    resolution: {integrity: sha512-ElwNtT/ZmamGqT0H6DuVeqs33pCj3HAiOKvwT7DRoErOH+W3PNOjpscr8zinnGJsK47ULpHZgvSq2prD6F3JpQ==}
+    engines: {node: '>= 16.0.0', parcel: ^2.15.1}
 
   '@parcel/packager-html@2.15.0':
     resolution: {integrity: sha512-1oA+bgqTny7yTXPgRUbBwi4TLy0ywPtpFJZcxwI6GONORVHDC/178PpjCbkD4q9O61J2e1Ms793aZam7zeBkjg==}
@@ -5624,7 +5628,19 @@ snapshots:
       '@parcel/plugin': 2.15.0(@parcel/core@2.15.0(@swc/helpers@0.5.17))
       '@parcel/source-map': 2.1.1
       '@parcel/utils': 2.15.0
-      lightningcss: 1.30.0
+      lightningcss: 1.30.1
+      nullthrows: 1.1.1
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
+  '@parcel/packager-css@2.15.1(@parcel/core@2.15.0(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/diagnostic': 2.15.1
+      '@parcel/plugin': 2.15.1(@parcel/core@2.15.0(@swc/helpers@0.5.17))
+      '@parcel/source-map': 2.1.1
+      '@parcel/utils': 2.15.1
+      lightningcss: 1.30.1
       nullthrows: 1.1.1
     transitivePeerDependencies:
       - '@parcel/core'
