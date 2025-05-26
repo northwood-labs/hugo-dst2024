@@ -66,7 +66,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.27.0",
-    "@parcel/bundler-default": "^2.15.0",
+    "@parcel/bundler-default": "^2.15.2",
     "@parcel/bundler-library": "^2.15.2",
     "@parcel/compressor-brotli": "^2.15.2",
     "@parcel/compressor-gzip": "^2.15.1",
