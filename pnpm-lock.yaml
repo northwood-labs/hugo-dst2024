@@ -85,8 +85,8 @@ importers:
         specifier: ^2.15.2
         version: 2.15.2(@parcel/core@2.15.2(@swc/helpers@0.5.17))
       '@parcel/transformer-raw':
-        specifier: ^2.15.0
-        version: 2.15.0(@parcel/core@2.15.2(@swc/helpers@0.5.17))
+        specifier: ^2.15.2
+        version: 2.15.2(@parcel/core@2.15.2(@swc/helpers@0.5.17))
       '@parcel/transformer-vue':
         specifier: ^2.15.2
         version: 2.15.2(@babel/core@7.26.10)(@parcel/core@2.15.2(@swc/helpers@0.5.17))(react@19.0.0)
