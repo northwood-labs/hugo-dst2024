@@ -61,8 +61,8 @@ importers:
         specifier: ^2.15.2
         version: 2.15.2(@parcel/core@2.15.1(@swc/helpers@0.5.17))
       '@parcel/packager-raw':
-        specifier: ^2.15.0
-        version: 2.15.0(@parcel/core@2.15.1(@swc/helpers@0.5.17))
+        specifier: ^2.15.2
+        version: 2.15.2(@parcel/core@2.15.1(@swc/helpers@0.5.17))
       '@parcel/reporter-cli':
         specifier: ^2.15.2
         version: 2.15.2(@parcel/core@2.15.1(@swc/helpers@0.5.17))
@@ -1241,6 +1241,10 @@ packages:
   '@parcel/packager-raw@2.15.1':
     resolution: {integrity: sha512-MZWaEZ1EJAw5R5w1ZPeoDHcwtmYfAHBm89r0F9gkUAhAxvAzSUDoFt8Cnlfz4i+lQW5ZMhUtFXRnD9n9xSkfjw==}
     engines: {node: '>= 16.0.0', parcel: ^2.15.1}
+
+  '@parcel/packager-raw@2.15.2':
+    resolution: {integrity: sha512-S4Gve8k9+qUj2c3wmbNmMQNqwsJ6E6o7ww/Z3CZ1M1i6UcegRVnK1usElw+6+j2L1sXdt/6pIUZvCg3DA9j3sA==}
+    engines: {node: '>= 16.0.0', parcel: ^2.15.2}
 
   '@parcel/packager-svg@2.15.0':
     resolution: {integrity: sha512-rtdqnxNTlVi7HI/mHvmKBjv9d7AT2vveqw9QELAHosEKLl5+ZUBtUvwv5NcaQ8Z2Z4Vjyq3EHuPD+LsYCLalhQ==}
@@ -6264,6 +6268,13 @@ snapshots:
   '@parcel/packager-raw@2.15.1(@parcel/core@2.15.1(@swc/helpers@0.5.17))':
     dependencies:
       '@parcel/plugin': 2.15.1(@parcel/core@2.15.1(@swc/helpers@0.5.17))
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
+  '@parcel/packager-raw@2.15.2(@parcel/core@2.15.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/plugin': 2.15.2(@parcel/core@2.15.1(@swc/helpers@0.5.17))
     transitivePeerDependencies:
       - '@parcel/core'
       - napi-wasm
