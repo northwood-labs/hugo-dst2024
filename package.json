@@ -75,7 +75,7 @@
     "@parcel/optimizer-css": "^2.15.1",
     "@parcel/optimizer-esbuild": "^2.15.2",
     "@parcel/optimizer-htmlnano": "^2.15.1",
-    "@parcel/packager-css": "^2.15.1",
+    "@parcel/packager-css": "^2.15.2",
     "@parcel/packager-html": "^2.15.1",
     "@parcel/packager-js": "^2.15.2",
     "@parcel/packager-raw": "^2.15.0",
