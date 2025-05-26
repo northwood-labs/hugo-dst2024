@@ -31,8 +31,8 @@ importers:
         specifier: ^2.15.0
         version: 2.15.0(@parcel/core@2.15.1(@swc/helpers@0.5.17))
       '@parcel/compressor-brotli':
-        specifier: ^2.15.1
-        version: 2.15.1(@parcel/core@2.15.1(@swc/helpers@0.5.17))
+        specifier: ^2.15.2
+        version: 2.15.2(@parcel/core@2.15.1(@swc/helpers@0.5.17))
       '@parcel/compressor-gzip':
         specifier: ^2.15.1
         version: 2.15.1(@parcel/core@2.15.1(@swc/helpers@0.5.17))
@@ -986,9 +986,9 @@ packages:
     resolution: {integrity: sha512-uzcHUXBXV+vUqXE7SR6Et60GauPGTWvc381pVzCzc90VQJyWY/xyRRIgcA+4MLi2+lQj+w4Uq9H9qg+hMx/JFg==}
     engines: {node: '>= 16.0.0'}
 
-  '@parcel/compressor-brotli@2.15.1':
-    resolution: {integrity: sha512-X7LQDbYIs9Zf8C18u0+TpCAGbGfWghVYQT1o8K1SBu4yJAKtL5oO+u74W6ygRaTVhtHJ2vHc64noe3FksobsaQ==}
-    engines: {node: '>= 16.0.0', parcel: ^2.15.1}
+  '@parcel/compressor-brotli@2.15.2':
+    resolution: {integrity: sha512-aqm0HruQiU+u0d+dMEt4HPA15NNsnTJdezW+mbMwyrr1rSfNIS61CNeu572fBraVNB1g4efNC9N240XC1AQbKA==}
+    engines: {node: '>= 16.0.0', parcel: ^2.15.2}
 
   '@parcel/compressor-gzip@2.15.1':
     resolution: {integrity: sha512-nFEghsuEP03/h7Q+t6Q40pbjUbrb/Ct/TKf2DA69OjewF4czN4/1Mtogy8s6oKh7L9IbCKC55939Q2Fw1XPTsA==}
@@ -5696,9 +5696,9 @@ snapshots:
     dependencies:
       chalk: 4.1.2
 
-  '@parcel/compressor-brotli@2.15.1(@parcel/core@2.15.1(@swc/helpers@0.5.17))':
+  '@parcel/compressor-brotli@2.15.2(@parcel/core@2.15.1(@swc/helpers@0.5.17))':
     dependencies:
-      '@parcel/plugin': 2.15.1(@parcel/core@2.15.1(@swc/helpers@0.5.17))
+      '@parcel/plugin': 2.15.2(@parcel/core@2.15.1(@swc/helpers@0.5.17))
     transitivePeerDependencies:
       - '@parcel/core'
       - napi-wasm
