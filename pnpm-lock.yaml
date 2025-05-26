@@ -58,8 +58,8 @@ importers:
         specifier: ^2.15.1
         version: 2.15.1(@parcel/core@2.15.1(@swc/helpers@0.5.17))
       '@parcel/packager-js':
-        specifier: ^2.15.1
-        version: 2.15.1(@parcel/core@2.15.1(@swc/helpers@0.5.17))
+        specifier: ^2.15.2
+        version: 2.15.2(@parcel/core@2.15.1(@swc/helpers@0.5.17))
       '@parcel/packager-raw':
         specifier: ^2.15.0
         version: 2.15.0(@parcel/core@2.15.1(@swc/helpers@0.5.17))
@@ -1221,6 +1221,10 @@ packages:
   '@parcel/packager-js@2.15.1':
     resolution: {integrity: sha512-afQThQpB3j+GLsRTsOABIi9QDBgGZfZQn4etMdFrnT9rSikRxFn5CStJnPc7jgnUf4deVOoODbVXF8VAYl1nUw==}
     engines: {node: '>= 16.0.0', parcel: ^2.15.1}
+
+  '@parcel/packager-js@2.15.2':
+    resolution: {integrity: sha512-kEXuKduZH/ynxm5zOUZSp6kV+/eyKbHn+zILXfFB7VeHuNyATfm8GTcSUhLYFHAoOncXorE51KI6KDMuKPejjA==}
+    engines: {node: '>= 16.0.0', parcel: ^2.15.2}
 
   '@parcel/packager-raw@2.15.0':
     resolution: {integrity: sha512-zbl4z2EyNPFfBGekQp8F9+LorKq5uV5zhkLcyGZY3kFqyar1HLwbr/Qm6Di1X3OE5IR0+kccqjtF7im9VY8v9A==}
@@ -6162,6 +6166,20 @@ snapshots:
       '@parcel/source-map': 2.1.1
       '@parcel/types': 2.15.1(@parcel/core@2.15.1(@swc/helpers@0.5.17))
       '@parcel/utils': 2.15.1
+      globals: 13.24.0
+      nullthrows: 1.1.1
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
+  '@parcel/packager-js@2.15.2(@parcel/core@2.15.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/diagnostic': 2.15.2
+      '@parcel/plugin': 2.15.2(@parcel/core@2.15.1(@swc/helpers@0.5.17))
+      '@parcel/rust': 2.15.2
+      '@parcel/source-map': 2.1.1
+      '@parcel/types': 2.15.2(@parcel/core@2.15.1(@swc/helpers@0.5.17))
+      '@parcel/utils': 2.15.2
       globals: 13.24.0
       nullthrows: 1.1.1
     transitivePeerDependencies:
