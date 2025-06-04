@@ -89,7 +89,7 @@
     "@parcel/transformer-raw": "^2.15.2",
     "@parcel/transformer-vue": "^2.15.2",
     "@stylistic/eslint-plugin": "^4.4.0",
-    "@stylistic/eslint-plugin-js": "^4.4.0",
+    "@stylistic/eslint-plugin-js": "^4.4.1",
     "@stylistic/eslint-plugin-jsx": "^4.4.0",
     "@stylistic/eslint-plugin-ts": "^4.4.0",
     "@tailwindcss/cli": "^4.1.7",
