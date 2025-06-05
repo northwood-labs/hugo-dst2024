@@ -157,8 +157,8 @@ importers:
         specifier: ^11.0.1
         version: 11.0.1(jiti@2.4.2)(postcss@8.5.4)
       postcss-custom-properties:
-        specifier: ^14.0.5
-        version: 14.0.5(postcss@8.5.4)
+        specifier: ^14.0.6
+        version: 14.0.6(postcss@8.5.4)
       postcss-import:
         specifier: ^16.1.0
         version: 16.1.0(postcss@8.5.4)
@@ -3441,8 +3441,8 @@ packages:
     peerDependencies:
       postcss: ^8.4.32
 
-  postcss-custom-properties@14.0.5:
-    resolution: {integrity: sha512-UWf/vhMapZatv+zOuqlfLmYXeOhhHLh8U8HAKGI2VJ00xLRYoAJh4xv8iX6FB6+TLXeDnm0DBLMi00E0hodbQw==}
+  postcss-custom-properties@14.0.6:
+    resolution: {integrity: sha512-fTYSp3xuk4BUeVhxCSJdIPhDLpJfNakZKoiTDx7yRGCdlZrSJR7mWKVOBS4sBF+5poPQFMj2YdXx1VHItBGihQ==}
     engines: {node: '>=18'}
     peerDependencies:
       postcss: ^8.4
@@ -8213,7 +8213,7 @@ snapshots:
       postcss: 8.5.4
       postcss-value-parser: 4.2.0
 
-  postcss-custom-properties@14.0.5(postcss@8.5.4):
+  postcss-custom-properties@14.0.6(postcss@8.5.4):
     dependencies:
       '@csstools/cascade-layer-name-parser': 2.0.5(@csstools/css-parser-algorithms@3.0.5(@csstools/css-tokenizer@3.0.4))(@csstools/css-tokenizer@3.0.4)
       '@csstools/css-parser-algorithms': 3.0.5(@csstools/css-tokenizer@3.0.4)
