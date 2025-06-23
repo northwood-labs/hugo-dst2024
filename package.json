@@ -73,7 +73,7 @@
     "@parcel/config-default": "^2.15.2",
     "@parcel/namer-default": "^2.15.2",
     "@parcel/optimizer-css": "^2.15.2",
-    "@parcel/optimizer-esbuild": "^2.15.2",
+    "@parcel/optimizer-esbuild": "^2.15.4",
     "@parcel/optimizer-htmlnano": "^2.15.2",
     "@parcel/packager-css": "^2.15.2",
     "@parcel/packager-html": "^2.15.2",
