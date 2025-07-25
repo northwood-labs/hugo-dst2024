@@ -68,7 +68,7 @@
     "@eslint/js": "^9.29.0",
     "@parcel/bundler-default": "^2.15.2",
     "@parcel/bundler-library": "^2.15.2",
-    "@parcel/compressor-brotli": "^2.15.2",
+    "@parcel/compressor-brotli": "^2.15.4",
     "@parcel/compressor-gzip": "^2.15.4",
     "@parcel/config-default": "^2.15.2",
     "@parcel/namer-default": "^2.15.2",
