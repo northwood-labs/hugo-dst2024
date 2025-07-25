@@ -40,8 +40,8 @@ importers:
         specifier: ^2.15.2
         version: 2.15.2(@parcel/core@2.15.4(@swc/helpers@0.5.17))(@swc/helpers@0.5.17)
       '@parcel/namer-default':
-        specifier: ^2.15.2
-        version: 2.15.2(@parcel/core@2.15.4(@swc/helpers@0.5.17))
+        specifier: ^2.15.4
+        version: 2.15.4(@parcel/core@2.15.4(@swc/helpers@0.5.17))
       '@parcel/optimizer-css':
         specifier: ^2.15.2
         version: 2.15.2(@parcel/core@2.15.4(@swc/helpers@0.5.17))
