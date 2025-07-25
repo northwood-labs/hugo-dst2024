@@ -28,8 +28,8 @@ importers:
         specifier: ^2.15.4
         version: 2.15.4(@parcel/core@2.15.4(@swc/helpers@0.5.17))
       '@parcel/bundler-library':
-        specifier: ^2.15.2
-        version: 2.15.2(@parcel/core@2.15.4(@swc/helpers@0.5.17))
+        specifier: ^2.15.4
+        version: 2.15.4(@parcel/core@2.15.4(@swc/helpers@0.5.17))
       '@parcel/compressor-brotli':
         specifier: ^2.15.4
         version: 2.15.4(@parcel/core@2.15.4(@swc/helpers@0.5.17))
@@ -960,9 +960,9 @@ packages:
     resolution: {integrity: sha512-4vkaZuwGqL8L7NqEgjRznz9/QoeVKk0Z6z2nzfpdnSWA4xX3moUj+JeoqGUbyFGuPzfCma4SA4+txnQbKu0edQ==}
     engines: {node: '>= 16.0.0', parcel: ^2.15.4}
 
-  '@parcel/bundler-library@2.15.2':
-    resolution: {integrity: sha512-3mFP3wt8OcD3RbiLDXT/Ru3NguBUWxcdURrJLKVG0CdlOPIyuMPFLl4BqoHxdpRD7B2fwptOzlEk1aZ04GAB8A==}
-    engines: {node: '>= 16.0.0', parcel: ^2.15.2}
+  '@parcel/bundler-library@2.15.4':
+    resolution: {integrity: sha512-cXIqxT2ECtA3zTwRdLdrFfsc/SZZp2CLJqYAP7ikANED23iXM86Ua5nWFUlZs2iakRtYbuiwEogZfhQLXT+lmQ==}
+    engines: {node: '>= 16.0.0', parcel: ^2.15.4}
 
   '@parcel/cache@2.15.4':
     resolution: {integrity: sha512-x/QgMuVvXQV6uNhIF+6kz6SzhVVkwf6WPSVG/xQvGMEiBabForDVYIhIEuN3RzUXCU352CGM6d8TtLLg61W1fw==}
@@ -5282,9 +5282,9 @@ snapshots:
       - '@parcel/core'
       - napi-wasm
 
-  '@parcel/bundler-library@2.15.2(@parcel/core@2.15.4(@swc/helpers@0.5.17))':
+  '@parcel/bundler-library@2.15.4(@parcel/core@2.15.4(@swc/helpers@0.5.17))':
     dependencies:
-      '@parcel/plugin': 2.15.2(@parcel/core@2.15.4(@swc/helpers@0.5.17))
+      '@parcel/plugin': 2.15.4(@parcel/core@2.15.4(@swc/helpers@0.5.17))
       nullthrows: 1.1.1
     transitivePeerDependencies:
       - '@parcel/core'
