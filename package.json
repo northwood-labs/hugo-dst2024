@@ -61,7 +61,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
-    "preact": "^10.26.9"
+    "preact": "^10.27.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
