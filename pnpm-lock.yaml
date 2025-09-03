@@ -184,8 +184,8 @@ importers:
         specifier: ^0.11.10
         version: 0.11.10
       snyk:
-        specifier: ^1.1298.3
-        version: 1.1298.3
+        specifier: ^1.1299.0
+        version: 1.1299.0
       svgo:
         specifier: ^3.3.2
         version: 3.3.2
@@ -4067,8 +4067,8 @@ packages:
     resolution: {integrity: sha512-ZA6oR3T/pEyuqwMgAKT0/hAv8oAXckzbkmR0UkUosQ+Mc4RxGoJkRmwHgHufaenlyAgE1Mxgpdcrf75y6XcnDg==}
     engines: {node: '>=14.16'}
 
-  snyk@1.1298.3:
-    resolution: {integrity: sha512-f9cpSgLlVn36zAACEJllXxNNTKiJiSjgNpZVnPvNCz4GPRf+i12xnfcxmHi9Sjwh7Jjdn6lWVht+o2WmdxalDw==}
+  snyk@1.1299.0:
+    resolution: {integrity: sha512-kBq4sW80A8BSFzm+71SnDoD47S/1Hh/jKvKE4XbPuLnSjrJthBIT3I3I+Yi/kb29W9f6+I8MilMReoRvYCDxHQ==}
     engines: {node: '>=12'}
     hasBin: true
 
@@ -8884,7 +8884,7 @@ snapshots:
 
   slash@5.1.0: {}
 
-  snyk@1.1298.3:
+  snyk@1.1299.0:
     dependencies:
       '@sentry/node': 7.120.4
       global-agent: 3.0.0
