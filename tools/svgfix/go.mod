@@ -5,7 +5,7 @@ go 1.23.3
 require (
 	github.com/northwood-labs/cli-helpers v0.0.0-20241111201136-8e7d54066157
 	github.com/northwood-labs/debug v0.0.0-20240514204655-f938e2fa11e9
-	github.com/spf13/cobra v1.10.1
+	github.com/spf13/cobra v1.10.2
 )
 
 require (
