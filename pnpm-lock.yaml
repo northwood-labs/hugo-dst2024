@@ -76,8 +76,8 @@ importers:
         specifier: ^2.16.3
         version: 2.16.3(@parcel/core@2.16.3(@swc/helpers@0.5.18))
       '@parcel/transformer-html':
-        specifier: ^2.16.3
-        version: 2.16.3(@parcel/core@2.16.3(@swc/helpers@0.5.18))
+        specifier: ^2.16.4
+        version: 2.16.4(@parcel/core@2.16.3(@swc/helpers@0.5.18))
       '@parcel/transformer-js':
         specifier: ^2.16.3
         version: 2.16.3(@parcel/core@2.16.3(@swc/helpers@0.5.18))
@@ -1304,6 +1304,10 @@ packages:
   '@parcel/transformer-html@2.16.3':
     resolution: {integrity: sha512-j/f+fR3hS9g3Kw4mySyF2sN4mp0t6amq3x52SAptpa4C7w8XVWproc+3ZLgjzi91OPqNeQAQUNQMy86AfuMuEw==}
     engines: {node: '>= 16.0.0', parcel: ^2.16.3}
+
+  '@parcel/transformer-html@2.16.4':
+    resolution: {integrity: sha512-w6JErYTeNS+KAzUAER18NHFIFFvxiLGd4Fht1UYcb/FDjJdLAMB/FljyEs0Rto/WAhZ2D0MuSL25HQh837R62g==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.4}
 
   '@parcel/transformer-image@2.16.3':
     resolution: {integrity: sha512-q8BhaGSaGtIP1JPxDpRoRxs5Oa17sVR4c0kyPyxwP0QoihKth1eQElbINx+7Ikbt7LoGucPUKEsnxrDzkUt8og==}
@@ -5752,6 +5756,15 @@ snapshots:
       '@parcel/diagnostic': 2.16.3
       '@parcel/plugin': 2.16.3(@parcel/core@2.16.3(@swc/helpers@0.5.18))
       '@parcel/rust': 2.16.3
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
+  '@parcel/transformer-html@2.16.4(@parcel/core@2.16.3(@swc/helpers@0.5.18))':
+    dependencies:
+      '@parcel/diagnostic': 2.16.4
+      '@parcel/plugin': 2.16.4(@parcel/core@2.16.3(@swc/helpers@0.5.18))
+      '@parcel/rust': 2.16.4
     transitivePeerDependencies:
       - '@parcel/core'
       - napi-wasm
