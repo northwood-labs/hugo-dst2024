@@ -58,8 +58,8 @@ importers:
         specifier: ^2.16.3
         version: 2.16.3(@parcel/core@2.16.3(@swc/helpers@0.5.18))
       '@parcel/packager-js':
-        specifier: ^2.16.3
-        version: 2.16.3(@parcel/core@2.16.3(@swc/helpers@0.5.18))
+        specifier: ^2.16.4
+        version: 2.16.4(@parcel/core@2.16.3(@swc/helpers@0.5.18))
       '@parcel/packager-raw':
         specifier: ^2.16.4
         version: 2.16.4(@parcel/core@2.16.3(@swc/helpers@0.5.18))
@@ -846,11 +846,11 @@ packages:
       whiskers:
         optional: true
 
-  '@lezer/common@1.5.0':
-    resolution: {integrity: sha512-PNGcolp9hr4PJdXR4ix7XtixDrClScvtSCYW3rQG106oVMOOI+jFb+0+J3mbeL/53g1Zd6s0kJzaw6Ri68GmAA==}
+  '@lezer/common@1.5.2':
+    resolution: {integrity: sha512-sxQE460fPZyU3sdc8lafxiPwJHBzZRy/udNFynGQky1SePYBdhkBl1kOagA9uT3pxR8K09bOrmTUqA9wb/PjSQ==}
 
-  '@lezer/lr@1.4.7':
-    resolution: {integrity: sha512-wNIFWdSUfX9Jc6ePMzxSPVgTVB4EOfDIwLQLWASyiUdHKaMsiilj9bYiGkGQCKVodd0x6bgQCV207PILGFCF9Q==}
+  '@lezer/lr@1.4.10':
+    resolution: {integrity: sha512-rnCpTIBafOx4mRp43xOxDJbFipJm/c0cia/V5TiGlhmMa+wsSdoGmUN3w5Bqrks/09Q/D4tNAmWaT8p6NRi77A==}
 
   '@lmdb/lmdb-darwin-arm64@2.8.5':
     resolution: {integrity: sha512-KPDeVScZgA1oq0CiPBcOa3kHIqU+pTOwRFDIhxvmf8CTNvqdZQYp5cCKW0bUk69VygB2PuTiINFWbY78aR2pQw==}
@@ -1080,6 +1080,10 @@ packages:
   '@parcel/packager-js@2.16.3':
     resolution: {integrity: sha512-01fufzVOs9reEDq9OTUyu5Kpasd8nGvBJEUytagM6rvNlEpmlUX5HvoAzUMSTyYeFSH+1VnX6HzK6EcQNY9Y8Q==}
     engines: {node: '>= 16.0.0', parcel: ^2.16.3}
+
+  '@parcel/packager-js@2.16.4':
+    resolution: {integrity: sha512-L2o39f/fhta+hxto7w8OTUKdstY+te5BmHZREckbQm0KTBg93BG7jB0bfoxLSZF0d8uuAYIVXjzeHNqha+du1g==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.4}
 
   '@parcel/packager-raw@2.16.3':
     resolution: {integrity: sha512-GCehb36D2xe8P8gftyZcjNr3XcUzBgRzWcasM4I0oPaLRZw4nuIu60cwTsGk6/HhUYDq8uPze+gr1L4pApRrjw==}
@@ -4912,11 +4916,11 @@ snapshots:
       '@babel/core': 7.28.6
       react: 19.0.0
 
-  '@lezer/common@1.5.0': {}
+  '@lezer/common@1.5.2': {}
 
-  '@lezer/lr@1.4.7':
+  '@lezer/lr@1.4.10':
     dependencies:
-      '@lezer/common': 1.5.0
+      '@lezer/common': 1.5.2
 
   '@lmdb/lmdb-darwin-arm64@2.8.5':
     optional: true
@@ -4938,8 +4942,8 @@ snapshots:
 
   '@mischnic/json-sourcemap@0.1.1':
     dependencies:
-      '@lezer/common': 1.5.0
-      '@lezer/lr': 1.4.7
+      '@lezer/common': 1.5.2
+      '@lezer/lr': 1.4.10
       json5: 2.2.3
 
   '@msgpackr-extract/msgpackr-extract-darwin-arm64@3.0.3':
@@ -5312,6 +5316,20 @@ snapshots:
       '@parcel/source-map': 2.1.1
       '@parcel/types': 2.16.3(@parcel/core@2.16.3(@swc/helpers@0.5.18))
       '@parcel/utils': 2.16.3
+      globals: 13.24.0
+      nullthrows: 1.1.1
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
+  '@parcel/packager-js@2.16.4(@parcel/core@2.16.3(@swc/helpers@0.5.18))':
+    dependencies:
+      '@parcel/diagnostic': 2.16.4
+      '@parcel/plugin': 2.16.4(@parcel/core@2.16.3(@swc/helpers@0.5.18))
+      '@parcel/rust': 2.16.4
+      '@parcel/source-map': 2.1.1
+      '@parcel/types': 2.16.4(@parcel/core@2.16.3(@swc/helpers@0.5.18))
+      '@parcel/utils': 2.16.4
       globals: 13.24.0
       nullthrows: 1.1.1
     transitivePeerDependencies:
